@@ -28,6 +28,7 @@ Rust terminology:
   stored in a block of memory. String literals (`”Hello”`), are stored in the program’s binary.
 
 * Rust’s `String` type is a wrapper around a vector of bytes. As with a `Vec<T>`, it is owned.
+  `Vec<T>` is an array that changes size dynamically.
     
 * As with many other types `String::from()` creates a string from a string literal; `String::new()` 
   creates a new empty string, to which string data can be added using the `push()` and `push_str()` methods.
@@ -40,5 +41,22 @@ Rust terminology:
 * For C++ programmers: think of `&str` as `const char*` from C++, but the one that always points 
   to a valid string in memory. Rust `String` is a rough equivalent of `std::string` from C++ 
   (main difference: it can only contain UTF-8 encoded bytes and will never use a small-string optimization).
+
+* How do I modify s1? Here is an example built by iteratively following the guidelines of the compiler. 
+  ```rust,editable
+  fn main() {
+      let mut s1: &str = "World";
+      println!("s1: {s1}");
+      let binding  = &(s1.to_owned() + " hobbit");
+      s1 = &binding;
+
+      let mut s2: String = String::from("Hello ");
+      println!("s2: {s2}");
+      s2.push_str(s1);
+      println!("s2: {s2}");
     
+      let s3: &str = &s2[6..];
+      println!("s3: {s3}");
+  }
+  ```   
 </details>

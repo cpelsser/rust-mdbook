@@ -2,12 +2,12 @@
 
 Rust is built with all the experience gained in the last 40 years.
 
-## Language Features
+<!-- ## Language Features
 
 * Enums and pattern matching.
 * Generics.
-* No overhead FFI.
-* Zero-cost abstractions.
+* No overhead FFI (Foreign Function Interface).
+* Zero-cost abstractions. -->
 
 ## Tooling
 
@@ -20,14 +20,14 @@ Rust is built with all the experience gained in the last 40 years.
 
 Key points:
 
-* Zero-cost abstractions, similar to C++, means that you don't have to 'pay'
+<!-- * Zero-cost abstractions, similar to C++, means that you don't have to 'pay'
   for higher-level programming constructs with memory or CPU. For example,
   writing a loop using `for` should result in roughly the same low level
   instructions as using the `.iter().fold()` construct.
 
 * It may be worth mentioning that Rust enums are 'Algebraic Data Types', also
   known as 'sum types', which allow the type system to express things like
-  `Option<T>` and `Result<T, E>`.
+  `Option<T>` and `Result<T, E>`. -->
 
 * Remind people to read the errors --- many developers have gotten used to
   ignore lengthy compiler output. The Rust compiler is significantly more

@@ -16,3 +16,13 @@ The types have widths as follows:
 * `isize` and `usize` are the width of a pointer,
 * `char` is 32 bit wide,
 * `bool` is 8 bit wide.
+
+
+<details>
+	r is used to denote raw string literals. Raw string literals do not process any escapes.
+	It is followed by (#)+, then ", the litteral, " and (#)+<br>
+
+	r#""foo""#; stands for "foo"
+
+	r##"foo #"# bar"##; stands for foo #"# bar
+</details>

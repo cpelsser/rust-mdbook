@@ -10,7 +10,7 @@
   - [Running Cargo Locally](cargo/running-locally.md)
 
 
-# Day 1: Morning
+<!-- # Day 1: Morning
 
 ----
 
@@ -34,9 +34,35 @@
     - [Overloading](basic-syntax/functions-interlude.md)
 - [Exercises](exercises/day-1/morning.md)
   - [Implicit Conversions](exercises/day-1/implicit-conversions.md)
+  - [Arrays and for Loops](exercises/day-1/for-loops.md) -->
+
+# Course 1
+
+----
+
+- [Welcome](course-1.md)
+  - [What is Rust?](course-1/what-is-rust.md)
+- [Hello World!](hello-world.md)
+  - [Small Example](hello-world/small-example.md)
+- [Why Rust?](why-rust.md)
+  - [Compile Time Guarantees](why-rust/compile-time.md)
+  - [Runtime Guarantees](why-rust/runtime.md)
+  - [Modern Features](why-rust/modern.md)
+- [Basic Syntax](basic-syntax.md)
+  - [Scalar Types](basic-syntax/scalar-types.md)
+  - [Compound Types](basic-syntax/compound-types.md)
+  - [References](basic-syntax/references.md)
+    - [Dangling References](basic-syntax/references-dangling.md)
+  - [Slices](basic-syntax/slices.md)
+    - [String vs str](basic-syntax/string-slices.md)
+  - [Functions](basic-syntax/functions.md)
+    - [Methods](basic-syntax/methods.md)
+    - [Overloading](basic-syntax/functions-interlude.md)
+- [Exercises](exercises/day-1/morning.md)
+  - [Implicit Conversions](exercises/day-1/implicit-conversions.md)
   - [Arrays and for Loops](exercises/day-1/for-loops.md)
 
-# Day 1: Afternoon
+<!-- # Course 2
 
 - [Variables](basic-syntax/variables.md)
   - [Type Inference](basic-syntax/type-inference.md)
@@ -242,3 +268,4 @@
   - [Day 3 Morning](exercises/day-3/solutions-morning.md)
   - [Day 3 Afternoon](exercises/day-3/solutions-afternoon.md)
   - [Day 4 Morning](exercises/day-4/solutions-morning.md)
+ -->

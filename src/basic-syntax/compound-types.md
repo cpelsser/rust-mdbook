@@ -59,4 +59,5 @@ Tuples:
     * You can think of it as `void` that can be familiar to you from other 
       programming languages.
 
+T is a generic type
 </details>

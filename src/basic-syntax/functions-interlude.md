@@ -27,5 +27,8 @@ fn main() {
 * When using generics, the standard library's `Into<T>` can provide a kind of limited
   polymorphism on argument types. We will see more details in a later section.
 
+* [std::process::id()](https://doc.rust-lang.org/std/process/fn.id.html) returns the 
+  pid of the current process 
+
 </defails>
 
