@@ -1,1 +1,2 @@
-1.50
+[toolchain]
+channel = "stable"
