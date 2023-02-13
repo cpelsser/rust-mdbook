@@ -10,7 +10,7 @@ This is the session of Comprehensive Rust. We will cover:
 
 * Ownership: move semantics, copying and cloning, borrowing, and lifetimes.
  -->
-<details>
+<!-- <details>
 
 Please remind the students that:
 
@@ -39,3 +39,4 @@ You can of course adjust this as necessary. Please make sure to include breaks,
 we recommend a break every hour!
 
 </details>
+ -->
