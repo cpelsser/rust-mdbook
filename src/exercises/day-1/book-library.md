@@ -41,8 +41,9 @@ Use this to create a library application. Copy the code below to
 {{#include book-library.rs:main}}
 ```
 
-<details>
+<!-- <details>
     
 [Solution](solutions-afternoon.md#designing-a-library)
 
 </details>
+ -->
