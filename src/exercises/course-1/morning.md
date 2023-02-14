@@ -1,4 +1,4 @@
-# Course 1: Morning Exercises
+# Course 1: Exercises
 
 In these exercises, we will explore two parts of Rust:
 
