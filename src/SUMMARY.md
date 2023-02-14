@@ -59,8 +59,8 @@
     - [Methods](basic-syntax/methods.md)
     - [Overloading](basic-syntax/functions-interlude.md)
 - [Exercises](exercises/day-1/morning.md)
-  - [Implicit Conversions](exercises/day-1/implicit-conversions.md)
-  - [Arrays and for Loops](exercises/day-1/for-loops.md)
+  - [Implicit Conversions](exercises/course-1/implicit-conversions.md)
+  - [Arrays and for Loops](exercises/course-1/for-loops.md)
 
 <!-- # Course 2
 
