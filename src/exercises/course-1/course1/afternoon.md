@@ -1,4 +1,4 @@
-# Day 1: Afternoon Exercises
+# Course 1: Afternoon Exercises
 
 We will look at two things:
 
