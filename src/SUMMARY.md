@@ -62,10 +62,11 @@
   - [Implicit Conversions](exercises/course-1/implicit-conversions.md)
   - [Arrays and for Loops](exercises/course-1/for-loops.md)
 
-<!-- # Course 2
+# Course 2
 
 - [Variables](basic-syntax/variables.md)
   - [Type Inference](basic-syntax/type-inference.md)
+  - [Option](basic-syntax/option.md)
   - [static & const](basic-syntax/static-and-const.md))
   - [Scopes and Shadowing](basic-syntax/scopes-shadowing.md)
 - [Memory Management](memory-management.md)
@@ -87,12 +88,12 @@
   - [Lifetimes](ownership/lifetimes.md)
   - [Lifetimes in Function Calls](ownership/lifetimes-function-calls.md)
   - [Lifetimes in Data Structures](ownership/lifetimes-data-structures.md)
-- [Exercises](exercises/day-1/afternoon.md)
-  - [Designing a Library](exercises/day-1/book-library.md)
-  - [Iterators and Ownership](exercises/day-1/iterators-and-ownership.md)
+- [Exercises](exercises/course-2/afternoon.md)
+  - [Designing a Library](exercises/course-2/book-library.md)
+  - [Iterators and Ownership](exercises/course-2/iterators-and-ownership.md)
 
 
-# Day 2: Morning
+<!-- # Day 2: Morning
 
 ----
 
@@ -268,4 +269,4 @@
   - [Day 3 Morning](exercises/day-3/solutions-morning.md)
   - [Day 3 Afternoon](exercises/day-3/solutions-afternoon.md)
   - [Day 4 Morning](exercises/day-4/solutions-morning.md)
- -->
+ --> -->

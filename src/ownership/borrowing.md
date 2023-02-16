@@ -25,7 +25,7 @@ fn main() {
 <details>
 
 Notes on stack returns:
-* Demonstrate that the return from `add` is cheap because the compiler can eliminate the copy operation. Change the above code to print stack addresses and run it on the [Playground]. In the "DEBUG" optimization level, the addresses should change, while the stay the same when changing to the "RELEASE" setting:
+* Demonstrate that the return from `add` is cheap because the compiler can eliminate the copy operation. Change the above code to print stack addresses and run it on the [Playground]. In the "DEBUG" optimization level, the addresses should change, while they stay the same when changing to the "RELEASE" setting:
 
   ```rust,editable
   #[derive(Debug)]
@@ -46,7 +46,12 @@ Notes on stack returns:
   }
   ```
 * The Rust compiler can do return value optimization (RVO).
+
+See [Grapham King's "Return Value Optimization in Rust" post](https://darkcoding.net/software/return-value-optimization-in-rust/)
+
 * In C++, copy elision has to be defined in the language specification because constructors can have side effects. In Rust, this is not an issue at all. If RVO did not happen, Rust will always performs a simple and efficient `memcpy` copy.
+
+Elision means dropping, omitting, cutting. It is used for a sound that is not pronounced in a work, for example.
 
 </details>
 

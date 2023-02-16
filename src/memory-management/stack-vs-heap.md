@@ -10,3 +10,10 @@
   * Values have dynamic sizes determined at runtime.
   * Slightly slower than the stack: some book-keeping needed.
   * No guarantee of memory locality.
+
+<details>
+
+* The stack is used to store the program and the variables of fixed size.
+* The heap is used for dynamically allocating memory.
+
+</details>

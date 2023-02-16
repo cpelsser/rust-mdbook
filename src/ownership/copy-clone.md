@@ -42,8 +42,46 @@ Copying and cloning are not the same thing:
 In the above example, try the following:
 
 * Add a `String` field to `struct Point`. It will not compile because `String` is not a `Copy` type.
+
+```rust,editable
+#[derive(Copy, Clone, Debug)]
+struct Point(i32, i32, String);
+
+fn main() {
+    let p1 = Point(3, 4, "Pokemon");
+    let p2 = p1;
+    println!("p1: {p1:?}");
+    println!("p2: {p2:?}");
+}
+```
+
 * Remove `Copy` from the `derive` attribute. The compiler error is now in the `println!` for  `p1`.
+
+```rust,editable
+#[derive(Clone, Debug)]
+struct Point(i32, i32, String);
+
+fn main() {
+    let p1 = Point(3, 4, String::from("Pokemon"));
+    let p2 = p1;
+    println!("p1: {p1:?}");
+    println!("p2: {p2:?}");
+}
+```
+
 * Show that it works if you clone `p1` instead.
+
+```rust,editable
+#[derive(Clone, Debug)]
+struct Point(i32, i32, String);
+
+fn main() {
+    let p1 = Point(3, 4, String::from("Pokemon"));
+    let p2 = p1.clone();
+    println!("p1: {p1:?}");
+    println!("p2: {p2:?}");
+}
+```
 
 If students ask about `derive`, it is sufficient to say that this is a way to generate code in Rust
 at compile time. In this case the default implementations of `Copy` and `Clone` traits are generated.
