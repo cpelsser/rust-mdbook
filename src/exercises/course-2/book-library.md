@@ -1,6 +1,6 @@
 # Designing a Library
 
-We will learn much more about structs and the `Vec<T>` type tomorrow. For now,
+We will learn much more about structs and the `Vec<T>` type later. For now,
 you just need to know part of its API:
 
 ```rust,editable
