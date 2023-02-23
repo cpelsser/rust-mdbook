@@ -24,6 +24,8 @@ fn main() {
 
 <details>
 
+`name` and `age` are field names of the structure and variable names.
+
 The `new` function could be written using `Self` as a type, as it is interchangeable with the struct type name
 
 ```rust,ignore
@@ -33,5 +35,5 @@ impl Person {
     }
 }
 ```
-    
+   
 </details>

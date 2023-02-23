@@ -113,11 +113,11 @@
   - [Destructuring Structs](pattern-matching/destructuring-structs.md)
   - [Destructuring Arrays](pattern-matching/destructuring-arrays.md)
   - [Match Guards](pattern-matching/match-guards.md)
-- [Exercises](exercises/day-2/morning.md)
-  - [Health Statistics](exercises/day-2/health-statistics.md)
-  - [Points and Polygons](exercises/day-2/points-polygons.md)
+- [Exercises](exercises/course-3/morning.md)
+  - [Health Statistics](exercises/course-3/health-statistics.md)
+  - [Points and Polygons](exercises/course-3/points-polygons.md)
 
-<!-- # Day 2: Afternoon
+<!-- # Course 4
 
 - [Welcome](course-4.md)
 - [Control Flow](control-flow.md)

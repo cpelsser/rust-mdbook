@@ -31,6 +31,8 @@ fn main() {
     dbg_size!(Option<bool>);
     dbg_size!(&i32);
     dbg_size!(Option<&i32>);
+    // dbg_size!(Option<&Foo>);
+    // dbg_size!(&Foo);
 }
 ```
 
@@ -45,5 +47,6 @@ Key Points:
  * `Option<bool>` is another example of tight packing.
  * For [some types](https://doc.rust-lang.org/std/option/#representation), Rust guarantees that `size_of::<T>()` equals `size_of::<Option<T>>()`.
  * Zero-sized types allow for efficient implementation of `HashSet` using `HashMap` with `()` as the value.
+ * The ty module defines how rustc represents types internally. https://rustc-dev-guide.rust-lang.org/ty.html
 
 </details>

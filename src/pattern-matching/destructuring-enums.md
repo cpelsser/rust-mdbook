@@ -36,4 +36,28 @@ Key points:
 * The `if`/`else` expression is returning an enum that is later unpacked with a `match`.
 * You can try adding a third variant to the enum definition and displaying the errors when running the code. Point out the places where your code is now inexhaustive and how the compiler tries to give you hints.
 
+```rust,editable
+enum Result {
+    Ok(i32),
+    Err(String),
+    Add(i32),
+}
+
+fn divide_in_two(n: i32) -> Result {
+    if n % 2 == 0 {
+        Result::Ok(n / 2)
+    } else {
+        Result::Err(format!("cannot divide {n} into two equal parts"))
+    }
+}
+
+fn main() {
+    let n = 99;
+    match divide_in_two(n) {
+        Result::Ok(half) => println!("{n} divided in two is {half}"),
+        Result::Err(msg) => println!("sorry, an error happened: {msg}"),
+        Result::Add(a) => println!("{}",a)
+    }
+}
+```
 </details>

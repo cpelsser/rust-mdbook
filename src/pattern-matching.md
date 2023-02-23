@@ -31,5 +31,9 @@ Key Points:
 * It can be useful to show how binding works, by for instance replacing a wildcard character with a variable, or removing the quotes around `q`.
 * You can demonstrate matching on a reference.
 * This might be a good time to bring up the concept of irrefutable patterns, as the term can show up in error messages.
+
+From [Rust Book](https://doc.rust-lang.org/book/ch18-02-refutability.html)
+
+"Patterns that will match for any possible value passed are irrefutable. An example would be x in the statement let x = 5; because x matches anything and therefore cannot fail to match. Patterns that can fail to match for some possible value are refutable. An example would be Some(x) in the expression if let Some(x) = a_value because if the value in the a_value variable is None rather than Some, the Some(x) pattern will not match."
    
 </details>

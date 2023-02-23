@@ -15,4 +15,18 @@ Key Points:
 of the original `match` expression being considered.  
 * You can use the variables defined in the pattern in your if expression.
 * The condition defined in the guard applies to every expression in a pattern with an `|`.
+
+```rust,editable
+#[rustfmt::skip]
+fn main() {
+    let pair = (1, -2);
+    println!("Tell me about {pair:?}");
+    match pair {
+        (x, y) if x == y     => println!("These are twins"),
+        (x, y) if x + y == 0 => println!("Antimatter, kaboom!"),
+        (x, _) | (x, -2) if x % 2 == 1 => println!("The first one is odd"),
+        _                    => println!("No correlation..."),
+    }
+}
+```
 </details>
