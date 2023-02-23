@@ -1,6 +1,6 @@
 # Welcome to course 1
 
-This is the session of Comprehensive Rust. We will cover:
+In this first session we will cover:
 
 * Basic Rust syntax: variables, scalar and compound types, enums, structs,
   references, functions, and methods.

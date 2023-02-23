@@ -64,6 +64,7 @@
 
 # Course 2
 
+- [Welcome](course-2.md)
 - [Variables](basic-syntax/variables.md)
   - [Type Inference](basic-syntax/type-inference.md)
   - [Option](basic-syntax/option.md)
@@ -93,11 +94,11 @@
   - [Iterators and Ownership](exercises/course-2/iterators-and-ownership.md)
 
 
-<!-- # Day 2: Morning
+# Course 3
 
 ----
 
-- [Welcome](welcome-day-2.md)
+- [Welcome](course-3.md)
 - [Structs](structs.md)
   - [Tuple Structs](structs/tuple-structs.md)
   - [Field Shorthand Syntax](structs/field-shorthand.md)
@@ -116,8 +117,9 @@
   - [Health Statistics](exercises/day-2/health-statistics.md)
   - [Points and Polygons](exercises/day-2/points-polygons.md)
 
-# Day 2: Afternoon
+<!-- # Day 2: Afternoon
 
+- [Welcome](course-4.md)
 - [Control Flow](control-flow.md)
   - [Blocks](control-flow/blocks.md)
   - [if expressions](control-flow/if-expressions.md)
@@ -269,4 +271,4 @@
   - [Day 3 Morning](exercises/day-3/solutions-morning.md)
   - [Day 3 Afternoon](exercises/day-3/solutions-afternoon.md)
   - [Day 4 Morning](exercises/day-4/solutions-morning.md)
- --> -->
+ -->
