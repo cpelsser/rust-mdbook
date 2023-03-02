@@ -32,6 +32,9 @@ methods on a `Vec`.
   elements to the vector. 
 * To index the vector you use `[` `]`, but they will panic if out of bounds. Alternatively, using
   `get` will return an `Option`. The `pop` function will remove the last element.
+  
+  `println!("v2: len = {}, capacity = {}, {:?}", v2.len(), v2.capacity(), v2.get(0));`
+  `println!("{:?}",v2.pop());`
 * Show iterating over a vector and mutating the value:
   `for e in &mut v { *e += 50; }`
 

@@ -1,4 +1,4 @@
-# Day 2 Afternoon Exercises
+# Course 4: Exercises
 
 ## Luhn Algorithm
 

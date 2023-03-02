@@ -15,13 +15,17 @@ fn main() {
 }
 ```
 
+Shared references in Rust disallow mutation by default. 
 If you need to mutate the data inside an `Rc`, you will need to wrap the data in
-a type such as [`Cell` or `RefCell`][2]. See [`Arc`][3] if you are in a multi-threaded
-context.
+a type such as [`Cell` or `RefCell`][2], in single-threaded cases. See [`Arc`][3] if you are in a multi-threaded
+context. Arc stands for "Atomically Reference counted". If you need to mutate through Arc use [`Mutex`][4], [`RwLock`][5], or one of the [`Atomic`][6] types.
 
 [1]: https://doc.rust-lang.org/std/rc/struct.Rc.html
 [2]: https://doc.rust-lang.org/std/cell/index.html
-[3]: ../concurrency/shared_state/arc.md
+[3]: https://doc.rust-lang.org/std/sync/struct.Arc.html
+[4]: https://doc.rust-lang.org/std/sync/struct.Mutex.html
+[5]: https://doc.rust-lang.org/std/sync/struct.RwLock.html
+[6]: https://doc.rust-lang.org/std/sync/atomic/index.html
 
 <details>
 

@@ -25,6 +25,20 @@ Rust.
 <details>
 
 * Point out that the `while let` loop will keep going as long as the value matches the pattern.
-* You could rewrite the `while let` loop as an infinite loop with an if statement that breaks when there is no value to unwrap for `iter.next()`. The `while let` provides syntactic sugar for the above scenario.
+* You could rewrite the `while let` loop as an infinite loop with an if statement that breaks when there is no value to unwrap for `iter.next()`. The `while let` provides syntactic sugar for the above scenario. 
+
+<!-- ```rust,editable
+fn main() {
+    let v = vec![10, 20, 30];
+    let mut iter = v.into_iter();
+
+    loop { if let Some(x) = iter.next() {
+        println!("x: {x}");
+        } else {
+            break;
+        }
+    }
+}
+``` -->
     
 </details>
