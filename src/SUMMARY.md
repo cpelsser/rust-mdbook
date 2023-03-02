@@ -117,7 +117,7 @@
   - [Health Statistics](exercises/course-3/health-statistics.md)
   - [Points and Polygons](exercises/course-3/points-polygons.md)
 
-<!-- # Course 4
+# Course 4
 
 - [Welcome](course-4.md)
 - [Control Flow](control-flow.md)
@@ -143,12 +143,12 @@
   - [Visibility](modules/visibility.md)
   - [Paths](modules/paths.md)
   - [Filesystem Hierarchy](modules/filesystem.md)
-- [Exercises](exercises/day-2/afternoon.md)
-  - [Luhn Algorithm](exercises/day-2/luhn.md)
-  - [Strings and Iterators](exercises/day-2/strings-iterators.md)
+- [Exercises](exercises/course-4/afternoon.md)
+  - [Luhn Algorithm](exercises/course-4/luhn.md)
+  - [Strings and Iterators](exercises/course-4/strings-iterators.md)
 
 
-# Day 3: Morning
+<!-- # Day 3: Morning
 
 ----
 
