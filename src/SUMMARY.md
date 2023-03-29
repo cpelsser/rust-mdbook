@@ -148,11 +148,11 @@
   - [Strings and Iterators](exercises/course-4/strings-iterators.md)
 
 
-<!-- # Day 3: Morning
+# Course 5
 
 ----
 
-- [Welcome](welcome-day-3.md)
+- [Welcome](course-5.md)
 - [Traits](traits.md)
   - [Deriving Traits](traits/deriving-traits.md)
   - [Default Methods](traits/default-methods.md)
@@ -174,7 +174,7 @@
 - [Exercises](exercises/day-3/morning.md)
   - [A Simple GUI Library](exercises/day-3/simple-gui.md)
 
-# Day 3: Afternoon
+# Course 6
 
 - [Error Handling](error-handling.md)
   - [Panics](error-handling/panics.md)
@@ -203,7 +203,7 @@
   - [Safe FFI Wrapper](exercises/day-3/safe-ffi-wrapper.md)
 
 
-# Day 4: Morning
+<!-- # Day 4: Morning
 
 ----
 
