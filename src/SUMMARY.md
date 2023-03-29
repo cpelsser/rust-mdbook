@@ -176,6 +176,7 @@
 
 # Course 6
 
+- [Welcome](course-6.md)
 - [Error Handling](error-handling.md)
   - [Panics](error-handling/panics.md)
     - [Catching Stack Unwinding](error-handling/panic-unwind.md)
