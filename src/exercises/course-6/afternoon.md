@@ -1,11 +1,11 @@
-# Day 3: Afternoon Exercises
+# Course 6 Exercises
 
 Let us build a safe wrapper for reading directory content!
 
-<details>
+<!-- <details>
 
 After looking at the exercise, you can look at the [solution] provided.
 
 [solution]: solutions-afternoon.md
 
-</details>
+</details> -->

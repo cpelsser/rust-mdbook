@@ -1,4 +1,4 @@
-# Day 3 Morning Exercise
+# Course 5 Exercise
 
 ## A Simple GUI Library
 
