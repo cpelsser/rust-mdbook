@@ -20,6 +20,7 @@ fn main() -> Result<()> {
 }
 ```
 
+
 Similarly, `Write` lets you abstract over `u8` sinks:
 
 ```rust,editable
@@ -38,3 +39,7 @@ fn main() -> Result<()> {
     Ok(())
 }
 ```
+<details>
+
+    `std::env::current_exe()` Returns the full filesystem path of the current running executable.
+</details>

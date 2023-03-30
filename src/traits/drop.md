@@ -29,7 +29,7 @@ fn main() {
 }
 ```
 
-<details>
+<!-- <details>
 
 Discussion points:
 
@@ -39,4 +39,4 @@ Discussion points:
         overflow!
 * Try replacing `drop(a)` with `a.drop()`.
 
-</details>
+</details> -->

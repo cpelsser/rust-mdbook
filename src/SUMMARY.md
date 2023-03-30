@@ -64,6 +64,8 @@
 
 # Course 2
 
+----
+
 - [Welcome](course-2.md)
 - [Variables](basic-syntax/variables.md)
   - [Type Inference](basic-syntax/type-inference.md)
@@ -119,6 +121,8 @@
 
 # Course 4
 
+----
+
 - [Welcome](course-4.md)
 - [Control Flow](control-flow.md)
   - [Blocks](control-flow/blocks.md)
@@ -171,10 +175,12 @@
   - [Closures](generics/closures.md)
   - [Monomorphization](generics/monomorphization.md)
   - [Trait Objects](generics/trait-objects.md)
-- [Exercises](exercises/day-3/morning.md)
-  - [A Simple GUI Library](exercises/day-3/simple-gui.md)
+- [Exercises](exercises/course-5/morning.md)
+  - [A Simple GUI Library](exercises/course-5/simple-gui.md)
 
 # Course 6
+
+----
 
 - [Welcome](course-6.md)
 - [Error Handling](error-handling.md)
@@ -200,8 +206,8 @@
     - [Writing Unsafe Functions](unsafe/writing-unsafe-functions.md)
     - [Extern Functions](unsafe/extern-functions.md)
   - [Implementing Unsafe Traits](unsafe/unsafe-traits.md)
-- [Exercises](exercises/day-3/afternoon.md)
-  - [Safe FFI Wrapper](exercises/day-3/safe-ffi-wrapper.md)
+- [Exercises](exercises/course-6/afternoon.md)
+  - [Safe FFI Wrapper](exercises/course-6/safe-ffi-wrapper.md)
 
 
 <!-- # Day 4: Morning

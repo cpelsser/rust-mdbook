@@ -19,8 +19,12 @@ fn main() {
 where
     B: FromIterator<Self::Item>,
     Self: Sized`
+`collect` enables to convert an interator into a collection. Here it enables to reconstruct a vector.
 
 There are also implementations which let you do cool things like convert an
 `Iterator<Item = Result<V, E>>` into a `Result<Vec<V>, E>`.
+
+Add this line to print the computed squares:
+`println!("{:?}", prime_squares)`
 
 </details>

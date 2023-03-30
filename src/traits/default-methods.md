@@ -26,3 +26,8 @@ fn main() {
     println!("{a:?} not_equals {b:?}: {}", a.not_equal(&b));
 }
 ```
+<details>
+
+Centimeters reuses the behavior of `not_equal` from the Equals trait. It overwrites `equal`, however.
+
+</details>

@@ -40,8 +40,10 @@ fn main() {
 
 * Traits may specify pre-implemented (default) methods and methods that users are required to implement themselves. Methods with default implementations can rely on required methods.
 * Types that implement a given trait may be of different sizes. This makes it impossible to have things like `Vec<Greet>` in the example above.
-* `dyn Greet` is a way to tell the compiler about a dynamically sized type that implements `Greet`.
+* `dyn Greet` is a way to tell the compiler about a dynamically sized type that implements `Greet`. The compiler does not know the concrete type that is being passed.
 * In the example, `pets` holds Fat Pointers to objects that implement `Greet`. The Fat Pointer consists of two components, a pointer to the actual object and a pointer to the virtual method table for the `Greet` implementation of that particular object.
+
+From [rust-lang](https://doc.rust-lang.org/std/keyword.dyn.html), "a dyn Trait reference contains two pointers. One pointer goes to the data (e.g., an instance of a struct). Another pointer goes to a map of method call names to function pointers (known as a virtual method table or vtable). At run-time, when a method needs to be called on the dyn Trait, the vtable is consulted to get the function pointer and then that function pointer is called."
 
 Compare these outputs in the above example:
 ```rust,ignore
@@ -51,4 +53,13 @@ Compare these outputs in the above example:
     println!("{}", std::mem::size_of::<Box<dyn Greet>>());
 ```
 
+This gives the output:
+```rust,ignore
+24 0
+8 8
+16
+16
+```
 </details>
+
+<!-- p442 in the Rust programming language -->

@@ -17,6 +17,8 @@ fn main() {
 }
 ```
 
+Here traits are used as bounds to stipulate what functionality a type implements. For example, above, T must implement Clone.
+
 <details>
 
 Show a `where` clause, students will encounter it when reading code.
