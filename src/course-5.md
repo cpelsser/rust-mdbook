@@ -1,4 +1,4 @@
-# Welcome to Day 3
+# Welcome to course 5
 
 In this course, we will cover some more advanced topics of Rust:
 
