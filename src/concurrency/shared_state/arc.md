@@ -28,11 +28,18 @@ fn main() {
 
 * `Arc` stands for "Atomic Reference Counted", a thread safe version of `Rc` that uses atomic
   operations.
+
+  "The type Arc<T> provides shared ownership of a value of type T, allocated in the heap. Invoking clone on Arc produces a new Arc instance, which points to the same allocation on the heap as the source Arc, while increasing a reference count. When the last Arc pointer to a given allocation is destroyed, the value stored in that allocation (often referred to as “inner value”) is also dropped." from [1].
+
+  Also see [How arc works in rust](https://medium.com/@DylanKerler1/how-arc-works-in-rust-b06192acd0a6)
+
+
 * `Arc<T>` implements `Clone` whether or not `T` does. It implements `Send` and `Sync` iff `T`
   implements them both.
 * `Arc::clone()` has the cost of atomic operations that get executed, but after that the use of the
   `T` is free.
 * Beware of reference cycles, `Arc` does not use a garbage collector to detect them.
     * `std::sync::Weak` can help.
+
 
 </details>

@@ -57,4 +57,35 @@ Notable parts:
 * Blocks are introduced to narrow the scope of the `LockGuard` as much as possible.
 * We still need to acquire the `Mutex` to print our `Vec`.
 
+Below is code to slowdown the main thread to invert the pushes into the vector.
+
+```rust,editable
+use std::sync::{Arc, Mutex};
+use std::thread;
+use std::time::Duration;
+
+fn main() {
+    let v = Arc::new(Mutex::new(vec![10, 20, 30]));
+
+    let v2 = v.clone();
+    let handle = thread::spawn(move || {
+        let mut v2 = v2.lock().unwrap();
+        v2.push(10);
+    });
+
+    thread::sleep(Duration::from_millis(10));
+
+    {
+        let mut v = v.lock().unwrap();
+        v.push(1000);
+    }
+
+    handle.join().unwrap();
+
+    {
+        let v = v.lock().unwrap();
+        println!("v: {v:?}");
+    }
+}
+```
 </details>

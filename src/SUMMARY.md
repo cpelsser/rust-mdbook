@@ -210,11 +210,11 @@
   - [Safe FFI Wrapper](exercises/course-6/safe-ffi-wrapper.md)
 
 
-# Day 4: Morning
+# Course 7
 
 ----
 
-- [Welcome](welcome-day-4.md)
+- [Welcome](course-7.md)
 - [Concurrency](concurrency.md)
   - [Threads](concurrency/threads.md)
   - [Scoped Threads](concurrency/scoped-threads.md)

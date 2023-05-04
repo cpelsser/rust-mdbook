@@ -36,7 +36,7 @@ implementation.
 * `Mutex<T>` implements both `Send` and `Sync` iff `T` implements `Send`.
 * A read-write lock counterpart - `RwLock`.
 * Why does `lock()` return a `Result`? 
-    * If the thread that held the `Mutex` panicked, the `Mutex` becomes "poisoned" to signal that
+    * If the thread that held the `Mutex` panicked, the `Mutex` becomes "poisoned". The error signals that
       the data it protected might be in an inconsistent state. Calling `lock()` on a poisoned mutex
       fails with a [`PoisonError`]. You can call `into_inner()` on the error to recover the data
       regardless.
