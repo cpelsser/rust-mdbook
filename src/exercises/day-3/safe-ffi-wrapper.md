@@ -1,1 +1,0 @@
-# Safe FFI Wrapper

@@ -210,7 +210,7 @@
   - [Safe FFI Wrapper](exercises/course-6/safe-ffi-wrapper.md)
 
 
-<!-- # Day 4: Morning
+# Day 4: Morning
 
 ----
 
@@ -229,11 +229,11 @@
     - [Send](concurrency/send-sync/send.md)
     - [Sync](concurrency/send-sync/sync.md)
     - [Examples](concurrency/send-sync/examples.md)
-- [Exercises](exercises/day-4/morning.md)
-  - [Dining Philosophers](exercises/day-4/dining-philosophers.md)
-  - [Multi-threaded Link Checker](exercises/day-4/link-checker.md)
+- [Exercises](exercises/course-7/morning.md)
+  - [Dining Philosophers](exercises/course-7/dining-philosophers.md)
+  - [Multi-threaded Link Checker](exercises/course-7/link-checker.md)
 
-# Day 4: Afternoon
+<!-- # Day 4: Afternoon
 
 ----
 

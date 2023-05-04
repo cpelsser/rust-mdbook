@@ -32,4 +32,6 @@ fn main() {
 Using a mutable static is generally a bad idea, but there are some cases where it might make sense
 in low-level `no_std` code, such as implementing a heap allocator or working with some C APIs.
 
+`no_std` is used to prevent Rust from loading the standard library. This is used for bare metal development for example. [no_std in the Embedded Rust Book](https://docs.rust-embedded.org/book/intro/no-std.html)
+
 </details>
