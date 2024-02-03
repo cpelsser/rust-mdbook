@@ -60,7 +60,9 @@
     - [Overloading](basic-syntax/functions-interlude.md)
 - [Exercises](exercises/course-1/morning.md)
   - [Implicit Conversions](exercises/course-1/implicit-conversions.md)
+  - [Matrix multiplication](exercises/course-1/matrix-mult.md)
   - [Arrays and for Loops](exercises/course-1/for-loops.md)
+  - [Palindrome](exercises/course-1/palindrome.md)
 
 # Course 2
 
