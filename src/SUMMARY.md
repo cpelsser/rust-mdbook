@@ -49,6 +49,7 @@
   - [Runtime Guarantees](why-rust/runtime.md)
   - [Modern Features](why-rust/modern.md)
 - [Basic Syntax](basic-syntax.md)
+  - [If expressions](basic-syntax/if-expressions.md)
   - [Scalar Types](basic-syntax/scalar-types.md)
   - [Compound Types](basic-syntax/compound-types.md)
   - [References](basic-syntax/references.md)
@@ -128,7 +129,7 @@
 - [Welcome](course-4.md)
 - [Control Flow](control-flow.md)
   - [Blocks](control-flow/blocks.md)
-  - [if expressions](control-flow/if-expressions.md)
+  <!-- - [if expressions](control-flow/if-expressions.md)-->
   - [if let expressions](control-flow/if-let-expressions.md)
   - [while expressions](control-flow/while-expressions.md)
   - [while let expressions](control-flow/while-let-expressions.md)
