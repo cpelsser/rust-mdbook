@@ -71,8 +71,6 @@ This course was inspired by the excellent work in the [Comprehensive Rust course
 ## Contribution 🤲
 Contributions to the course materials or feedback are welcome! If you encounter issues or have suggestions, please open an issue or submit a pull request on the [GitHub repository](https://github.com/cpelsser/rust-mdbook).
 
-## License 📜
-This course material is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Feel free to use, modify, and share it under the terms of this license.
 ---
 
 Happy coding! 🚀
