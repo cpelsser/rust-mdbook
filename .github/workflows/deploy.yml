@@ -1,0 +1,35 @@
+name: Deploy mdBook to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Run the workflow on pushes to the main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Step 2: Install Rust stable toolchain and mdBook dependencies
+    - name: Install Rust and mdBook
+      run: |
+        rustup toolchain install stable
+        rustup default stable
+        cargo install mdbook --version 0.4.21
+        cargo install mdbook-svgbob --locked
+        curl -L https://github.com/rust-lang/mdBook/releases/download/v0.4.21/mdbook-v0.4.21-x86_64-unknown-linux-gnu.tar.gz | tar xvz
+
+    # Step 3: Build the book
+    - name: Build the mdBook
+      run: ./mdbook build
+
+    # Step 4: Deploy the book to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./book
