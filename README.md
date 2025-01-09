@@ -1,8 +1,10 @@
 # Rust Programming: Course Series 🚀 🦀
 
-Welcome to the **Rust Programming Course Series 🦀**, a comprehensive journey through mastering Rust, one of the most powerful and reliable systems programming languages available today. This series consists of seven well-structured courses, each designed to progressively build your understanding and skills in Rust.
+Welcome to the **Rust Programming Course Series 🦀**, your portal to harnessing the raw power of Rust! 🔥 Dive into a world where your code is not only efficient but fearless. Whether you're writing for the web, embedded systems, or game engines, Rust has your back. Get ready to challenge yourself and create something extraordinary., your ultimate gateway to mastering Rust! 🌈 Whether you're a seasoned programmer or a curious learner, this series will transform the way you think about programming. Get ready to explore the magic of Rust's memory safety, blazing performance, and fearless concurrency!, a comprehensive journey through mastering Rust, one of the most powerful and reliable systems programming languages available today. This series consists of seven well-structured courses, each designed to progressively build your understanding and skills in Rust.
 
-## Courses Overview
+## Courses Overview 🎯
+
+Rust isn’t just a language—it’s a way of thinking, a mindset for crafting robust and efficient software. 💡 It’s a language that will make you love problem-solving all over again! Let’s unlock the potential of your coding skills with these exciting courses:
 
 ### 1. **Introduction to Rust** 🌟
 - **Description**: Learn the fundamentals of Rust, including syntax, basic data types, and control flow.
@@ -56,7 +58,9 @@ Welcome to the **Rust Programming Course Series 🦀**, a comprehensive journey 
 
 ## How to Use This Course 📝
 
-1. **Access the Material**: Visit [https://cpelsser.github.io/rust-mdbook/](https://cpelsser.github.io/rust-mdbook/) to access the courses.
+This course isn’t just about learning—it’s about igniting a passion for programming like never before. 🌟 Here's how to maximize your experience:
+
+1. **Access the Material**: Visit [https://bidouilles.github.io/rust-mdbook/](https://bidouilles.github.io/rust-mdbook/) to access the courses.
 2. **Progress Sequentially**: Each course builds upon the previous one, so it is recommended to follow the order.
 3. **Practice Regularly**: Rust is best learned through hands-on coding. Use the exercises and challenges provided in each course.
 
@@ -69,8 +73,11 @@ Welcome to the **Rust Programming Course Series 🦀**, a comprehensive journey 
 This course was inspired by the excellent work in the [Comprehensive Rust course](https://google.github.io/comprehensive-rust/) by Google.
 
 ## Contribution 🤲
-Contributions to the course materials or feedback are welcome! If you encounter issues or have suggestions, please open an issue or submit a pull request on the [GitHub repository](https://github.com/cpelsser/rust-mdbook).
+Contributions to the course materials or feedback are welcome! If you encounter issues or have suggestions, please open an issue or submit a pull request on the [GitHub repository](https://github.com/bidouilles/rust-mdbook).
+
+## License 📜
+This course material is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Feel free to use, modify, and share it under the terms of this license.
 
 ---
 
-Happy coding! 🚀
+Are you ready to join the ranks of developers shaping the future of software with Rust? 🛠️ Let’s write fearless, flawless, and fast code, one byte at a time! 🚀 🦀✨ Happy coding! 🚀
