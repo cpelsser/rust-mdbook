@@ -1,55 +1,78 @@
-# Comprehensive Rust 🦀
+# Rust Programming: Course Series 🚀 🦀
 
-This repository has the source code for Comprehensive Rust 🦀, a four day Rust
-course developed by the Android team. The course covers all aspects of Rust,
-from basic syntax to generics and error handling. It also includes
-Android-specific content on the last day.
+Welcome to the **Rust Programming Course Series 🦀**, a comprehensive journey through mastering Rust, one of the most powerful and reliable systems programming languages available today. This series consists of seven well-structured courses, each designed to progressively build your understanding and skills in Rust.
 
-Read the course at **https://google.github.io/comprehensive-rust/**.
+## Courses Overview
 
-## Course Format and Target Audience
+### 1. **Introduction to Rust** 🌟
+- **Description**: Learn the fundamentals of Rust, including syntax, basic data types, and control flow.
+- **Key Topics**:
+  - Setting up the Rust environment
+  - Variables and mutability
+  - Functions and comments
+  - Ownership and borrowing basics
 
-The course is used internally at Google when teaching Rust to experienced
-software engineers. They typically have a background in C++ or Java.
+### 2. **Ownership and Memory Safety** 🔒
+- **Description**: Dive deep into Rust's unique ownership model, enabling memory safety without garbage collection.
+- **Key Topics**:
+  - Ownership rules
+  - Borrowing and references
+  - Lifetimes and their significance
 
-The course is taught in a classroom setting and we hope it will be useful for
-others who want to teach Rust to their team. The course will be less useful for
-self-study since you miss out on the discussions happening in the classroom. You
-don't see the questions and answers and you don't see the compiler errors we
-trigger when going through the code samples. We hope to improve on this via
-[speaker notes](https://github.com/google/comprehensive-rust/issues/53) and by
-[publishing videos](https://github.com/google/comprehensive-rust/issues/52).
+### 3. **Error Handling in Rust** ⚠️
+- **Description**: Understand Rust's approach to error handling and build robust applications.
+- **Key Topics**:
+  - Option and Result types
+  - Propagating errors
+  - Using `unwrap` and `expect` safely
 
-## Building
+### 4. **Collections and Iterators** 🛠️
+- **Description**: Explore Rust's standard collections and the power of iterators for functional programming.
+- **Key Topics**:
+  - Vectors, HashMaps, and Strings
+  - Iterators and closures
+  - Using combinators for data processing
 
-The course is built using [mdBook](https://github.com/rust-lang/mdBook) and its
-[Svgbob plugin](https://github.com/boozook/mdbook-svgbob). Install both tools
-with
+### 5. **Concurrency in Rust** 🤝
+- **Description**: Leverage Rust's concurrency model for safe and efficient multi-threading.
+- **Key Topics**:
+  - Threads and message passing
+  - The `Mutex` and `RwLock` primitives
+  - Asynchronous programming basics
 
-```shell
-$ cargo install mdbook
-$ cargo install mdbook-svgbob
-```
+### 6. **Building with Cargo and Crates** 📦
+- **Description**: Learn how to manage projects, dependencies, and testing in Rust.
+- **Key Topics**:
+  - Cargo commands and workflows
+  - Using external crates
+  - Writing and running tests
 
-Then run
+### 7. **Advanced Rust Programming** 🚧
+- **Description**: Master advanced concepts in Rust for performance-critical applications.
+- **Key Topics**:
+  - Unsafe Rust
+  - Smart pointers
+  - Traits, generics, and macros
 
-```shell
-$ mdbook test
-```
+## How to Use This Course 📝
 
-to test all included Rust snippets. Run
+1. **Access the Material**: Visit [https://cpelsser.github.io/rust-mdbook/](https://cpelsser.github.io/rust-mdbook/) to access the courses.
+2. **Progress Sequentially**: Each course builds upon the previous one, so it is recommended to follow the order.
+3. **Practice Regularly**: Rust is best learned through hands-on coding. Use the exercises and challenges provided in each course.
 
-```shell
-$ mdbook serve
-```
+## Prerequisites 🛠️
+- Familiarity with programming concepts (preferred but not required).
+- A computer with Rust installed ([Get Started with Rust](https://www.rust-lang.org/learn/get-started)).
 
-to start a web server with the course. You'll find the content on
-<http://localhost:3000>. You can use `mdbook build` to create a static version
-of the course in the `book/` directory.
+## Acknowledgments
 
-## Contact
+This course was inspired by the excellent work in the [Comprehensive Rust course](https://google.github.io/comprehensive-rust/) by Google.
 
-For questions or comments, please contact [Martin
-Geisler](mailto:mgeisler@google.com) or start a [discussion on
-GitHub](https://github.com/google/comprehensive-rust/discussions). We would love
-to hear from you.
+## Contribution 🤲
+Contributions to the course materials or feedback are welcome! If you encounter issues or have suggestions, please open an issue or submit a pull request on the [GitHub repository](https://github.com/cpelsser/rust-mdbook).
+
+## License 📜
+This course material is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Feel free to use, modify, and share it under the terms of this license.
+---
+
+Happy coding! 🚀
