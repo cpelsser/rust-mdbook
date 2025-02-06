@@ -196,9 +196,8 @@ fn main() {
 <details>
 <ul>
 <li><code>pub fn unwrap_or(self, default: T) -&gt; T</code>. Returns the contained <code>Some</code> value or a provided default. Here, ZERO.unwrap_or(0) is equal to 42. It would return 0 if ZERO was equal to None.</li>
-<li>Mention that <code>const</code> behaves semantically similar to C++’s <code>constexpr</code>.</li>
-<li><code>static</code>, on the other hand, is much more similar to a <code>const</code> or mutable global variable in C++.</li>
-<li>It isn’t super common that one would need a runtime evaluated constant, but it is helpful and safer than using a static.</li>
+<li><code>const</code> is used to define a constant value that is inlined wherever it is used. inlingin means that the compiler replaces all instances of the constant with its value.</li>
+<li><code>static</code>, on the other hand have a fixed memory location and can be mutated.</li>
 </ul>
 </details>
 

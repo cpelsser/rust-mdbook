@@ -190,6 +190,26 @@
 <p>The question about modifying <code>a[3]</code> can spark an interesting discussion, but the answer is that for memory safety reasons
 you cannot do it through <code>a</code> after you created a slice, but you can read the data from both <code>a</code> and <code>s</code> safely. 
 More details will be explained in the borrow checker section.</p>
+<pre><code>// We cannot change a[3] after it has been borrowed by s.
+fn main() {
+  let mut a: [i32; 6] = [10, 20, 30, 40, 50, 60];
+  println!(&quot;a: {a:?}&quot;);
+
+  let s: &amp;mut [i32] = &amp;mut a[2..4];
+  s[0] = 1;
+  println!(&quot;s: {s:?}&quot;);
+}
+
+// but we can still read the content of a
+fn main() {
+  let mut a: [i32; 6] = [10, 20, 30, 40, 50, 60];
+  println!(&quot;a: {a:?}&quot;);
+
+  let s: &amp;mut [i32] = &amp;mut a[2..4];
+  s[0] = 1;
+  println!(&quot;a: {a:?}&quot;);
+}
+</code></pre>
 </li>
 </ul>
 </details>

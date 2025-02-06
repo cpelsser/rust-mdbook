@@ -715,12 +715,15 @@ error.</p>
 <li><code>bool</code> is 8 bit wide.</li>
 </ul>
 <details>
-	r is used to denote raw string literals. Raw string literals do not process any escapes.
-	It is followed by (#)+, then ", the litteral, " and (#)+<br>
-<pre><code>r#&quot;&quot;foo&quot;&quot;#; stands for &quot;foo&quot;
-
-r##&quot;foo #&quot;# bar&quot;##; stands for foo #&quot;# bar
-</code></pre>
+<p><code>r</code> is used to denote raw string literals. Raw string literals do not process any escapes.
+It is followed by <code>(#)+</code>, then <code>&quot;</code>, the litteral, <code>&quot;</code> and <code>(#)+</code>, where <code>+</code> means one or more occurences.</p>
+<p><code>r#&quot;&quot;foo&quot;&quot;#</code> stands for <code>&quot;foo&quot;</code>.</p>
+<p><code>r##&quot;foo #&quot;# bar&quot;##</code> stands for <code>foo #&quot;# bar</code>.
+Each character in a raw string literal is represented as a Unicode scalar value.
+<code>r#&quot;Hello, &quot;Rust&quot;!&quot;#</code> is a string that includes the characters <code>H, e, l, l, o, ,, , &quot;, R, u, s, t, &quot;, !</code>.</p>
+<p><code>b#&quot;...&quot;#</code> denotes a byte string, ie a sequence of bytes.
+<code>b&quot;hello&quot;</code> is equivalent to <code>[104, 101, 108, 108, 111]</code> (ASCII values for ‘h’, ‘e’, ‘l’, ‘l’, ‘o’).</p>
+<p><code>br#&quot;...&quot;#</code> is for a raw byte string. </p>
 </details><div style="break-before: page; page-break-before: always;"></div><h1 id="compound-types"><a class="header" href="#compound-types">Compound Types</a></h1>
 <div class="table-wrapper"><table><thead><tr><th></th><th>Types</th><th>Literals</th></tr></thead><tbody>
 <tr><td>Arrays</td><td><code>[T; N]</code></td><td><code>[20, 30, 40]</code>, <code>[0; 3]</code></td></tr>
@@ -865,6 +868,26 @@ enough.</li>
 <p>The question about modifying <code>a[3]</code> can spark an interesting discussion, but the answer is that for memory safety reasons
 you cannot do it through <code>a</code> after you created a slice, but you can read the data from both <code>a</code> and <code>s</code> safely. 
 More details will be explained in the borrow checker section.</p>
+<pre><code>// We cannot change a[3] after it has been borrowed by s.
+fn main() {
+  let mut a: [i32; 6] = [10, 20, 30, 40, 50, 60];
+  println!(&quot;a: {a:?}&quot;);
+
+  let s: &amp;mut [i32] = &amp;mut a[2..4];
+  s[0] = 1;
+  println!(&quot;s: {s:?}&quot;);
+}
+
+// but we can still read the content of a
+fn main() {
+  let mut a: [i32; 6] = [10, 20, 30, 40, 50, 60];
+  println!(&quot;a: {a:?}&quot;);
+
+  let s: &amp;mut [i32] = &amp;mut a[2..4];
+  s[0] = 1;
+  println!(&quot;a: {a:?}&quot;);
+}
+</code></pre>
 </li>
 </ul>
 </details>
@@ -931,6 +954,9 @@ to a valid string in memory. Rust <code>String</code> is a rough equivalent of <
     println!(&quot;s3: {s3}&quot;);
 }
 </code></pre></pre>
+<pre><code>fn to_owned(&amp;self) -&gt; Self::Owned
+</code></pre>
+<p>Creates owned data from borrowed data, usually by cloning.</p>
 </li>
 </ul>
 </details>
@@ -993,7 +1019,7 @@ match by_35 {
 </ul>
 </details>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="methods"><a class="header" href="#methods">Methods</a></h1>
-<p>Rust has methods, they are simply functions that are associated with a particular type. The
+<p>Rust has methods. They are simply functions that are associated with a particular type. The
 first argument of a method is an instance of the type it is associated with:</p>
 <pre><pre class="playground"><code class="language-rust editable edition2021">struct Rectangle {
     width: u32,
@@ -1381,9 +1407,8 @@ fn main() {
 <details>
 <ul>
 <li><code>pub fn unwrap_or(self, default: T) -&gt; T</code>. Returns the contained <code>Some</code> value or a provided default. Here, ZERO.unwrap_or(0) is equal to 42. It would return 0 if ZERO was equal to None.</li>
-<li>Mention that <code>const</code> behaves semantically similar to C++’s <code>constexpr</code>.</li>
-<li><code>static</code>, on the other hand, is much more similar to a <code>const</code> or mutable global variable in C++.</li>
-<li>It isn’t super common that one would need a runtime evaluated constant, but it is helpful and safer than using a static.</li>
+<li><code>const</code> is used to define a constant value that is inlined wherever it is used. inlingin means that the compiler replaces all instances of the constant with its value.</li>
+<li><code>static</code>, on the other hand have a fixed memory location and can be mutated.</li>
 </ul>
 </details>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="scopes-and-shadowing"><a class="header" href="#scopes-and-shadowing">Scopes and Shadowing</a></h1>

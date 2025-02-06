@@ -171,12 +171,15 @@
 <li><code>bool</code> is 8 bit wide.</li>
 </ul>
 <details>
-	r is used to denote raw string literals. Raw string literals do not process any escapes.
-	It is followed by (#)+, then ", the litteral, " and (#)+<br>
-<pre><code>r#&quot;&quot;foo&quot;&quot;#; stands for &quot;foo&quot;
-
-r##&quot;foo #&quot;# bar&quot;##; stands for foo #&quot;# bar
-</code></pre>
+<p><code>r</code> is used to denote raw string literals. Raw string literals do not process any escapes.
+It is followed by <code>(#)+</code>, then <code>&quot;</code>, the litteral, <code>&quot;</code> and <code>(#)+</code>, where <code>+</code> means one or more occurences.</p>
+<p><code>r#&quot;&quot;foo&quot;&quot;#</code> stands for <code>&quot;foo&quot;</code>.</p>
+<p><code>r##&quot;foo #&quot;# bar&quot;##</code> stands for <code>foo #&quot;# bar</code>.
+Each character in a raw string literal is represented as a Unicode scalar value.
+<code>r#&quot;Hello, &quot;Rust&quot;!&quot;#</code> is a string that includes the characters <code>H, e, l, l, o, ,, , &quot;, R, u, s, t, &quot;, !</code>.</p>
+<p><code>b#&quot;...&quot;#</code> denotes a byte string, ie a sequence of bytes.
+<code>b&quot;hello&quot;</code> is equivalent to <code>[104, 101, 108, 108, 111]</code> (ASCII values for ‘h’, ‘e’, ‘l’, ‘l’, ‘o’).</p>
+<p><code>br#&quot;...&quot;#</code> is for a raw byte string. </p>
 </details>
                     </main>
 
