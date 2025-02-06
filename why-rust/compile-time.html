@@ -164,11 +164,13 @@
 <li>No data races between threads.</li>
 <li>No iterator invalidation.</li>
 </ul>
+<p>For the purpose of this course, “No memory leaks” should be understood
+as “Pretty much no <em>accidental</em> memory leaks”.</p>
 <details>
 <p>It is possible to produce memory leaks in (safe) Rust. Some examples
 are:</p>
 <ul>
-<li>You can for use <a href="https://doc.rust-lang.org/std/boxed/struct.Box.html#method.leak"><code>Box::leak</code></a> to leak a pointer. A use of this could
+<li>You can for example use <a href="https://doc.rust-lang.org/std/boxed/struct.Box.html#method.leak"><code>Box::leak</code></a> to leak a pointer. A use of this could
 be to get runtime-initialized and runtime-sized static variables</li>
 <li>You can use <a href="https://doc.rust-lang.org/std/mem/fn.forget.html"><code>std::mem::forget</code></a> to make the compiler “forget” about
 a value (meaning the destructor is never run).</li>
@@ -177,8 +179,6 @@ a value (meaning the destructor is never run).</li>
 <li>In fact, some will consider infinitely populating a collection a memory
 leak and Rust does not protect from those.</li>
 </ul>
-<p>For the purpose of this course, “No memory leaks” should be understood
-as “Pretty much no <em>accidental</em> memory leaks”.</p>
 </details>
 
                     </main>
