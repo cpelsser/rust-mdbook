@@ -19,10 +19,19 @@ The types have widths as follows:
 
 
 <details>
-	r is used to denote raw string literals. Raw string literals do not process any escapes.
-	It is followed by (#)+, then ", the litteral, " and (#)+<br>
 
-	r#""foo""#; stands for "foo"
+`r` is used to denote raw string literals. Raw string literals do not process any escapes.
+It is followed by `(#)+`, then `"`, the litteral, `"` and `(#)+`, where `+` means one or more occurences.
 
-	r##"foo #"# bar"##; stands for foo #"# bar
+`r#""foo""#` stands for `"foo"`.
+
+`r##"foo #"# bar"##` stands for `foo #"# bar`.
+Each character in a raw string literal is represented as a Unicode scalar value.
+`r#"Hello, "Rust"!"#` is a string that includes the characters `H, e, l, l, o, ,, , ", R, u, s, t, ", !`.
+
+`b#"..."#` denotes a byte string, ie a sequence of bytes.
+`b"hello"` is equivalent to `[104, 101, 108, 108, 111]` (ASCII values for 'h', 'e', 'l', 'l', 'o').
+
+`br#"..."#` is for a raw byte string. 
+
 </details>

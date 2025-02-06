@@ -1,6 +1,6 @@
 # Methods
 
-Rust has methods, they are simply functions that are associated with a particular type. The
+Rust has methods. They are simply functions that are associated with a particular type. The
 first argument of a method is an instance of the type it is associated with:
 
 ```rust,editable

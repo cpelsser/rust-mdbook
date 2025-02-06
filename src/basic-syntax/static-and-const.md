@@ -56,9 +56,8 @@ We will look at mutating static data in the [chapter on Unsafe Rust](../unsafe.m
 <details>
 
 * `pub fn unwrap_or(self, default: T) -> T`. Returns the contained `Some` value or a provided default. Here, ZERO.unwrap_or(0) is equal to 42. It would return 0 if ZERO was equal to None.
-* Mention that `const` behaves semantically similar to C++'s `constexpr`.
-* `static`, on the other hand, is much more similar to a `const` or mutable global variable in C++.
-* It isn't super common that one would need a runtime evaluated constant, but it is helpful and safer than using a static.
+* `const` is used to define a constant value that is inlined wherever it is used. inlingin means that the compiler replaces all instances of the constant with its value.
+* `static`, on the other hand have a fixed memory location and can be mutated.
 
 </details>
 

@@ -33,4 +33,23 @@ fn main() {
   you cannot do it through `a` after you created a slice, but you can read the data from both `a` and `s` safely. 
   More details will be explained in the borrow checker section.
 
+      // We cannot change a[3] after it has been borrowed by s.
+      fn main() {
+        let mut a: [i32; 6] = [10, 20, 30, 40, 50, 60];
+        println!("a: {a:?}");
+
+        let s: &mut [i32] = &mut a[2..4];
+        s[0] = 1;
+        println!("s: {s:?}");
+      }
+
+      // but we can still read the content of a
+      fn main() {
+        let mut a: [i32; 6] = [10, 20, 30, 40, 50, 60];
+        println!("a: {a:?}");
+
+        let s: &mut [i32] = &mut a[2..4];
+        s[0] = 1;
+        println!("a: {a:?}");
+      }
 </details>

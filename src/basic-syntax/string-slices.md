@@ -58,5 +58,10 @@ Rust terminology:
       let s3: &str = &s2[6..];
       println!("s3: {s3}");
   }
+  ```
+
   ```   
+  fn to_owned(&self) -> Self::Owned
+  ```
+  Creates owned data from borrowed data, usually by cloning.
 </details>
