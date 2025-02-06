@@ -11,12 +11,14 @@ Static memory management at compile time:
 * No data races between threads.
 * No iterator invalidation.
 
+For the purpose of this course, "No memory leaks" should be understood
+as "Pretty much no *accidental* memory leaks".
 <details>
 
 It is possible to produce memory leaks in (safe) Rust. Some examples
 are:
 
-* You can for use [`Box::leak`] to leak a pointer. A use of this could
+* You can for example use [`Box::leak`] to leak a pointer. A use of this could
   be to get runtime-initialized and runtime-sized static variables
 * You can use [`std::mem::forget`] to make the compiler "forget" about
   a value (meaning the destructor is never run).
@@ -24,9 +26,6 @@ are:
   `Arc`.
 * In fact, some will consider infinitely populating a collection a memory
   leak and Rust does not protect from those.
-
-For the purpose of this course, "No memory leaks" should be understood
-as "Pretty much no *accidental* memory leaks".
 
 [`Box::leak`]: https://doc.rust-lang.org/std/boxed/struct.Box.html#method.leak
 [`std::mem::forget`]: https://doc.rust-lang.org/std/mem/fn.forget.html
