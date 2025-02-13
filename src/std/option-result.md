@@ -22,4 +22,12 @@ fn main() {
   * If found, `Result::Ok` holds the index where the element is found.
   * Otherwise, `Result::Err` contains the index where such an element should be inserted.
 
+
+The Result enum is defined as follows:
+```
+enum Result<T, E> {
+    Ok(T),
+    Err(E),
+}
+```
 </details>
