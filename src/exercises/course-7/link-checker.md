@@ -76,3 +76,47 @@ $ cargo run
 [1]: https://docs.rs/reqwest/
 [2]: https://docs.rs/scraper/
 [3]: https://docs.rs/thiserror/
+
+<details>
+
+**Exercise guidance for speakers:**
+- This is a capstone exercise combining threads, channels, and real networking.
+- Start simple: single-threaded, then add parallelism.
+- Careful with URL handling: relative vs absolute, same-domain filtering.
+- Use a HashSet to track visited URLs and avoid cycles.
+
+**Key concepts practiced:**
+1. HTTP requests with `reqwest`.
+2. HTML parsing with `scraper`.
+3. Thread pools and work distribution via channels.
+4. Error handling with `thiserror`.
+
+**Architecture suggestions:**
+```
+Main Thread              Worker Threads
+    |                         |
+    v                         v
+[URL Queue] --channel--> [Fetch & Parse]
+    ^                         |
+    |                         v
+    +-------- results --------+
+```
+
+**Hints to give if stuck:**
+- Use `mpsc::channel` for URL distribution.
+- `HashSet<Url>` tracks visited pages.
+- Filter to same domain: `url.host() == start_url.host()`.
+- Handle relative URLs with `base_url.join(relative)`.
+
+**Common challenges:**
+- Rate limiting (add delays between requests).
+- Error handling for failed requests.
+- Graceful shutdown when queue is empty.
+- Memory management for large crawls.
+
+**Extension ideas:**
+- Add retry logic for failed requests.
+- Report broken links (404s).
+- Respect robots.txt.
+
+</details>

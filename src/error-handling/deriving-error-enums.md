@@ -36,10 +36,21 @@ fn main() {
 
 <details>
 
-`thiserror`'s derive macro automatically implements `std::error::Error`, and optionally `Display`
-(if the `#[error(...)]` attributes are provided) and `From` (if the `#[from]` attribute is added).
-It also works for structs.
+**Key points for speakers:**
+- `thiserror` is the go-to crate for library error types.
+- `#[error("...")]` generates the `Display` implementation.
+- `#[from]` generates `From` implementation for automatic `?` conversion.
+- It's a proc macro — generates code at compile time, no runtime cost.
 
-It doesn't affect your public API, which makes it good for libraries.
+**Common student questions:**
+- *"thiserror vs anyhow — when to use which?"* - `thiserror` for libraries (structured errors), `anyhow` for applications (convenient catch-all).
+- *"What does #[from] do?"* - Generates `impl From<io::Error> for ReadUsernameError`, enabling automatic conversion with `?`.
+- *"Can I have multiple #[from]?"* - Yes, for different source error types. Each generates a separate `From` impl.
+- *"What about error chains?"* - `thiserror` supports `#[source]` attribute to wrap underlying errors while preserving the chain.
+
+**Additional notes:**
+- `thiserror` doesn't affect your public API — users don't need to depend on it.
+- Works for both enums and structs.
+- The `{0}` in error messages refers to tuple fields; use `{field_name}` for named fields.
 
 </details>

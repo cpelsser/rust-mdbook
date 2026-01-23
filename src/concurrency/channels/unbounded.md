@@ -25,3 +25,13 @@ fn main() {
     }
 }
 ```
+
+<details>
+
+- `mpsc` stands for "multiple producer, single consumer".
+- `send()` returns a `Result` - it fails if the receiver has been dropped.
+- The receiver blocks on `recv()` until a message arrives or all senders drop.
+- `rx.iter()` iterates until the channel is closed (all senders dropped).
+- Unbounded channels can grow without limit, which may cause memory issues.
+
+</details>

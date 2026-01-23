@@ -30,9 +30,32 @@ fn main() {
 
 <details>
 
-We wouldn't actually use pointers for this because it can be done safely with references.
+**Key points for speakers:**
+- `# Safety` doc comment is critical — documents what callers must guarantee.
+- The `// Safe because ...` comment documents why the preconditions are met.
+- Unsafe functions can contain unsafe operations without nested `unsafe` blocks.
+- `#[deny(unsafe_op_in_unsafe_fn)]` is recommended — makes unsafe operations explicit.
 
-Note that unsafe code is allowed within an unsafe function without an `unsafe` block. We can
-prohibit this with `#[deny(unsafe_op_in_unsafe_fn)]`. Try adding it and see what happens.
+**Common student questions:**
+- *"Why document safety requirements?"* - It's the contract between function writer and caller. Without it, callers can't know what to guarantee.
+- *"Is my unsafe function always called unsafely?"* - Yes, callers must wrap calls in `unsafe {}` and verify preconditions.
+- *"What if I forget to document safety?"* - Clippy can warn you. It's a best practice, not enforced by the compiler.
+- *"When should a function be unsafe?"* - When it has preconditions that, if violated, cause undefined behavior.
+
+**Demo suggestion:**
+Add `#[deny(unsafe_op_in_unsafe_fn)]` and show how the code needs to be restructured with explicit `unsafe` blocks inside.
+
+**Best practice:**
+```rust
+#[deny(unsafe_op_in_unsafe_fn)]
+unsafe fn swap(a: *mut u8, b: *mut u8) {
+    // SAFETY: Caller guarantees pointers are valid and aligned
+    unsafe {
+        let temp = *a;
+        *a = *b;
+        *b = temp;
+    }
+}
+```
 
 </details>

@@ -82,5 +82,18 @@ fn main() {
     println!("{:?}", numbers(-5).collect::<Vec<_>>());
     println!("{:?}", numbers(5).collect::<Vec<_>>());
 }
-
 ```
+
+<details>
+
+- Generics use monomorphization to create specialized instances for each type.
+  This is called static dispatch.
+- `dyn Trait` uses dynamic dispatch through a virtual method table (vtable).
+  There's only one version of the function regardless of the concrete type.
+- A `&dyn Trait` is a "fat pointer": one pointer to the data, one to the vtable.
+- Types in a `Vec<Box<dyn Trait>>` are "type-erased" - we don't know the
+  concrete type at compile time.
+- Not all traits can be made into trait objects. The trait must be "object-safe"
+  (no `Self` in return types, no generic methods).
+
+</details>

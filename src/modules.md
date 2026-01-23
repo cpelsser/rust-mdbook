@@ -22,3 +22,12 @@ fn main() {
     bar::do_something();
 }
 ```
+
+<details>
+
+- Modules are used to organize code and control visibility (public/private).
+- By default, items in a module are private to the parent module.
+- Use `pub` to make items visible outside their module.
+- Modules can be nested arbitrarily deep.
+
+</details>

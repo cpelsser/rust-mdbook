@@ -13,3 +13,13 @@ Rust offers a new mix:
 It does this with an explicit ownership concept.
 
 First, let's refresh how memory management works.
+
+<details>
+
+- C/C++ give full control but require manual memory management, leading to bugs
+  like use-after-free, double-free, and memory leaks.
+- Languages with garbage collection (Java, Go, Python) are safe but have
+  runtime overhead and less predictable performance.
+- Rust achieves both safety and control through compile-time ownership rules.
+
+</details>

@@ -108,3 +108,33 @@ IntoIterator for
 and [`impl IntoIterator for
 Vec<T>`](https://doc.rust-lang.org/std/vec/struct.Vec.html#impl-IntoIterator-for-Vec%3CT%2C%20A%3E)
 to check your answers.
+
+<details>
+
+**Exercise guidance for speakers:**
+- This exercise builds understanding of ownership in iteration.
+- Key insight: `v.iter()` vs `v.into_iter()` vs `&v` in for loops.
+- Students should predict types before running code.
+
+**Answers to the questions:**
+
+1. `v.iter()` returns `Option<&i8>` — borrows elements.
+2. `v.into_iter()` returns `Option<String>` — moves elements (consumes Vec).
+3. First loop: `word` is `&String` (borrowed).
+4. Second loop: `word` is `String` (moved).
+
+**Key concepts practiced:**
+1. The relationship between `Iterator` and `IntoIterator`.
+2. How `for` loops desugar to `into_iter()` calls.
+3. Borrowing vs moving in iteration.
+4. Associated types in traits.
+
+**Common student questions:**
+- *"Why can't I use v after the second loop?"* — `into_iter()` consumes ownership.
+- *"Why use &v instead of v.iter()?"* — Same result, but `&v` in `for` is more idiomatic.
+- *"What about iter_mut()?"* — Gives `&mut T`, for modifying elements in place.
+
+**Teaching tip:**
+Have students predict the types BEFORE running the code. The "aha moment" comes from seeing the difference between `&T` and `T`.
+
+</details>

@@ -28,10 +28,25 @@ fn main() {
 
 <details>
 
-Because `if` is an expression and must have a particular type, both of its branch blocks must have the same type. Consider showing what happens if you add `;` after `x / 2` in the second example.
+**Key points for speakers:**
+- `if` is an expression, not just a statement — it returns a value.
+- Both branches must return the same type (or `()` if no value needed).
+- This replaces the ternary operator (`? :`) from C-like languages.
+- No parentheses required around the condition (unlike C/Java).
 
-Add `println!` to print the result of the computation. 
-```rust,editable
-println!("{x}")
+**Common student questions:**
+- *"Why no ternary operator?"* - Rust's `if` expression serves the same purpose more readably.
+- *"What if branches have different types?"* - Compile error! Both must match.
+- *"What happens with a trailing semicolon?"* - The branch returns `()` instead of the value. Try adding `;` after `x / 2` to see.
+- *"Do I need the else?"* - Only if using `if` as an expression for a value. Without `else`, the type is `()`.
+
+**Demo suggestion:**
+Show the compile error when branches have different types:
+```rust
+let x = if true { 5 } else { "hello" };  // Error!
 ```
+
+**Note about style:**
+When used as an expression, put the result on its own line without `;` for clarity.
+
 </details>

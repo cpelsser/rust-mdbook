@@ -11,9 +11,20 @@ It achieves this by modeling _ownership_ explicitly.
 
 <details>
 
-* If asked how at this point, you can mention that in Rust this is usually handled by RAII wrapper types such as [Box], [Vec], [Rc], or [Arc]. These encapsulate ownership and memory allocation via various means, and prevent the potential errors in C.
+**Key points for speakers:**
+- Rust's key innovation: compile-time ownership tracking with zero runtime cost.
+- The ownership model gives you C's performance with Java's safety guarantees.
+- Different smart pointers for different needs: `Box` (single owner), `Rc` (shared, single-threaded), `Arc` (shared, multi-threaded).
+- The `Drop` trait is Rust's destructor — called automatically when a value goes out of scope.
 
-* You may be asked about destructors here, the [Drop] trait is the Rust equivalent.
+**Common student questions:**
+- *"How can it be safe without a garbage collector?"* - The compiler tracks ownership and ensures memory is freed exactly once, at the right time.
+- *"What if I need shared ownership?"* - Use `Rc<T>` (single-threaded) or `Arc<T>` (multi-threaded) for reference counting.
+- *"What's the Drop trait?"* - It's like a destructor. Implement `fn drop(&mut self)` to run cleanup code when a value is dropped.
+- *"Can Rust reject valid programs?"* - Yes, the borrow checker is conservative. Sometimes you need `unsafe` or refactoring to satisfy it.
+
+**Teaching tip:**
+Emphasize that this is the "aha moment" — Rust gets the best of all worlds by using the type system to enforce memory safety at compile time.
 
 </details>
 

@@ -25,3 +25,12 @@ mod tests {
 
 * This lets you unit test private helpers.
 * The `#[cfg(test)]` attribute is only active when you run `cargo test`.
+
+<details>
+
+- `#[cfg(test)]` means the module is only compiled during testing.
+- `use super::*;` imports everything from the parent module.
+- Test modules can access private functions in the same file.
+- This pattern keeps tests close to the code they test.
+
+</details>

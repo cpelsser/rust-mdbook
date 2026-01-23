@@ -64,6 +64,8 @@
   - [Matrix multiplication](exercises/course-1/matrix-mult.md)
   - [Arrays and for Loops](exercises/course-1/for-loops.md)
   - [Palindrome](exercises/course-1/palindrome.md)
+  - [Fibonacci](exercises/course-1/fibonacci.md)
+  - [Collatz Sequence](exercises/course-1/collatz.md)
 
 # Course 2
 
@@ -73,7 +75,7 @@
 - [Variables](basic-syntax/variables.md)
   - [Type Inference](basic-syntax/type-inference.md)
   - [Option](basic-syntax/option.md)
-  - [static & const](basic-syntax/static-and-const.md))
+  - [static & const](basic-syntax/static-and-const.md)
   - [Scopes and Shadowing](basic-syntax/scopes-shadowing.md)
 - [Memory Management](memory-management.md)
   - [Stack vs Heap](memory-management/stack-vs-heap.md)
@@ -97,6 +99,7 @@
 - [Exercises](exercises/course-2/afternoon.md)
   - [Designing a Library](exercises/course-2/book-library.md)
   - [Iterators and Ownership](exercises/course-2/iterators-and-ownership.md)
+  - [Builder Type](exercises/course-2/builder-type.md)
 
 
 # Course 3
@@ -121,6 +124,7 @@
 - [Exercises](exercises/course-3/morning.md)
   - [Health Statistics](exercises/course-3/health-statistics.md)
   - [Points and Polygons](exercises/course-3/points-polygons.md)
+  - [Expression Evaluation](exercises/course-3/expression-eval.md)
 
 # Course 4
 
@@ -146,6 +150,12 @@
     - [Recursive Data Types](std/box-recursive.md)
     - [Niche Optimization](std/box-niche.md)
   - [Rc](std/rc.md)
+- [Iterators](iterators.md)
+  - [Motivation](iterators/motivation.md)
+  - [Iterator Trait](iterators/iterator.md)
+  - [Helper Methods](iterators/helpers.md)
+  - [collect](iterators/collect.md)
+  - [IntoIterator](iterators/intoiterator.md)
 - [Modules](modules.md)
   - [Visibility](modules/visibility.md)
   - [Paths](modules/paths.md)
@@ -153,6 +163,7 @@
 - [Exercises](exercises/course-4/afternoon.md)
   - [Luhn Algorithm](exercises/course-4/luhn.md)
   - [Strings and Iterators](exercises/course-4/strings-iterators.md)
+  - [Iterator Method Chaining](exercises/course-4/iterator-chain.md)
 
 
 # Course 5
@@ -175,11 +186,15 @@
   - [Generic Methods](generics/methods.md)
   - [Trait Bounds](generics/trait-bounds.md)
   - [impl Trait](generics/impl-trait.md)
-  - [Closures](generics/closures.md)
   - [Monomorphization](generics/monomorphization.md)
+- [Closures](closures.md)
+  - [Syntax](closures/syntax.md)
+  - [Capturing](closures/capturing.md)
+  - [Closure Traits](closures/traits.md)
   - [Trait Objects](generics/trait-objects.md)
 - [Exercises](exercises/course-5/morning.md)
   - [A Simple GUI Library](exercises/course-5/simple-gui.md)
+  - [Log Filter](exercises/course-5/log-filter.md)
 
 # Course 6
 

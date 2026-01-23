@@ -29,9 +29,29 @@ fn main() {
 
 <details>
 
-Using a mutable static is generally a bad idea, but there are some cases where it might make sense
-in low-level `no_std` code, such as implementing a heap allocator or working with some C APIs.
+**Key points for speakers:**
+- Immutable statics are safe and common — they're truly global constants.
+- Mutable statics are `unsafe` because they can cause data races.
+- Every access to a `mut static` requires an `unsafe` block.
+- Prefer `Mutex`, `RwLock`, or atomics for shared mutable state.
 
-`no_std` is used to prevent Rust from loading the standard library. This is used for bare metal development for example. [no_std in the Embedded Rust Book](https://docs.rust-embedded.org/book/intro/no-std.html)
+**Common student questions:**
+- *"Why is reading also unsafe?"* - Another thread might be writing simultaneously. Even reading during a write can observe torn values.
+- *"What should I use instead?"* - `lazy_static!` or `once_cell` for lazy initialization, `Mutex<T>` for thread-safe mutation, atomics for simple counters.
+- *"When is static mut acceptable?"* - Rare: embedded/no_std where you control all access, FFI globals, single-threaded programs.
+- *"What's a data race?"* - Two threads accessing the same memory, at least one writing, with no synchronization. Undefined behavior in Rust.
+
+**Additional notes:**
+- `no_std` environments (embedded, kernel code) may need `static mut` because standard synchronization primitives aren't available.
+- Consider `AtomicU32` for this counter example — it's safe and efficient.
+
+**Better alternative:**
+```rust
+use std::sync::atomic::{AtomicU32, Ordering};
+static COUNTER: AtomicU32 = AtomicU32::new(0);
+fn add_to_counter(inc: u32) {
+    COUNTER.fetch_add(inc, Ordering::Relaxed);
+}
+```
 
 </details>

@@ -21,3 +21,22 @@ expression of the block, if any. In the example above, the type is `()`.
 
 See [pattern matching](../pattern-matching.md) for more details on patterns in
 Rust.
+
+<details>
+
+**Key points for speakers:**
+- `match` must be exhaustive — all possible values must be covered.
+- The `_` pattern is a catch-all that matches anything (like `default` in switch).
+- `match` is an expression — all arms must return the same type.
+- Pattern matching is one of Rust's most powerful features.
+
+**Common student questions:**
+- *"How is this different from switch in C/Java?"* - No fallthrough (each arm is independent), must be exhaustive, can destructure values, and it's an expression that returns a value.
+- *"What does `as_deref()` do?"* - It converts `Option<String>` to `Option<&str>`, allowing us to match against string literals.
+- *"Why underscore instead of `else`?"* - `_` is a pattern that matches any value. It's more consistent with Rust's pattern matching system.
+- *"What if I forget a case?"* - The compiler will error! This is a huge advantage over switch statements.
+
+**Demo suggestion:**
+Show what happens when you remove the `_` arm — the compiler lists all unhandled cases (infinite in this case since it's `&str`).
+
+</details>

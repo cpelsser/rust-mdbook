@@ -27,11 +27,20 @@ unsafe impl AsBytes for u32 {}
 
 <details>
 
-There should be a `# Safety` section on the Rustdoc for the trait explaining the requirements for
-the trait to be safely implemented.
+**Key points for speakers:**
+- Unsafe traits have invariants that the compiler can't verify.
+- `unsafe impl` means "I promise this type satisfies the trait's requirements."
+- The `# Safety` doc comment documents what implementers must guarantee.
+- Common unsafe traits: `Send`, `Sync`, `GlobalAlloc`.
 
-The actual safety section for `AsBytes` is rather longer and more complicated.
+**Common student questions:**
+- *"Why is implementing a trait unsafe?"* - The trait's methods rely on invariants. If the impl violates them, the methods become unsound.
+- *"What about Send and Sync?"* - They're unsafe because the compiler can't verify thread safety for all cases. Most types auto-implement them, but raw pointers opt out by default.
+- *"When would I implement an unsafe trait?"* - Rarely. Usually for FFI types, custom allocators, or when wrapping unsafe primitives.
+- *"What does 'defined representation' mean?"* - The memory layout is specified (e.g., `#[repr(C)]`). Rust's default representation can change between compiler versions.
 
-The built-in `Send` and `Sync` traits are unsafe.
+**Additional notes:**
+- The `# Safety` section is a documentation convention, not enforced by the compiler.
+- `zerocopy` is useful for serialization without copies — great for network protocols.
 
 </details>

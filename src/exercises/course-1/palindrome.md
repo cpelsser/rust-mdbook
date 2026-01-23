@@ -27,3 +27,40 @@ fn main() {
     println!("Is '{}' a palindrome? {}", non_palindrome, is_palindrome(non_palindrome)); // False
 }
 ```
+
+<details>
+
+**Exercise guidance for speakers:**
+- This is a great introductory exercise for string manipulation.
+- Students practice `chars()`, `filter()`, and iterator methods.
+- Key insight: compare filtered chars with reversed filtered chars.
+
+**Key concepts practiced:**
+1. String methods: `chars()`, `to_lowercase()`.
+2. Iterator methods: `filter()`, `rev()`, `eq()`.
+3. Closures for filtering predicates.
+4. Character methods: `is_alphanumeric()`.
+
+**Hints to give if stuck:**
+- Filter to keep only alphanumeric characters.
+- Convert to lowercase for case-insensitive comparison.
+- Use `rev()` to reverse an iterator.
+- Compare with `eq()` or `collect()` and compare collections.
+
+**Elegant solution:**
+```rust
+fn is_palindrome(s: &str) -> bool {
+    let chars: Vec<_> = s.chars()
+        .filter(|c| c.is_alphanumeric())
+        .map(|c| c.to_ascii_lowercase())
+        .collect();
+    chars.iter().eq(chars.iter().rev())
+}
+```
+
+**Common mistakes:**
+- Forgetting to handle case sensitivity.
+- Not filtering out spaces and punctuation.
+- Inefficient double iteration (can be done in one pass with `take(n/2)` comparison).
+
+</details>

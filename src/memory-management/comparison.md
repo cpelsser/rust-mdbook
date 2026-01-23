@@ -32,3 +32,21 @@ Here is a rough comparison of the memory management techniques.
 * Compiler-enforced and scope-based like Rust:
   * Some upfront complexity.
   * Can reject valid programs.
+
+<details>
+
+**Key points for speakers:**
+- This is a summary slide — use it to reinforce the trade-offs.
+- Rust's "cons" are really about learning curve, not fundamental limitations.
+- "Can reject valid programs" means the borrow checker is conservative — better safe than sorry.
+- In practice, most "rejected valid programs" can be restructured to satisfy the compiler.
+
+**Common student questions:**
+- *"What does 'reject valid programs' mean?"* - The borrow checker can't prove all safe programs are safe. Example: two mutable references to different array indices.
+- *"Is the upfront complexity worth it?"* - For systems programming, security-critical code, or long-running services — absolutely yes.
+- *"Which should I choose for my project?"* - Depends on your constraints. Rust excels where safety AND performance matter. GC languages are fine for many applications.
+
+**Discussion prompt:**
+Ask students: "For a web server handling millions of requests, which approach would you choose and why?"
+
+</details>

@@ -25,3 +25,14 @@ fn main() {
     }
 }
 ```
+
+<details>
+
+- `sync_channel(n)` creates a channel with capacity `n`.
+- `send()` blocks if the channel is full until space becomes available.
+- Bounded channels provide backpressure, preventing producers from overwhelming
+  consumers.
+- A capacity of 0 means the sender and receiver must rendezvous (synchronize).
+- Compare the output with the unbounded version to see the blocking behavior.
+
+</details>

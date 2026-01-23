@@ -33,3 +33,36 @@ function:
 #[allow(dead_code)]
 fn main() {}
 ```
+
+<details>
+
+**Exercise guidance for speakers:**
+- This exercise practices string processing, iteration, and the `?` operator.
+- Encourage using iterator methods: `chars()`, `filter()`, `rev()`, `enumerate()`.
+- The algorithm works right-to-left, so `rev()` is useful.
+- Students often forget edge cases: all spaces, single digit, non-digit characters.
+
+**Hints to give if stuck:**
+1. First, filter out spaces and collect to a String or Vec.
+2. Check minimum length (>= 2 digits).
+3. Iterate right-to-left, doubling every other digit.
+4. Sum digits (remember 14 → 1 + 4 = 5).
+5. Check if sum % 10 == 0.
+
+**Common student mistakes:**
+- Forgetting to handle spaces.
+- Doubling from left instead of right.
+- Not handling the "sum digits of doubled value" step.
+- Off-by-one errors in which digits to double.
+
+**Solution approach:**
+```rust
+cc.chars()
+  .filter(|c| !c.is_whitespace())
+  .rev()
+  .enumerate()
+  .map(|(i, c)| { /* transform based on position */ })
+  .sum::<u32>() % 10 == 0
+```
+
+</details>

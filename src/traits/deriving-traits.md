@@ -17,3 +17,14 @@ fn main() {
              if p1 == p2 { "yes" } else { "no" });
 }
 ```
+
+<details>
+
+- Deriving only works for traits that have standard implementations based on the
+  struct's fields.
+- Common derivable traits: `Debug`, `Clone`, `Copy`, `PartialEq`, `Eq`,
+  `PartialOrd`, `Ord`, `Hash`, `Default`.
+- You can only derive `Copy` if all fields implement `Copy`.
+- For custom behavior, implement the trait manually instead of deriving.
+
+</details>

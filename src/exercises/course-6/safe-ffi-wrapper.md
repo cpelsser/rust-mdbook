@@ -45,3 +45,37 @@ functions and methods:
 
 {{#include safe-ffi-wrapper.rs:main}}
 ```
+
+<details>
+
+**Exercise guidance for speakers:**
+- This is an advanced exercise combining FFI, unsafe, and RAII.
+- The wrapper provides a safe Rust interface to unsafe C functions.
+- Implements `Iterator` for ergonomic directory traversal.
+- `Drop` ensures `closedir` is always called (RAII pattern).
+
+**Key concepts practiced:**
+1. FFI declarations with `extern "C"`.
+2. Working with raw pointers and null checks.
+3. Converting between Rust strings and C strings (`CStr`, `CString`).
+4. Implementing standard traits (`Iterator`, `Drop`).
+5. Encapsulating unsafe code in safe abstractions.
+
+**Hints to give if stuck:**
+- `CString::new(path)?.as_ptr()` converts Rust string to C string.
+- Check for null pointer from `opendir` (indicates error).
+- `readdir` returns null when no more entries.
+- `CStr::from_ptr(dirent.d_name.as_ptr())` converts C string back.
+- Implement `Drop` to call `closedir`.
+
+**Safety discussion:**
+- Why is the FFI call unsafe?
+- How does the wrapper make it safe?
+- What invariants does the wrapper maintain?
+
+**Extension ideas:**
+- Add error handling with `std::io::Error`.
+- Filter out `.` and `..` entries.
+- Return `PathBuf` instead of `String`.
+
+</details>
