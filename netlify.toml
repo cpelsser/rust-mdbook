@@ -1,0 +1,57 @@
+[build]
+  command = """
+    curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.52/mdbook-v0.4.52-x86_64-unknown-linux-gnu.tar.gz | tar -xz && \
+    curl -sSL https://github.com/boozook/mdbook-svgbob/releases/download/v0.2.1/mdbook-svgbob-v0.2.1-x86_64-unknown-linux-gnu.tar.gz | tar -xz && \
+    ./mdbook build
+  """
+  publish = "book"
+
+[build.environment]
+  RUST_LOG = "info"
+
+# Redirects for SPA-like behavior (optional, for cleaner URLs)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["admin"]}
+
+# Headers for better caching and security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Preview deployments for pull requests
+[context.deploy-preview]
+  command = """
+    curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.52/mdbook-v0.4.52-x86_64-unknown-linux-gnu.tar.gz | tar -xz && \
+    curl -sSL https://github.com/boozook/mdbook-svgbob/releases/download/v0.2.1/mdbook-svgbob-v0.2.1-x86_64-unknown-linux-gnu.tar.gz | tar -xz && \
+    ./mdbook build
+  """
+
+# Branch deploys
+[context.branch-deploy]
+  command = """
+    curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.52/mdbook-v0.4.52-x86_64-unknown-linux-gnu.tar.gz | tar -xz && \
+    curl -sSL https://github.com/boozook/mdbook-svgbob/releases/download/v0.2.1/mdbook-svgbob-v0.2.1-x86_64-unknown-linux-gnu.tar.gz | tar -xz && \
+    ./mdbook build
+  """
