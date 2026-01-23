@@ -58,9 +58,11 @@ Speaker notes are designed for instructors who may be new to teaching Rust, prov
 
 ## Building Locally
 
+### HTML Book
+
 ```bash
 # Install mdbook and dependencies
-cargo install mdbook mdbook-svgbob
+cargo install mdbook@0.4.52 mdbook-svgbob
 
 # Build the book
 mdbook build
@@ -68,6 +70,53 @@ mdbook build
 # Serve locally with live reload
 mdbook serve
 ```
+
+### PDF Book
+
+Building the PDF requires additional dependencies:
+
+#### 1. Install Tools
+
+```bash
+# mdbook and mdbook-pandoc (specific versions required)
+cargo install mdbook@0.4.52 mdbook-svgbob mdbook-pandoc@0.10.4
+
+# Pandoc
+brew install pandoc
+
+# LaTeX (MacTeX or BasicTeX)
+brew install --cask mactex
+# Or for a smaller install: brew install --cask basictex
+```
+
+#### 2. Install LaTeX Packages
+
+```bash
+sudo tlmgr install lualatex-math selnolig
+```
+
+#### 3. Install Fonts
+
+```bash
+brew install --cask font-noto-serif font-noto-sans font-noto-sans-mono font-noto-color-emoji font-noto-sans-math
+```
+
+#### 4. Build the PDF
+
+```bash
+MDBOOK_OUTPUT__PANDOC__DISABLED=false mdbook build
+```
+
+The PDF will be generated at `book/pandoc/pdf/linfo2315-rust-course.pdf`.
+
+#### Version Compatibility
+
+| Tool | Version |
+|------|---------|
+| mdbook | 0.4.52 |
+| mdbook-pandoc | 0.10.4 |
+| mdbook-svgbob | 0.2.2 |
+| Pandoc | 3.x |
 
 ## Prerequisites
 - Familiarity with programming concepts (preferred but not required).

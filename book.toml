@@ -1,7 +1,6 @@
 [book]
 authors = ["Martin Geisler", "adapted by Cristel Pelsser"]
 language = "en"
-multilingual = false
 src = "src"
 title = "Rust-LINFO2315 (adapted from Comprehensive Rust 🦀)"
 
@@ -29,7 +28,7 @@ class = "bob"
 # command = "./aspect-ratio-helper.py"
 
 [output.html]
-curly-quotes = true
+smart-punctuation = true
 additional-js = ["ga4.js", "speaker-notes.js"]
 additional-css = ["svgbob.css", "speaker-notes.css"]
 site-url = "/rust-linfo2315/"
@@ -42,3 +41,31 @@ level = 0
 
 [output.html.playground]
 editable = true
+
+[output.pandoc]
+optional = true
+disabled = true
+hosted-html = "https://cpelsser.github.io/rust-mdbook/"
+
+[output.pandoc.profile.pdf]
+output-file = "linfo2315-rust-course.pdf"
+pdf-engine = "lualatex"
+
+[output.pandoc.profile.pdf.variables]
+mainfont = "Noto Serif"
+sansfont = "Noto Sans"
+monofont = "Noto Sans Mono"
+mainfontfallback = [
+  "NotoColorEmoji:mode=harf",
+  "NotoSansMath:",
+]
+sansfontfallback = [
+  "NotoColorEmoji:mode=harf",
+]
+monofontfallback = [
+  "NotoColorEmoji:mode=harf",
+  "NotoSansMath:",
+]
+geometry = ["margin=1.25in"]
+linkcolor = "blue"
+urlcolor = "red"
