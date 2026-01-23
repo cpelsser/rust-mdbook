@@ -6,7 +6,9 @@
     if [ ! -f "$CARGO_HOME/bin/mdbook-svgbob" ]; then \
       cargo install mdbook-svgbob --version 0.2.2 --locked; \
     fi && \
-    ./mdbook build
+    ./mdbook build && \
+    echo '=== Build output ===' && \
+    ls -la book/ | head -20
   """
   publish = "book"
 
