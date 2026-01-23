@@ -16,17 +16,17 @@ and test that `cargo run` does not deadlock:
 
 ```rust,compile_fail
 {{#include dining-philosophers.rs:Philosopher}}
-    // left_fork: ...
-    // right_fork: ...
+    // left_chopstick: ...
+    // right_chopstick: ...
     // thoughts: ...
 }
 
 {{#include dining-philosophers.rs:Philosopher-think}}
 
 {{#include dining-philosophers.rs:Philosopher-eat}}
-        // Pick up forks...
+        // Pick up chopsticks...
 {{#include dining-philosophers.rs:Philosopher-eat-end}}
-    // Create forks
+    // Create chopsticks
 
     // Create philosophers
 
@@ -60,7 +60,7 @@ If all philosophers pick up their left fork simultaneously, no one can pick up t
 4. **Try-lock**: If can't get second fork, release first and retry.
 
 **Hints to give if stuck:**
-- Forks are `Arc<Mutex<()>>` or `Arc<Mutex<bool>>`.
+- Chopsticks are `Arc<Mutex<()>>` or `Arc<Mutex<Chopstick>>`.
 - Each philosopher is a separate thread.
 - Use channels to collect thoughts.
 - To avoid deadlock: make one philosopher "left-handed."
