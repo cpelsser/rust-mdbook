@@ -31,7 +31,7 @@ class = "bob"
 smart-punctuation = true
 additional-js = ["ga4.js", "speaker-notes.js"]
 additional-css = ["svgbob.css", "speaker-notes.css"]
-site-url = "/rust-linfo2315/"
+site-url = "/"
 git-repository-url = "https://github.com/cpelsser/rust-mdbook"
 edit-url-template = "https://github.com/cpelsser/rust-mdbook/edit/main/{path}"
 

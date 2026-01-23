@@ -16,12 +16,6 @@
   CARGO_INCREMENTAL = "0"
   RUSTFLAGS = "-C debuginfo=0"
 
-# Redirects for SPA-like behavior (optional, for cleaner URLs)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Role = ["admin"]}
 
 # Headers for better caching and security
 [[headers]]
