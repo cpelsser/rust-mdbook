@@ -2,7 +2,7 @@
 authors = ["Martin Geisler", "adapted by Cristel Pelsser"]
 language = "en"
 src = "src"
-title = "Rust-LINFO2315 (adapted from Comprehensive Rust 🦀)"
+title = "Rust-LINFO2315"
 
 [rust]
 edition = "2021"
