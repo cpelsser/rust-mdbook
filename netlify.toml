@@ -1,13 +1,15 @@
 [build]
   command = """
-    curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.52/mdbook-v0.4.52-x86_64-unknown-linux-gnu.tar.gz | tar -xz && \
-    curl -sSL https://github.com/boozook/mdbook-svgbob/releases/download/v0.2.1/mdbook-svgbob-v0.2.1-x86_64-unknown-linux-gnu.tar.gz | tar -xz && \
+    curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.52/mdbook-v0.4.52-x86_64-unknown-linux-gnu.tar.gz -o mdbook.tar.gz && \
+    tar -xzf mdbook.tar.gz && \
+    cargo install mdbook-svgbob --version 0.2.2 && \
     ./mdbook build
   """
   publish = "book"
 
 [build.environment]
   RUST_LOG = "info"
+  CARGO_HOME = "/opt/build/cache/cargo"
 
 # Redirects for SPA-like behavior (optional, for cleaner URLs)
 [[redirects]]
@@ -43,15 +45,17 @@
 # Preview deployments for pull requests
 [context.deploy-preview]
   command = """
-    curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.52/mdbook-v0.4.52-x86_64-unknown-linux-gnu.tar.gz | tar -xz && \
-    curl -sSL https://github.com/boozook/mdbook-svgbob/releases/download/v0.2.1/mdbook-svgbob-v0.2.1-x86_64-unknown-linux-gnu.tar.gz | tar -xz && \
+    curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.52/mdbook-v0.4.52-x86_64-unknown-linux-gnu.tar.gz -o mdbook.tar.gz && \
+    tar -xzf mdbook.tar.gz && \
+    cargo install mdbook-svgbob --version 0.2.2 && \
     ./mdbook build
   """
 
 # Branch deploys
 [context.branch-deploy]
   command = """
-    curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.52/mdbook-v0.4.52-x86_64-unknown-linux-gnu.tar.gz | tar -xz && \
-    curl -sSL https://github.com/boozook/mdbook-svgbob/releases/download/v0.2.1/mdbook-svgbob-v0.2.1-x86_64-unknown-linux-gnu.tar.gz | tar -xz && \
+    curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.52/mdbook-v0.4.52-x86_64-unknown-linux-gnu.tar.gz -o mdbook.tar.gz && \
+    tar -xzf mdbook.tar.gz && \
+    cargo install mdbook-svgbob --version 0.2.2 && \
     ./mdbook build
   """
