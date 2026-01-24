@@ -2,7 +2,7 @@
 # (Adapted from Comprehensive Rust) 🦀
 
 The goal of the course is to teach you Rust. We assume you don't know anything
-about Rust and hope to:
+about Rust and aim to:
 
 * Give you a comprehensive understanding of the Rust syntax and language.
 * Enable you to modify existing programs
