@@ -53,3 +53,75 @@
 .ace_gutter-cell {
   background: transparent !important;
 }
+
+/* Improved syntax highlighting colors for better contrast */
+/* ACE Editor (editable playgrounds) */
+.ace_keyword {
+  color: #c586c0 !important; /* pink - keywords like fn, let, if, else */
+}
+
+.ace_storage,
+.ace_type {
+  color: #4ec9b0 !important; /* cyan - types like i32, String */
+}
+
+.ace_function {
+  color: #dcdcaa !important; /* yellow - function names */
+}
+
+.ace_constant.ace_numeric {
+  color: #b5cea8 !important; /* green - numbers */
+}
+
+.ace_string {
+  color: #ce9178 !important; /* orange - strings */
+}
+
+.ace_comment {
+  color: #6a9955 !important; /* green-gray - comments */
+}
+
+.ace_variable {
+  color: #9cdcfe !important; /* light blue - variables */
+}
+
+.ace_support.ace_function {
+  color: #dcdcaa !important; /* yellow - built-in functions like println */
+}
+
+.ace_identifier {
+  color: #d4d4d4 !important; /* light gray - default text */
+}
+
+/* Highlight.js (static code blocks) */
+.hljs-keyword,
+.hljs-built_in {
+  color: #c586c0 !important;
+}
+
+.hljs-type,
+.hljs-class,
+.hljs-title {
+  color: #4ec9b0 !important;
+}
+
+.hljs-function {
+  color: #dcdcaa !important;
+}
+
+.hljs-number {
+  color: #b5cea8 !important;
+}
+
+.hljs-string {
+  color: #ce9178 !important;
+}
+
+.hljs-comment {
+  color: #6a9955 !important;
+}
+
+.hljs-variable,
+.hljs-params {
+  color: #9cdcfe !important;
+}
