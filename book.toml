@@ -29,7 +29,9 @@ class = "bob"
 
 [output.html]
 smart-punctuation = true
-additional-js = ["ga4.js", "speaker-notes.js"]
+default-theme = "navy"
+preferred-dark-theme = "navy"
+additional-js = ["speaker-notes.js"]
 additional-css = ["svgbob.css", "speaker-notes.css"]
 site-url = "/"
 git-repository-url = "https://github.com/cpelsser/rust-mdbook"

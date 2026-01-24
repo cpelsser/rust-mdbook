@@ -29,3 +29,12 @@
 .content details summary .pop-out i:hover {
   color: var(--icons-hover);
 }
+
+/* Fix: Ensure sidebar appears above navigation arrows */
+.sidebar {
+  z-index: 100;
+}
+
+.nav-chapters {
+  z-index: 50;
+}
