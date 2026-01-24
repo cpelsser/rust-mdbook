@@ -43,6 +43,7 @@ level = 0
 
 [output.html.playground]
 editable = true
+line-numbers = true
 
 [output.pandoc]
 optional = true
@@ -52,8 +53,12 @@ hosted-html = "https://cpelsser.github.io/rust-mdbook/"
 [output.pandoc.profile.pdf]
 output-file = "linfo2315-rust-course.pdf"
 pdf-engine = "lualatex"
+highlight-style = "tango"
 
 [output.pandoc.profile.pdf.variables]
+colorlinks = true
+verbatim-in-note = true
+code-block-font-size = "\\small"
 mainfont = "Noto Serif"
 sansfont = "Noto Sans"
 monofont = "Noto Sans Mono"
