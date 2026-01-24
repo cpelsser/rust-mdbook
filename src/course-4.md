@@ -2,15 +2,14 @@
 
 Now that we have seen a fair amount of Rust, we will continue with:
 
-<!-- * Structs, enums, methods.
+* Control flow constructs: `if let`, `while`, `while let`, `for`, `loop`,
+  `match`, `break`, and `continue`.
 
-* Pattern matching: destructuring enums, structs, and arrays. -->
+* The Standard Library: `Option` and `Result`, `String`, `Vec`, `HashMap`,
+  `Box`, and `Rc`.
 
-* Control flow constructs: `if`, `if let`, `while`, `while let`, `break`, and
-  `continue`.
-
-* The Standard Library: `String`, `Option` and `Result`, `Vec`, `HashMap`, `Rc`
-  and `Arc`.
+* Iterators: the `Iterator` trait, helper methods, `collect`, and
+  `IntoIterator`.
 
 * Modules: visibility, paths, and filesystem hierarchy.
 
