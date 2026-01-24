@@ -9,7 +9,7 @@ Here is a rough comparison of the memory management techniques.
 * Automatic like Java:
   * Fully automatic.
   * Safe and correct.
-* Scope-based like C++:
+* Scope-based (RAII pattern):
   * Partially automatic.
   * No runtime overhead.
 * Compiler-enforced scope-based like Rust:
@@ -26,7 +26,7 @@ Here is a rough comparison of the memory management techniques.
 * Automatic like Java:
   * Garbage collection pauses.
   * Destructor delays.
-* Scope-based like C++:
+* Scope-based (RAII pattern):
   * Complex, opt-in by programmer.
   * Potential for use-after-free.
 * Compiler-enforced and scope-based like Rust:

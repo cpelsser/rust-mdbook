@@ -19,8 +19,13 @@ fn main() {
 
 <details>
 
-* Mention that this is the opposite of the defaults in C++, which copies by value unless you use `std::move` (and the move constructor is defined!).
+**Key points for speakers:**
+- Move semantics are Rust's default for non-Copy types — no special syntax needed.
+- This is different from Python, where assignment creates a new reference to the same object.
+- In Rust, clones are always explicit (by using `clone`), making performance costs visible.
 
-* In Rust, your clones are explicit (by using `clone`).
+**Comparison with Python:**
+In Python, `s2 = s1` makes both variables point to the same object (shared reference).
+In Rust, `let s2 = s1` *moves* ownership — only `s2` is valid after this.
 
 </details>

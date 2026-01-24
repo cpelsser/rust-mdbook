@@ -1,7 +1,7 @@
 # Implicit Conversions
 
 Rust will not automatically apply _implicit conversions_ between types ([unlike
-C++][3]). You can see this in a program like this:
+C][3]). You can see this in a program like this:
 
 ```rust,editable,compile_fail
 fn multiply(x: i16, y: i16) -> i16 {
@@ -42,4 +42,4 @@ sufficient to only implement `From` to get a respective `Into` implementation au
 
 [1]: https://doc.rust-lang.org/std/convert/trait.From.html
 [2]: https://doc.rust-lang.org/std/convert/trait.Into.html
-[3]: https://en.cppreference.com/w/cpp/language/implicit_conversion
+[3]: https://en.cppreference.com/w/c/language/conversion

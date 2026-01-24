@@ -60,7 +60,7 @@
 - [Ownership](ownership.md)
   - [Move Semantics](ownership/move-semantics.md)
   - [Moved Strings in Rust](ownership/moved-strings-rust.md)
-    - [Double Frees in Modern C++](ownership/double-free-modern-cpp.md)
+    - [The Double-Free Problem](ownership/double-free-problem.md)
   - [Moves in Function Calls](ownership/moves-function-calls.md)
   - [Copying and Cloning](ownership/copy-clone.md)
   - [Borrowing](ownership/borrowing.md)

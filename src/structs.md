@@ -1,6 +1,6 @@
 # Structs
 
-Like C and C++, Rust has support for custom structs:
+Like C, Rust has support for custom structs:
 
 ```rust,editable
 struct Person {
@@ -29,9 +29,9 @@ fn main() {
 <details>
 Key Points: 
 
-* Structs work like in C or C++.
-  * Like in C++, and unlike in C, no typedef is needed to define a type.
-  * Unlike in C++, there is no inheritance between structs.
+* Structs work like in C.
+  * Unlike in C, no `typedef` is needed to define a type — just use the struct name directly.
+  * Rust structs have no inheritance (unlike Python classes).
 * Methods are defined in an `impl` block, which we will see in following slides.
 * There are different types of structs.
   * Zero-sized structs (e.g. `struct Foo;`) might be used when implementing a trait on some type but don't have any data that you want to store in the value itself. 

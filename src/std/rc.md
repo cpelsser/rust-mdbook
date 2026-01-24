@@ -29,7 +29,8 @@ context. Arc stands for "Atomically Reference counted". If you need to mutate th
 
 <details>
 
-* Like C++'s `std::shared_ptr`.
+* Similar to Python's object model — Python uses reference counting internally for all objects.
+* The difference: in Rust, you explicitly choose `Rc` when you need shared ownership; it's not the default.
 * `clone` is cheap: creates a pointer to the same allocation and increases the reference count.
 * `make_mut` actually clones the inner value if necessary ("clone-on-write") and returns a mutable reference.
 

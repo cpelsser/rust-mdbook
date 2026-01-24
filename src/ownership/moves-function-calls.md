@@ -47,6 +47,6 @@ fn main() {
 }
 ```
 
-* Rust makes it harder than C++ to inadvertently create copies by making move semantics the default, and by forcing programmers to make clones explicit.
+* Rust makes it easy to see where copies happen by making move semantics the default. If you need a copy, you must explicitly call `.clone()`.
 
 </details>

@@ -11,9 +11,7 @@ about Rust and aim to:
 
 ## Assumptions
 
-The course assumes that you already know how to program. Rust is a statically
-typed language and we will sometimes make comparisons with C and C++ to better
-explain or contrast the Rust approach.
-
-If you know how to program in a dynamically typed language such as Python or
-JavaScript, then you will be able to follow along just fine too.
+The course assumes that you already know how to program in C and Python. Rust is a statically
+typed language and we will sometimes make comparisons with C (for low-level concepts like
+memory management and pointers) and Python (for higher-level concepts like iterators and
+error handling) to better explain or contrast the Rust approach.

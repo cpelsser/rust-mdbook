@@ -31,7 +31,7 @@ fn main() {
 - *"How do I link to a C library?"* - Use `#[link(name = "library")]` or configure in Cargo.toml with build scripts.
 
 **Teaching tip:**
-Point out that this is how Rust interoperates with existing C/C++ codebases — essential for systems programming.
+Point out that this is how Rust interoperates with existing C codebases — essential for systems programming.
 
 **Example extension:**
 ```rust

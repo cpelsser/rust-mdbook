@@ -8,17 +8,16 @@ Some unique selling points of Rust:
 
 <details>
 
-Make sure to ask the class which languages they have experience with. Depending
-on the answer you can highlight different features of Rust:
+Key points to highlight for students with C and Python experience:
 
-* Experience with C or C++: Rust eliminates a whole class of _runtime errors_
-  via the borrow checker. You get performance like in C and C++, but you don't
+* Coming from C: Rust eliminates a whole class of _runtime errors_
+  via the borrow checker. You get performance like in C, but you don't
   have the memory unsafety issues. In addition, you get a modern language with
   constructs like pattern matching and built-in dependency management.
 
-* Experience with Java, Go, Python, JavaScript...: You get the same memory safety
-  as in those languages, plus a similar high-level language feeling. In addition
-  you get fast and predictable performance like C and C++ (no garbage collector)
+* Coming from Python: You get similar memory safety as in Python, plus a similar
+  high-level language feeling with iterators, pattern matching, and expressive syntax.
+  In addition you get fast and predictable performance like C (no garbage collector)
   as well as access to low-level hardware (should you need it)
 
 </details>

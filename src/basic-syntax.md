@@ -1,6 +1,6 @@
 # Basic Syntax
 
-Much of the Rust syntax will be familiar to you from C, C++ or Java:
+Much of the Rust syntax will be familiar to you from C and Python:
 
 * Blocks and scopes are delimited by curly braces.
 * Line comments are started with `//`, block comments are delimited by `/* ...

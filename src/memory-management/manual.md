@@ -26,7 +26,7 @@ pointer is lost and we cannot deallocate the memory.
 **Key points for speakers:**
 - Manual memory management requires perfect discipline — every malloc needs a free.
 - Common bugs: use-after-free, double-free, memory leaks, buffer overflows.
-- These bugs cause security vulnerabilities (CVEs) in C/C++ codebases regularly.
+- These bugs cause security vulnerabilities (CVEs) in C codebases regularly.
 - Error paths make manual management especially error-prone.
 
 **Common student questions:**
