@@ -47,11 +47,11 @@ Notes on stack returns:
   ```
 * The Rust compiler can do return value optimization (RVO).
 
-See [Grapham King's "Return Value Optimization in Rust" post](https://darkcoding.net/software/return-value-optimization-in-rust/)
+See [Graham King's "Return Value Optimization in Rust" post](https://darkcoding.net/software/return-value-optimization-in-rust/)
 
 * In C++, copy elision has to be defined in the language specification because constructors can have side effects. In Rust, this is not an issue at all. If RVO did not happen, Rust will always performs a simple and efficient `memcpy` copy.
 
-Elision means dropping, omitting, cutting. It is used for a sound that is not pronounced in a work, for example.
+Elision means dropping, omitting, cutting. It is used for a sound that is not pronounced in a word, for example.
 
 </details>
 

@@ -21,7 +21,7 @@ The types have widths as follows:
 <details>
 
 `r` is used to denote raw string literals. Raw string literals do not process any escapes.
-It is followed by `(#)+`, then `"`, the litteral, `"` and `(#)+`, where `+` means one or more occurences.
+It is followed by `(#)+`, then `"`, the literal, `"` and `(#)+`, where `+` means one or more occurrences.
 
 `r#""foo""#` stands for `"foo"`.
 

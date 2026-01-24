@@ -28,7 +28,7 @@ fn main() {
 
 In the above example, try the following:
 
-* Move the declaration of `p2` and `p3` into a a new scope (`{ ... }`), resulting in the following code:
+* Move the declaration of `p2` and `p3` into a new scope (`{ ... }`), resulting in the following code:
   ```rust,ignore
   #[derive(Debug)]
   struct Point(i32, i32);
