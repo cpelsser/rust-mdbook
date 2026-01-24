@@ -119,7 +119,7 @@ The PDF will be generated at `book/pandoc/pdf/linfo2315-rust-course.pdf`.
 | Pandoc | 3.x |
 
 ## Prerequisites
-- Familiarity with programming concepts (preferred but not required).
+- Experience with C and Python programming (the course uses these languages for comparisons).
 - A computer with Rust installed ([Get Started with Rust](https://www.rust-lang.org/learn/get-started)).
 
 ## Acknowledgments
