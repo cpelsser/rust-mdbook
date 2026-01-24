@@ -38,3 +38,18 @@
 .nav-chapters {
   z-index: 50;
 }
+
+/* Hide code fold widgets in ACE editor */
+.ace_fold-widget {
+  display: none !important;
+}
+
+/* Fix line number gutter styling to match dark theme */
+.ace_gutter {
+  background: var(--code-bg) !important;
+  color: #6c7a89 !important;
+}
+
+.ace_gutter-cell {
+  background: transparent !important;
+}
