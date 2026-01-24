@@ -54,22 +54,25 @@ Course content lives in `src/` as Markdown files:
 - Topic directories: `basic-syntax/`, `ownership/`, `memory-management/`, `error-handling/`, `traits/`, `generics/`, `closures/`, `iterators/`, `concurrency/`, `testing/`, `unsafe/`, `std/`, `modules/`
 
 ### mdBook Configuration
-- `book.toml` - Main configuration (preprocessors: links, index, svgbob)
+- `book.toml` - Main configuration (preprocessors: links, index, svgbob; default theme: navy)
 - `theme/index.hbs` - Custom HTML template
 - `speaker-notes.js/css` - Presentation mode support
 - `svgbob.css` - ASCII-to-SVG diagram styling
+- `netlify.toml` - Netlify deployment configuration
 
 ## Key Dependencies
 
-- **mdbook** (0.4.21) - Documentation generator
-- **mdbook-svgbob** - Converts ASCII art diagrams to SVG
+- **mdbook** (0.4.52) - Documentation generator
+- **mdbook-svgbob** (0.2.2) - Converts ASCII art diagrams to SVG
+- **mdbook-pandoc** - PDF generation support (optional, disabled by default)
 - **reqwest** - HTTP client (used in link-checker exercise)
 - **scraper** - HTML parsing (used in link-checker exercise)
 - **thiserror** - Error handling derive macros
 
 ## CI/CD
 
-GitHub Actions (`.github/workflows/deploy.yml`) automatically builds and deploys to GitHub Pages on push to main.
+- **GitHub Actions** (`.github/workflows/deploy.yml`) - Builds and deploys to GitHub Pages on push to main
+- **Netlify** (`netlify.toml`) - Alternative deployment with preview builds for PRs and branch deploys
 
 ## Speaker Notes
 
