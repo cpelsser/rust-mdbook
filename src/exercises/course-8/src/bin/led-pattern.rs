@@ -67,8 +67,8 @@ fn main() -> ! {
             display_on = !display_on;
         }
 
-        // Display the current pattern (simplified: just show center 3x3)
-        // A full implementation would scan all rows rapidly
+        // Display the current pattern using row scanning
+        // Each row is briefly activated to create the full 5x5 image
         if display_on {
             let pattern = PATTERNS[current_pattern];
 

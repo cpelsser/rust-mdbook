@@ -239,3 +239,4 @@
   - [Reading Button Input](bare-metal/buttons.md)
 - [Exercises](exercises/course-8/exercises.md)
   - [LED Pattern Controller](exercises/course-8/led-pattern.md)
+- [Where to Go Next](bare-metal/next-steps.md)

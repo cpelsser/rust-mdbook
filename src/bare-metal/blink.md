@@ -64,15 +64,28 @@ fn main() -> ! {
 
     loop {
         board.display_pins.row1.set_high().unwrap();
-        delay(1_000_000);  // Approximately 1 second at 64MHz
+        delay(64_000_000);  // Approximately 1 second at 64MHz
 
         board.display_pins.row1.set_low().unwrap();
-        delay(1_000_000);
+        delay(64_000_000);
     }
 }
 ```
 
-The `delay()` function burns CPU cycles. It's not precise, but it works!
+The `delay()` function burns CPU cycles - one cycle per count. The nRF52833
+runs at 64 MHz (64 million cycles per second), so `delay(64_000_000)` waits
+roughly 1 second. It's not precise due to loop overhead, but it works for
+learning! For precise timing in real applications, use a hardware timer.
+
+> **Note:** We use `cortex_m::asm::delay` here to demonstrate bare metal
+> programming with minimal dependencies. For real projects, use the HAL's
+> `Timer` with `DelayNs` trait for precise, portable timing:
+> ```rust,ignore
+> use embedded_hal::delay::DelayNs;
+> use microbit::hal::Timer;
+> let mut timer = Timer::new(board.TIMER0);
+> timer.delay_ms(1000);  // Precise 1 second delay
+> ```
 
 ## Try It Yourself
 

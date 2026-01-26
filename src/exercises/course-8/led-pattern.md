@@ -10,7 +10,7 @@ Create a program that displays LED patterns and responds to button input.
 
 ## Starter Code
 
-Copy this to `src/bin/led-pattern.rs`:
+Copy this to `src/exercises/course-8/src/bin/led-pattern.rs`:
 
 ```rust,compile_fail
 #![no_main]
@@ -180,7 +180,20 @@ The key insight is that you need:
 2. Row scanning for the LED matrix (or use a timer interrupt)
 3. State variables that persist across loop iterations
 
-A full solution would use the `microbit-v2` display driver for easier
-matrix control, but implementing it manually teaches important concepts.
+**Why manual row scanning?**
+
+We implement row scanning manually here to understand how LED matrices work
+at a low level. In real projects, use the `Display` API which handles this
+automatically:
+
+```rust,ignore
+use microbit::{display::blocking::Display, hal::Timer};
+
+let mut display = Display::new(board.display_pins);
+let mut timer = Timer::new(board.TIMER0);
+
+// Much simpler! Handles row scanning internally
+display.show(&mut timer, pattern, 1000);
+```
 
 </details>
