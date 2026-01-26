@@ -106,6 +106,9 @@ it, the compiled binary would have no loadable segments!
 - `thumbv7em-none-eabihf` = Thumb instruction set, Cortex-M4, no OS, hardware float
 - probe-rs replaces older tools like OpenOCD + GDB
 - The micro:bit has a built-in debug probe (no extra hardware!)
+- Memory layout is fundamental: the linker must know where Flash and RAM are
+- `link.x` (from `cortex-m-rt`) uses `memory.x` to generate the final linker script
+- BSPs often provide `memory.x`, but for custom boards you must create it yourself
 
 **Common student questions:**
 
@@ -119,5 +122,11 @@ it, the compiled binary would have no loadable segments!
   nRF52833 has Flash at 0x00000000 and RAM at 0x20000000. Every chip is different!
 - *"What happens without memory.x?"* - The linker doesn't know where to put your
   code, resulting in "no loadable segments" errors when flashing.
+- *"Why is Flash at 0x00000000?"* - ARM Cortex-M processors boot from address 0.
+  The vector table (interrupt handlers) must be at the start of Flash.
+- *"What's the difference between Flash and RAM?"* - Flash is persistent (code
+  survives power off) but slow to write. RAM is fast but volatile (lost on reset).
+- *"Can I change these addresses?"* - Only if your chip supports it. Some chips
+  have configurable memory maps, but most have fixed addresses from the hardware.
 
 </details>
