@@ -65,9 +65,13 @@ Both are *active low*: pressing the button connects to ground (reads LOW).
 - Buttons are "active low" - pressed = logic 0
 - The on-board debugger appears as a USB drive for easy flashing
 
-**Common questions:**
+**Common student questions:**
 
 - *"Why active low?"* - It's a common hardware design pattern that
   provides better noise immunity.
+- *"Why only 10 pins for 25 LEDs?"* - Multiplexing! By rapidly switching rows,
+  we create the illusion of all LEDs being on simultaneously.
+- *"What's GPIO?"* - General Purpose Input/Output. Pins that can be configured
+  as either inputs (read signals) or outputs (send signals).
 
 </details>

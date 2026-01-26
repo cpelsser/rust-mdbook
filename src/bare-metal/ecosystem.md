@@ -72,9 +72,13 @@ This allows writing **portable drivers** that work on any microcontroller!
 - `embedded-hal` traits enable code reuse across platforms
 - The micro:bit BSP (`microbit-v2`) wraps `nrf52833-hal`
 
-**Common questions:**
+**Common student questions:**
 
 - *"Which layer should I use?"* - Start with BSP. Use HAL for features
   the BSP doesn't expose. Use PAC only for advanced/undocumented features.
+- *"What's an SVD file?"* - System View Description, an XML file from chip vendors
+  that describes all registers. Tools like `svd2rust` generate PACs from it.
+- *"Can I mix layers?"* - Yes! You might use BSP for buttons and HAL for timers.
+  The BSP re-exports HAL types, so they're compatible.
 
 </details>

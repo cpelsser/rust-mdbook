@@ -75,11 +75,15 @@ The `panic_halt` crate provides a `#[panic_handler]` function. We don't call
 any functions from it - we just need it linked into our binary. The `as _`
 means "import nothing into the namespace."
 
-**Common questions:**
+**Common student questions:**
 
 - *"What happens after `main` returns?"* - It can't return! The `-> !` type
   enforces this at compile time.
 - *"Why `as _`?"* - We need the crate linked (for its panic handler) but
   don't need to use any of its items by name.
+- *"What does `panic_halt` actually do?"* - It defines a function that runs
+  when a panic occurs. It simply enters an infinite loop, halting the CPU.
+- *"Are there other panic handlers?"* - Yes! `panic-probe` prints via the
+  debugger, `panic-rtt-target` uses RTT. For learning, `panic_halt` is simplest.
 
 </details>

@@ -82,11 +82,13 @@ everything from `core`.
 - `HashMap` depends on random number generation (for security)
 - `std` re-exports the contents of both `core` and `alloc`
 
-**Common questions:**
+**Common student questions:**
 
 - *"Can I use `Vec` on bare metal?"* - Yes, if you provide a global allocator.
   Many embedded projects avoid dynamic allocation entirely.
 - *"What about `println!`?"* - You can implement your own using UART/serial,
   or use RTT (Real-Time Transfer) for debugging.
+- *"Why avoid dynamic allocation?"* - Heap fragmentation and allocation failures
+  are hard to handle in safety-critical systems. Fixed-size buffers are predictable.
 
 </details>

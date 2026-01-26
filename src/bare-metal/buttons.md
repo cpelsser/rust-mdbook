@@ -99,11 +99,17 @@ course, we'll keep it simple. In production code, you'd add debouncing logic.
 - Active low is common in hardware - pressed means LOW
 - The main loop polls continuously - works but uses CPU
 
-**Common questions:**
+**Common student questions:**
 
 - *"Why active low?"* - Better noise immunity and simpler circuit design.
+  The internal pull-up resistor keeps the pin high until grounded by the button.
 - *"What about interrupts?"* - You can trigger code on button press without
   polling, but that's an advanced topic.
+- *"What is debouncing?"* - Physical buttons bounce (rapidly connect/disconnect)
+  for a few milliseconds. Debouncing filters this noise, typically by waiting
+  ~10-50ms after detecting a press before reading again.
+- *"Why does my button seem stuck?"* - Make sure you're checking inside the loop,
+  not just once at startup. The loop runs continuously to poll the button state.
 
 **Demo suggestion:**
 

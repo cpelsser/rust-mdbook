@@ -28,4 +28,13 @@ This section covers:
 - You trade convenience for control and predictability
 - The Rust embedded ecosystem provides excellent abstractions
 
+**Common student questions:**
+
+- *"Why would I choose bare metal over an OS?"* - For real-time guarantees, minimal
+  resource usage, or when no OS exists for your hardware.
+- *"Is embedded Rust production-ready?"* - Yes! Companies use Rust in production
+  embedded systems. The ecosystem has matured significantly since 2018.
+- *"Can I use my favorite crates?"* - Many crates work with `no_std`. Check for
+  `#![no_std]` support in the crate documentation.
+
 </details>

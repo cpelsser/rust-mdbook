@@ -102,11 +102,16 @@ learning! For precise timing in real applications, use a hardware timer.
 - `embedded_hal::digital::OutputPin` is a trait - same code works on any chip
 - `delay()` is a busy-wait loop, not a proper timer
 
-**Common questions:**
+**Common student questions:**
 
 - *"Why `unwrap()` everywhere?"* - These operations can't really fail on
   this hardware, but the traits return `Result` for portability.
 - *"Is busy-waiting bad?"* - For blinking an LED, it's fine. For real
   applications, use hardware timers or interrupts.
+- *"Why set column LOW and row HIGH?"* - The LED matrix uses this convention.
+  Current flows from row (high) through LED to column (low). Setting both
+  high or both low means no current flows.
+- *"Can I control brightness?"* - Yes, using PWM (Pulse Width Modulation).
+  Rapidly toggling the LED faster than the eye can see creates apparent dimming.
 
 </details>

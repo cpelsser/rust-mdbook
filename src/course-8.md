@@ -42,10 +42,12 @@ Rust is increasingly popular for embedded development because:
 - Embedded Rust has grown significantly since 2018
 - The micro:bit is ideal for learning: built-in LEDs, buttons, and debugger
 
-**Common questions:**
+**Common student questions:**
 
 - *"Is this harder than regular Rust?"* - Different, not harder. Less library support,
   but the core language is the same.
 - *"Do I need electronics experience?"* - No! The micro:bit requires no wiring.
+- *"Will this work on other microcontrollers?"* - The concepts transfer! The specific
+  crates differ (e.g., `esp-hal` for ESP32), but `embedded-hal` traits are universal.
 
 </details>

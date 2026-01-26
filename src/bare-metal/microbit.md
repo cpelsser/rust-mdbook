@@ -21,4 +21,13 @@ This section covers:
 - No extra hardware (JTAG debugger, wires) needed
 - Originally designed for BBC's "Make It Digital" campaign in the UK
 
+**Common student questions:**
+
+- *"Can I use micro:bit v1?"* - This course targets v2. The v1 has a different chip
+  (nRF51822) and less memory. Code won't be directly compatible.
+- *"Where can I buy one?"* - Official resellers at microbit.org, or Amazon/electronics
+  retailers. Around $15-20 USD.
+- *"What if I break it?"* - The micro:bit is quite robust. The most common issue is
+  using a charge-only USB cable that doesn't transfer data.
+
 </details>
