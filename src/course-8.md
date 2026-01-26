@@ -30,7 +30,7 @@ Rust is increasingly popular for embedded development because:
 
 ## Prerequisites
 
-- Completed Courses 1-6 (especially ownership and traits)
+- Completed Courses 1-7 (especially ownership and traits)
 - BBC micro:bit v2 hardware
 - Development tools installed (see [Setup](bare-metal/setup.md))
 
