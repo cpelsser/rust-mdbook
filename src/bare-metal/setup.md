@@ -62,6 +62,43 @@ The following debug probes were found:
 | Device not found (macOS) | No special drivers needed, try different port |
 | Device not found (Windows) | Install [Zadig](https://zadig.akeo.ie/) driver |
 
+## Understanding the Build Configuration
+
+Bare metal projects typically need two configuration files that tell the compiler
+where to place code in memory:
+
+### `.cargo/config.toml`
+
+Sets the default target and linker configuration:
+
+```toml
+[build]
+target = "thumbv7em-none-eabihf"
+
+[target.thumbv7em-none-eabihf]
+rustflags = ["-C", "link-arg=-Tlink.x"]
+runner = "probe-rs run --chip nRF52833_xxAA"
+```
+
+### `memory.x`
+
+Defines the memory layout for the linker - where Flash and RAM are located:
+
+```text
+MEMORY
+{
+  FLASH : ORIGIN = 0x00000000, LENGTH = 512K
+  RAM   : ORIGIN = 0x20000000, LENGTH = 128K
+}
+```
+
+The linker uses this to place your code in Flash and variables in RAM. Without
+it, the compiled binary would have no loadable segments!
+
+> **Note:** The `microbit-v2` crate provides `memory.x` automatically, so we
+> don't need to create these files manually for this course. But understanding
+> them is essential for working with other microcontrollers.
+
 <details>
 
 **Key points:**
@@ -78,5 +115,9 @@ The following debug probes were found:
   `none` = no OS, `eabihf` = embedded ABI with hardware floating-point.
 - *"Can I use OpenOCD instead of probe-rs?"* - Yes, but probe-rs is simpler to
   set up and is the modern standard for Rust embedded development.
+- *"Where do the memory addresses come from?"* - From the chip's datasheet. The
+  nRF52833 has Flash at 0x00000000 and RAM at 0x20000000. Every chip is different!
+- *"What happens without memory.x?"* - The linker doesn't know where to put your
+  code, resulting in "no loadable segments" errors when flashing.
 
 </details>
