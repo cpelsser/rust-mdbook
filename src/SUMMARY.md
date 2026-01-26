@@ -222,3 +222,20 @@
 - [Exercises](exercises/course-7/morning.md)
   - [Dining Philosophers](exercises/course-7/dining-philosophers.md)
   - [Multi-threaded Link Checker](exercises/course-7/link-checker.md)
+
+# Course 8
+
+----
+
+- [Welcome](course-8.md)
+- [Bare Metal Basics](bare-metal.md)
+  - [What is no_std?](bare-metal/no-std.md)
+  - [The Embedded Ecosystem](bare-metal/ecosystem.md)
+- [Meet the micro:bit](bare-metal/microbit.md)
+  - [Hardware Overview](bare-metal/microbit-hardware.md)
+  - [Development Setup](bare-metal/setup.md)
+- [Your First Bare Metal Program](bare-metal/first-program.md)
+  - [Blink an LED](bare-metal/blink.md)
+  - [Reading Button Input](bare-metal/buttons.md)
+- [Exercises](exercises/course-8/exercises.md)
+  - [LED Pattern Controller](exercises/course-8/led-pattern.md)
