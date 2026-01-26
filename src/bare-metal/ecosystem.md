@@ -3,22 +3,22 @@
 Rust's embedded ecosystem is organized in layers, from low-level hardware access
 to high-level board support:
 
-```svgbob
-+----------------------------------+
-|      Your Application Code       |
-+----------------------------------+
-|   BSP (Board Support Package)    |
-|        e.g., microbit-v2         |
-+----------------------------------+
-|    HAL (Hardware Abstraction)    |
-|        e.g., nrf52833-hal        |
-+----------------------------------+
-|    PAC (Peripheral Access)       |
-|        e.g., nrf52833-pac        |
-+----------------------------------+
-|           Hardware               |
-|      Nordic nRF52833 chip        |
-+----------------------------------+
+```bob
+    .------------------------------------.
+    |      Your Application Code         |
+    +------------------------------------+
+    |    BSP (Board Support Package)     |
+    |          "microbit-v2"             |
+    +------------------------------------+
+    |     HAL (Hardware Abstraction)     |
+    |          "nrf52833-hal"            |
+    +------------------------------------+
+    |      PAC (Peripheral Access)       |
+    |          "nrf52833-pac"            |
+    +------------------------------------+
+    |             Hardware               |
+    |        Nordic nRF52833 chip        |
+    '------------------------------------'
 ```
 
 ## PAC - Peripheral Access Crate
