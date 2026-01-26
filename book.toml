@@ -54,6 +54,7 @@ hosted-html = "https://cpelsser.github.io/rust-mdbook/"
 output-file = "linfo2315-rust-course.pdf"
 pdf-engine = "lualatex"
 highlight-style = "tango"
+filters = ["remove-details.lua"]
 
 [output.pandoc.profile.pdf.variables]
 colorlinks = true
