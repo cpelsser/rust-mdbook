@@ -57,6 +57,7 @@ highlight-style = "tango"
 filters = ["remove-details.lua"]
 
 [output.pandoc.profile.pdf.variables]
+papersize = "a4"
 colorlinks = true
 verbatim-in-note = true
 code-block-font-size = "\\small"
@@ -74,6 +75,6 @@ monofontfallback = [
   "NotoColorEmoji:mode=harf",
   "NotoSansMath:",
 ]
-geometry = ["margin=1.25in"]
+geometry = ["margin=0.75in"]
 linkcolor = "blue"
 urlcolor = "red"
