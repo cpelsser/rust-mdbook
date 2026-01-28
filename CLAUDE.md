@@ -4,7 +4,64 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is an **mdBook-based Rust programming course** adapted from Google's Comprehensive Rust course. It consists of 7 progressive courses teaching Rust fundamentals through advanced topics, hosted at https://cpelsser.github.io/rust-mdbook/.
+This is an **mdBook-based Rust programming course** for **LINFO2315 - Design of Embedded and Real-time Systems** at UCLouvain (Université catholique de Louvain), Belgium. The course is taught by **Professor Cristel Pelsser** and adapted from Google's Comprehensive Rust course.
+
+The book consists of 8 progressive courses teaching Rust fundamentals through bare metal embedded programming, hosted at https://cpelsser.github.io/rust-mdbook/.
+
+## Academic Context (LINFO2315)
+
+### Course Information
+- **Code**: LINFO2315
+- **Title**: Design of Embedded and Real-time Systems
+- **Credits**: 5.00 (30h lectures + 30h practical)
+- **Term**: Q2 (Second semester)
+- **Language**: English (with French support available)
+- **Institution**: UCLouvain, Louvain-la-Neuve, Belgium
+- **Instructor**: Professor Cristel Pelsser
+- **Moodle**: https://moodle.uclouvain.be/course/view.php?id=558
+
+### Target Programs
+- Master [120] in Computer Science Engineering (INFO2M)
+- Master [120] in Computer Science (SINF2M)
+- Master [120] in Electrical Engineering (ELEC2M)
+- Master [120] in Electromechanical Engineering (ELME2M)
+
+### Topics Covered
+- Embedded processors
+- Standard peripherals and custom peripheral development
+- Multi-core system architecture and inter-core communication
+- Real-time operating systems (RTOS): characterization and comparison
+- In-depth study of an open-source RTOS
+- Programming methodology for RTOS applications
+- Embedded Linux
+- Embedded systems security
+- **Secure programming with Rust for embedded systems**
+
+### Learning Outcomes
+Students who successfully complete this course will be able to:
+1. Design and implement a baremetal application
+2. Understand RTOS concepts
+3. Design and implement applications on an RTOS
+4. **Program in Rust for embedded systems**
+5. Design and implement systems on multi-core architecture with inter-core communication
+6. Efficiently program real-time constrained applications using rigorous methodology
+
+### Hardware
+Each student receives an **ESP32-LoRa-v3** board (dual-core Xtensa processor) for hands-on development.
+
+**Note**: Course 8 (Bare Metal Rust) uses the **BBC micro:bit v2** as an accessible introduction to embedded Rust before students work with the ESP32.
+
+### Evaluation
+- Project with demonstration during semester: 7 points
+- Written exam in June session: 13 points
+- Project cannot be redone for August session
+- **Generative AI is not authorized for this course**
+
+### Prerequisites
+Prior knowledge in computer architecture and programming is required.
+
+### Reference Book
+- "Real-time Operating Systems Book 1 - The Theory" by Jim Cooling, Lindentree Associates 2017, ISBN: 9781 5496 0894 0
 
 ## Common Commands
 
@@ -49,8 +106,9 @@ The Cargo workspace has two members:
 ### Content Organization
 Course content lives in `src/` as Markdown files:
 - `src/SUMMARY.md` - mdBook table of contents (defines navigation structure)
-- `src/course-1/` through `src/course-7/` - Course-specific content
-- `src/exercises/course-1/` through `src/exercises/course-7/` - Exercise files (.md and .rs)
+- `src/course-1/` through `src/course-8/` - Course-specific content
+- `src/bare-metal/` - Course 8 bare metal Rust content (micro:bit v2)
+- `src/exercises/course-1/` through `src/exercises/course-8/` - Exercise files (.md and .rs)
 - Topic directories: `basic-syntax/`, `ownership/`, `memory-management/`, `error-handling/`, `traits/`, `generics/`, `closures/`, `iterators/`, `concurrency/`, `testing/`, `unsafe/`, `std/`, `modules/`
 
 ### mdBook Configuration
@@ -119,3 +177,4 @@ Available exercise binaries (run with `cargo run --bin <name>`):
 - Course 5: `simple-gui`, `log-filter`
 - Course 6: `safe-ffi-wrapper`
 - Course 7: `dining-philosophers`, `link-checker`
+- Course 8: Standalone embedded projects (see `src/exercises/course-8/` with separate Cargo.toml for micro:bit)
