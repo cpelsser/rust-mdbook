@@ -20,6 +20,29 @@ The book consists of 8 progressive courses teaching Rust fundamentals through ba
 - **Instructor**: Professor Cristel Pelsser
 - **Moodle**: https://moodle.uclouvain.be/course/view.php?id=558
 
+### About Professor Cristel Pelsser
+- **Position**: Professor, holds the Chair in Critical Embedded Systems at UCLouvain
+- **Affiliation**: UCLouvain - EPL / ICTEAM / INGI
+- **Website**: https://cristel.pelsser.eu/
+- **Research Focus**: Network operations, routing, Internet measurements, protocols and security
+
+**Biography**: Cristel Pelsser received her PhD from UCLouvain, Belgium. From 2015 to 2022, she was a full professor at the University of Strasbourg (France) where she led a team of researchers focusing on core Internet technologies. She spent nine years as a researcher working for ISPs in Japan (NTT, Internet Initiative Japan). Her aim is to facilitate network operations, avoid network disruptions, and when they occur, pinpoint failures precisely to quickly fix issues and prevent recurrence.
+
+**Research Areas**:
+- BGP security and routing protocols
+- Internet measurement infrastructure
+- Machine learning for network anomaly detection
+- Critical embedded systems for IoT applications
+- Next-generation tools for Internet monitoring
+
+**Recent Achievements**:
+- Best of CCR Award 2025 for "An Analysis of QUIC Connection Migration in the Wild"
+- Best Paper Award ACM SIGCOMM 2024 for "The Next Generation of BGP Data Collection Platforms" (GILL)
+- Applied Networking Research Prize (ANRP) twice: 2019 (BGP community attacks) and 2013 (seamless BGP reconfigurations)
+- Steering committee member of TMA, PAM, and IMC; General co-chair of IMC 2022
+
+**Teaching Philosophy**: Emphasizes practical applications of theory, helping students progress from programming basics to advanced systems design. Focus on building skills for creating reliable and secure computing systems through hands-on learning with real-world applications.
+
 ### Target Programs
 - Master [120] in Computer Science Engineering (INFO2M)
 - Master [120] in Computer Science (SINF2M)
