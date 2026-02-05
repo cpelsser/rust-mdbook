@@ -26,4 +26,3 @@ fn main() {
 - Violating the preconditions causes undefined behavior (UB).
 
 </details>
-```

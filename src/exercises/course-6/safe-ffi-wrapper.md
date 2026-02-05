@@ -10,7 +10,7 @@ You will want to consult the manual pages:
 * [`readdir(3)`](https://man7.org/linux/man-pages/man3/readdir.3.html)
 * [`closedir(3)`](https://man7.org/linux/man-pages/man3/closedir.3.html)
 
-You will also want to browse the [`std::ffi`] module, particular for [`CStr`]
+You will also want to browse the [`std::ffi`] module, particularly for [`CStr`]
 and [`CString`] types which are used to hold NUL-terminated strings coming from
 C. The [Nomicon] also has a very useful chapter about FFI.
 
