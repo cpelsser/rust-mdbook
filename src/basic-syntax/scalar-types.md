@@ -29,7 +29,7 @@ It is followed by `(#)+`, then `"`, the literal, `"` and `(#)+`, where `+` means
 Each character in a raw string literal is represented as a Unicode scalar value.
 `r#"Hello, "Rust"!"#` is a string that includes the characters `H, e, l, l, o, ,, , ", R, u, s, t, ", !`.
 
-`b#"..."#` denotes a byte string, ie a sequence of bytes.
+`b#"..."#` denotes a byte string, i.e., a sequence of bytes.
 `b"hello"` is equivalent to `[104, 101, 108, 108, 111]` (ASCII values for 'h', 'e', 'l', 'l', 'o').
 
 `br#"..."#` is for a raw byte string. 

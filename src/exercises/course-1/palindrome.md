@@ -4,7 +4,7 @@ Implement a Rust function that determines whether a given string is a palindrome
 
 A palindrome is a sequence of characters that reads the same forward and backward (e.g. kayak, madam, racecar, ...). 
 
-In this exercices we ask you to ignore spaces, punctuation, and case.
+In this exercise, we ask you to ignore spaces, punctuation, and case.
 
 Have a look at the [`std::str`](https://doc.rust-lang.org/std/primitive.str.html) documentation if needed.
 
