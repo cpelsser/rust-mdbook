@@ -32,7 +32,7 @@ smart-punctuation = true
 default-theme = "navy"
 preferred-dark-theme = "navy"
 additional-js = ["speaker-notes.js"]
-additional-css = ["svgbob.css", "speaker-notes.css"]
+additional-css = ["svgbob.css", "speaker-notes.css", "code-style.css"]
 site-url = "/"
 git-repository-url = "https://github.com/cpelsser/rust-mdbook"
 edit-url-template = "https://github.com/cpelsser/rust-mdbook/edit/main/{path}"
@@ -43,7 +43,7 @@ level = 0
 
 [output.html.playground]
 editable = true
-line-numbers = true
+line-numbers = false
 
 [output.pandoc]
 optional = true
