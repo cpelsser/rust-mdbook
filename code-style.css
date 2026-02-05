@@ -1,12 +1,92 @@
 /* Custom code block styling - restore old appearance */
+/* Based on Tomorrow Night theme with adjustments */
 
-/* Fix comment color to match old style (muted gray) */
-.hljs-comment {
-    color: #7a8a7a !important;
+/* === Ace Editor (editable code blocks) === */
+
+/* Comments - muted gray (Tomorrow Night default: #969896) */
+.ace_comment {
+    color: #969896 !important;
 }
 
-/* Style the indent guides to be subtle gray */
+/* Literals: true, false, numbers, parameters - orange (Tomorrow Night: #DE935F) */
+.ace_constant.ace_language,
+.ace_constant.ace_numeric,
+.ace_variable.ace_parameter {
+    color: #de935f !important;
+}
+
+/* Function names - blue (Tomorrow Night: #81A2BE) */
+.ace_entity.ace_name.ace_function,
+.ace_support.ace_function,
+.ace_function {
+    color: #81a2be !important;
+}
+
+/* Types (u32, bool, i32) - yellow (Tomorrow Night: #F0C674) */
+.ace_support.ace_type,
+.ace_support.ace_class {
+    color: #f0c674 !important;
+}
+
+/* Storage type (fn, let, mut, etc.) - purple (Tomorrow Night: #B294BB) */
+.ace_storage,
+.ace_storage.ace_type,
+.ace_keyword {
+    color: #b294bb !important;
+}
+
+/* Strings - green (Tomorrow Night: #B5BD68) */
+.ace_string {
+    color: #b5bd68 !important;
+}
+
+/* Operators - aqua (Tomorrow Night: #8ABEB7) */
+.ace_keyword.ace_operator {
+    color: #8abeb7 !important;
+}
+
+/* Variables - red (Tomorrow Night: #CC6666) */
+.ace_variable {
+    color: #cc6666 !important;
+}
+
+/* === Highlight.js (non-editable code blocks) === */
+
+/* Comments */
+.hljs-comment {
+    color: #969896 !important;
+}
+
+/* Numbers and literals */
+.hljs-number,
+.hljs-literal,
+.hljs-params {
+    color: #de935f !important;
+}
+
+/* Function names */
+.hljs-title,
+.hljs-section {
+    color: #8abeb7 !important;
+}
+
+/* Types */
+.hljs-type,
+.hljs-built_in {
+    color: #f0c674 !important;
+}
+
+/* Keywords */
+.hljs-keyword {
+    color: #b294bb !important;
+}
+
+/* Strings */
+.hljs-string {
+    color: #b5bd68 !important;
+}
+
+/* === Indent guides === */
 .ace_indent-guide {
-    background: none !important;
-    border-right: 1px solid #3a3a3a !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYHB3d/8PAAOIAdULw8qMAAAAAElFTkSuQmCC) right repeat-y !important;
 }
