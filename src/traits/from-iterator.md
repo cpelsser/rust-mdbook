@@ -19,7 +19,7 @@ fn main() {
 where
     B: FromIterator<Self::Item>,
     Self: Sized`
-`collect` enables to convert an interator into a collection. Here it enables to reconstruct a vector.
+`collect` enables you to convert an iterator into a collection. Here it enables you to reconstruct a vector.
 
 There are also implementations which let you do cool things like convert an
 `Iterator<Item = Result<V, E>>` into a `Result<Vec<V>, E>`.
