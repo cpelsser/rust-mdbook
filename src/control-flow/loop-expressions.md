@@ -44,4 +44,3 @@ let result = loop {
 ```
 
 </details>
-```

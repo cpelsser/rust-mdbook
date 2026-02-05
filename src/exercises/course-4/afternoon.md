@@ -1,6 +1,6 @@
 # Course 4: Exercises
 
-In course 4, the exercices will focus on strings and iterators.
+In course 4, the exercises will focus on strings and iterators.
 
 <!-- <details>
 

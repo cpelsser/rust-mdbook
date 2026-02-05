@@ -39,5 +39,4 @@ while let Some(top) = stack.pop() {
 ```
 
 </details>
-```
 
