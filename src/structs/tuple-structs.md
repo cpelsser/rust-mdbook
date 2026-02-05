@@ -36,6 +36,6 @@ fn main() {
 
 Newtypes are a great way to encode additional information about the value in a primitive type, for example:
   * The number is measured in some units: `Newtons` in the example above.
-  * The value passed some validation when it was created, so you no longer have to validate it again at every use: 'PhoneNumber(String)` or `OddNumber(u32)`.
+  * The value passed some validation when it was created, so you no longer have to validate it again at every use: `PhoneNumber(String)` or `OddNumber(u32)`.
     
 </details>
