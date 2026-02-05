@@ -51,7 +51,7 @@ See [Graham King's "Return Value Optimization in Rust" post](https://darkcoding.
 
 * If return value optimization (RVO) did not happen, Rust would simply perform an efficient `memcpy` copy — there are no constructors with side effects to worry about.
 
-Elision means dropping, omitting, cutting. It is used for a sound that is not pronounced in a word, for example.
+Elision means dropping, omitting, or cutting. For example, it describes a sound that is not pronounced in a word.
 
 </details>
 

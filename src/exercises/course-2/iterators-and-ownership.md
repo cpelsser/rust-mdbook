@@ -68,7 +68,7 @@ declare two types:
 Note that `IntoIter` and `Item` are linked: the iterator must have the same
 `Item` type, which means that it returns `Option<Item>`
 
-Like before, what  is the type returned by the iterator?
+Like before, what is the type returned by the iterator?
 
 ```rust,editable,compile_fail
 fn main() {
@@ -83,7 +83,7 @@ fn main() {
 ## `for` Loops
 
 Now that we know both `Iterator` and `IntoIterator`, we can build `for` loops.
-They call `into_iter()` on an expression and iterates over the resulting
+They call `into_iter()` on an expression and iterate over the resulting
 iterator:
 
 ```rust,editable

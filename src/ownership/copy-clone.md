@@ -54,7 +54,7 @@ fn main() {
 }
 ```
 
-* Remove `Copy` from the `derive` attribute. The compiler error is now in the `println!` for  `p1`.
+* Remove `Copy` from the `derive` attribute. The compiler error is now in the `println!` for `p1`.
 
 ```rust,editable
 #[derive(Clone, Debug)]
