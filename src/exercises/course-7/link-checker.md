@@ -6,7 +6,7 @@ recursively check other pages on the same domain and keep doing this until all
 pages have been validated.
 
 For this, you will need an HTTP client such as [`reqwest`][1]. Create a new
-Cargo project and `reqwest` it as a dependency with:
+Cargo project and add `reqwest` as a dependency with:
 
 ```shell
 $ cargo new link-checker
