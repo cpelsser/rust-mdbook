@@ -34,6 +34,10 @@ fn main() {
 
 <details>
 
+Items are private by default. Use `pub` to expose them. Children can see parent's private items.
+
+---
+
 **Key points for speakers:**
 - Private by default is a security-conscious design choice.
 - `pub` makes an item visible to parent modules (and their parents, up to `pub` at crate level).

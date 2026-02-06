@@ -37,6 +37,10 @@ Some folks also like to use the [JetBrains][4] family of IDEs, which do their ow
 
 <details>
 
+Cargo is Rust's build system and package manager. Use `rustup` to install Rust.
+
+---
+
 **Key points for speakers:**
 - Cargo is Rust's build system AND package manager (like npm + webpack for JS, or Maven for Java).
 - `rustup` manages Rust versions; `cargo` manages project dependencies and builds.

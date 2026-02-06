@@ -36,6 +36,10 @@ fn main() {
 
 <details>
 
+`thiserror` derives error enums. Use `#[error]` for messages, `#[from]` for automatic conversion.
+
+---
+
 **Key points for speakers:**
 - `thiserror` is the go-to crate for library error types.
 - `#[error("...")]` generates the `Display` implementation.

@@ -21,6 +21,10 @@ You can use `break` and `continue` here as usual.
 
 <details>
 
+`for x in collection` iterates over items. Use `&collection` to borrow instead of consuming.
+
+---
+
 **Key points for speakers:**
 - `for x in collection` calls `into_iter()` automatically — consumes the collection.
 - Use `&collection` or `&mut collection` to iterate by reference instead.

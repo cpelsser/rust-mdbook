@@ -10,6 +10,10 @@ We will now look at some of the most common traits of the Rust standard library:
 
 <details>
 
+Key std traits: `Iterator`, `From`/`Into`, `Read`/`Write`, `Drop`, and operator traits.
+
+---
+
 **Key points for speakers:**
 - These traits form the foundation of idiomatic Rust code.
 - Understanding these traits is essential for reading and writing Rust effectively.

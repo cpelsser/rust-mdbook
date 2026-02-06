@@ -35,6 +35,10 @@ Here is a rough comparison of the memory management techniques.
 
 <details>
 
+Manual is fast but unsafe. GC is safe but has pauses. Rust is safe, fast, but has a learning curve.
+
+---
+
 **Key points for speakers:**
 - This is a summary slide — use it to reinforce the trade-offs.
 - Rust's "cons" are really about learning curve, not fundamental limitations.

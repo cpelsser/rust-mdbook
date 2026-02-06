@@ -22,6 +22,10 @@ fn main() {
 
 <details>
 
+`loop` is an infinite loop. Use `break` to exit, optionally with a return value.
+
+---
+
 **Key points for speakers:**
 - `loop` is Rust's infinite loop — clearer intent than `while true`.
 - The example shows the Collatz conjecture (3n+1 problem) — a fun mathematical puzzle.

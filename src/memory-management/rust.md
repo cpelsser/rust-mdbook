@@ -11,6 +11,10 @@ It achieves this by modeling _ownership_ explicitly.
 
 <details>
 
+Rust enforces memory safety at compile time through ownership — no GC, no manual free.
+
+---
+
 **Key points for speakers:**
 - Rust's key innovation: compile-time ownership tracking with zero runtime cost.
 - The ownership model gives you C's performance with Java's safety guarantees.

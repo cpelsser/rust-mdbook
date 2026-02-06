@@ -13,6 +13,10 @@ fn main() {
 
 <details>
 
+`collect()` turns an iterator into a collection (Vec, HashMap, String, etc.).
+
+---
+
 **Key points for speakers:**
 - `collect()` is generic — works with any type implementing `FromIterator`.
 - The turbofish (`::<>`) specifies the collection type explicitly.

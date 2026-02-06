@@ -28,6 +28,10 @@ fn main() {
 
 <details>
 
+`if` is an expression that returns a value. Both branches must have the same type.
+
+---
+
 **Key points for speakers:**
 - `if` is an expression, not just a statement — it returns a value.
 - Both branches must return the same type (or `()` if no value needed).

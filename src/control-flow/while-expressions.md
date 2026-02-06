@@ -18,6 +18,10 @@ fn main() {
 
 <details>
 
+`while` loops until the condition is false. Condition must be a `bool`.
+
+---
+
 **Key points for speakers:**
 - `while` works like in most languages — nothing surprising here.
 - The condition must be a `bool` — no truthy/falsy values like in JavaScript.

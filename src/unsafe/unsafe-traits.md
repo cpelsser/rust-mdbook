@@ -27,6 +27,10 @@ unsafe impl AsBytes for u32 {}
 
 <details>
 
+Unsafe traits have invariants the compiler can't verify. `unsafe impl` means "I promise."
+
+---
+
 **Key points for speakers:**
 - Unsafe traits have invariants that the compiler can't verify.
 - `unsafe impl` means "I promise this type satisfies the trait's requirements."

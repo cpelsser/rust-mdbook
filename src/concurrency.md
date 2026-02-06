@@ -9,6 +9,10 @@ can rely on the compiler to ensure correctness at runtime.
 
 <details>
 
+Rust prevents data races at compile time. The type system ensures thread safety.
+
+---
+
 **Key points for speakers:**
 - "Fearless concurrency" means the compiler catches data races at compile time.
 - Rust doesn't prevent all concurrency bugs (deadlocks are still possible), but it prevents data races.

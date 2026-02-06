@@ -20,6 +20,10 @@ type returned by the function:
 
 <details>
 
+`?` calls `From::from` to convert error types automatically.
+
+---
+
 **Key points for speakers:**
 - The `?` operator does automatic error conversion via `From::from`.
 - This is why `?` works across different error types — if `From` is implemented.

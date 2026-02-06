@@ -29,6 +29,10 @@ fn main() {
 
 <details>
 
+`static mut` is unsafe due to data races. Prefer `Mutex`, `RwLock`, or atomics instead.
+
+---
+
 **Key points for speakers:**
 - Immutable statics are safe and common — they're truly global constants.
 - Mutable statics are `unsafe` because they can cause data races.

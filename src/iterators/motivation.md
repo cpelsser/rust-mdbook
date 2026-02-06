@@ -21,6 +21,10 @@ In Rust we bundle this state and logic together into an object known as an
 
 <details>
 
+Iterators encapsulate traversal logic. Zero-cost abstraction — compiles to the same code as C-style loops.
+
+---
+
 **Key points for speakers:**
 - C-style loops mix iteration mechanics with business logic.
 - Iterators separate "how to traverse" from "what to do with elements."

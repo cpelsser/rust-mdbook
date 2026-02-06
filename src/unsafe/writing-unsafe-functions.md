@@ -30,6 +30,10 @@ fn main() {
 
 <details>
 
+Mark functions `unsafe` when they have preconditions. Document them in `# Safety`.
+
+---
+
 **Key points for speakers:**
 - `# Safety` doc comment is critical — documents what callers must guarantee.
 - The `// Safe because ...` comment documents why the preconditions are met.

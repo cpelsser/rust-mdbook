@@ -20,6 +20,10 @@ fn main() {
 
 <details>
 
+Rust prevents dangling references at compile time. References can't outlive what they point to.
+
+---
+
 **Key points for speakers:**
 - This is a compile-time error, not a runtime crash. Rust prevents the bug before the program runs.
 - In C, this code would compile and cause undefined behavior (use-after-free).

@@ -18,6 +18,10 @@ void sayHello(Person person) {
 
 <details>
 
+A garbage collector automatically finds and frees unused memory at runtime.
+
+---
+
 **Key points for speakers:**
 - GC languages trade predictability for convenience — you don't manage memory, but can't control when cleanup happens.
 - GC pauses can be problematic for real-time systems (games, audio, trading).

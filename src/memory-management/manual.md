@@ -23,6 +23,10 @@ pointer is lost and we cannot deallocate the memory.
 
 <details>
 
+You call malloc and free yourself. Error-prone: leaks, use-after-free, double-free.
+
+---
+
 **Key points for speakers:**
 - Manual memory management requires perfect discipline — every malloc needs a free.
 - Common bugs: use-after-free, double-free, memory leaks, buffer overflows.

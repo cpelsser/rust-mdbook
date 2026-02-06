@@ -19,6 +19,10 @@ fn main() {
 
 <details>
 
+Assignment transfers ownership. The old variable becomes invalid. Exactly one owner at a time.
+
+---
+
 **Key points for speakers:**
 - Move semantics are Rust's default for non-Copy types — no special syntax needed.
 - This is different from Python, where assignment creates a new reference to the same object.

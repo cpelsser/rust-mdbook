@@ -40,6 +40,10 @@ fn main() {
 
 <details>
 
+`Fn` borrows immutably, `FnMut` borrows mutably, `FnOnce` consumes captured values.
+
+---
+
 **Key points for speakers:**
 - Three traits form a hierarchy: `Fn` ⊂ `FnMut` ⊂ `FnOnce`.
 - Trait is determined by what the closure does with captured values.

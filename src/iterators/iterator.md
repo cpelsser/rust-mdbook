@@ -36,6 +36,10 @@ fn main() {
 
 <details>
 
+`Iterator` has one required method: `next()` returns `Some(item)` or `None` when done.
+
+---
+
 **Key points for speakers:**
 - `Iterator` has one required method: `next()` → `Option<Item>`.
 - `None` signals the end of iteration — clean, no sentinel values.

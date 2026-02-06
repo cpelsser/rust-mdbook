@@ -42,6 +42,10 @@ These types are not thread-safe and cannot be moved to other threads:
 
 <details>
 
+Most types are `Send + Sync`. `Rc` is neither. `Cell`/`RefCell` are `Send` but not `Sync`.
+
+---
+
 **Key points for speakers:**
 - This is a reference table — students don't need to memorize it, but should understand the categories.
 - `Send + Sync` is the "happy path" — most types you write will be both.

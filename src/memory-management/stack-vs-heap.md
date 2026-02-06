@@ -13,6 +13,10 @@
 
 <details>
 
+The stack stores local variables of fixed size. The heap stores dynamically-sized data.
+
+---
+
 **Key points for speakers:**
 - Stack allocation is "free" — just moving a pointer. Heap requires finding free space.
 - Stack size is typically limited (8MB default on Linux). Heap is limited by system memory.

@@ -12,6 +12,10 @@ Paths are resolved as follows:
 
 <details>
 
+`crate::` = crate root, `self::` = current module, `super::` = parent module.
+
+---
+
 **Key points for speakers:**
 - `crate::` is the current crate root — like `/` in filesystem paths.
 - `self::` is explicitly "current module" — often optional but clarifies intent.

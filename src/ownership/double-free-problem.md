@@ -70,6 +70,10 @@ fn main() {
 
 <details>
 
+C allows double-free bugs. Python uses reference counting. Rust uses move semantics — zero cost, compile-time safe.
+
+---
+
 **Key points for speakers:**
 - C gives you control but lets you make mistakes (double-free, use-after-free).
 - Python is safe but has runtime overhead (reference counting, GC).

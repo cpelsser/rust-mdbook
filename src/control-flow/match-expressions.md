@@ -24,6 +24,10 @@ Rust.
 
 <details>
 
+`match` compares a value against patterns. Must be exhaustive — use `_` as a catch-all.
+
+---
+
 **Key points for speakers:**
 - `match` must be exhaustive — all possible values must be covered.
 - The `_` pattern is a catch-all that matches anything (like `default` in switch).

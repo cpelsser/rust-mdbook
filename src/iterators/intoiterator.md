@@ -53,6 +53,10 @@ fn main() {
 
 <details>
 
+`IntoIterator` creates an iterator from a value. `for` loops call `into_iter()` automatically.
+
+---
+
 **Key points for speakers:**
 - `IntoIterator` is what `for` loops call — it creates an iterator from a value.
 - `into_iter(self)` consumes the collection by default.

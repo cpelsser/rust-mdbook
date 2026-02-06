@@ -57,6 +57,10 @@ No explicit cleanup needed, and the compiler guarantees it happens.
 
 <details>
 
+Resources are automatically freed when variables go out of scope (RAII pattern).
+
+---
+
 **Key points for speakers:**
 - RAII = "Resource Acquisition Is Initialization" — resources tied to object lifetime.
 - Python's `with` statement is a limited form of RAII (only for explicitly managed resources).

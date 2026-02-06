@@ -23,6 +23,10 @@ The `crate` root is in:
 
 <details>
 
+`mod foo;` loads from `foo.rs` (Rust 2018) or `foo/mod.rs` (Rust 2015). Prefer the newer style.
+
+---
+
 **Key points for speakers:**
 - Rust 2018 style (`garden.rs`) is preferred — it's cleaner and has fewer files.
 - The old `mod.rs` style still works but clutters directories.

@@ -18,6 +18,10 @@ fn main() {
 
 <details>
 
+Unions share memory between fields. Reading is unsafe — you must track the active field yourself.
+
+---
+
 **Key points for speakers:**
 - Unions share memory between all fields — only one is valid at a time.
 - Reading a union field is always unsafe — Rust can't track which field is active.

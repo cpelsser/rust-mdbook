@@ -26,6 +26,10 @@ In this case we break the outer loop after 3 iterations of the inner loop.
 
 <details>
 
+`break` exits a loop, `continue` skips to the next iteration. Use labels (`'outer:`) for nested loops.
+
+---
+
 **Key points for speakers:**
 - Labels start with a single quote (`'outer:`) — don't confuse with lifetime syntax (same notation, different context).
 - Without labels, `break` and `continue` only affect the innermost loop.

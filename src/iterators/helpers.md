@@ -17,6 +17,10 @@ fn main() {
 
 <details>
 
+Adapters (`map`, `filter`) are lazy. Consumers (`sum`, `collect`) produce a result.
+
+---
+
 **Key points for speakers:**
 - Adapters (`map`, `filter`, `take`) return new iterators — they don't consume.
 - Consumers (`sum`, `count`, `collect`) drain the iterator and produce a result.

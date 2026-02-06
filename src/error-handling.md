@@ -9,6 +9,10 @@ Error handling in Rust is done using explicit control flow:
 
 <details>
 
+No exceptions. Errors are explicit values in `Result<T, E>`. Use `?` to propagate.
+
+---
+
 **Key points for speakers:**
 - Rust has NO exceptions. This is a deliberate design choice.
 - Errors are values that must be explicitly handled or propagated.

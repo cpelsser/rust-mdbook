@@ -32,6 +32,10 @@ allows the compiler to optimize the memory layout:
 
 <details>
 
+`Option<Box<T>>` is the same size as `Box<T>` — null represents `None` (niche optimization).
+
+---
+
 **Key points for speakers:**
 - "Niche optimization" uses invalid bit patterns to store enum discriminants.
 - `Box<T>` is never null, so the null pointer value represents `None` in `Option<Box<T>>`.

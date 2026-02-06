@@ -32,6 +32,10 @@ fn main() {
 
 <details>
 
+`anyhow` adds context to errors. Use `.context()` to enrich errors, `bail!` to return early.
+
+---
+
 **Key points for speakers:**
 - `anyhow` is the go-to crate for application error handling.
 - `.context()` wraps errors with additional information.

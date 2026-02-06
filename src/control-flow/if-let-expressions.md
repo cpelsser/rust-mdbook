@@ -18,6 +18,10 @@ Rust.
 
 <details>
 
+`if let` matches a single pattern. Use it instead of `match` when you only care about one case.
+
+---
+
 **Key points for speakers:**
 - `if let` is syntactic sugar for a `match` with one interesting arm and a wildcard.
 - Use it when you only care about one pattern and want to ignore the rest.

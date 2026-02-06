@@ -19,6 +19,10 @@ fn main() {
 
 <details>
 
+Closures capture variables from their environment. Use `move` to take ownership.
+
+---
+
 **Key points for speakers:**
 - Closures capture variables from their environment — this is what makes them "closures."
 - Capture mode is inferred: shared reference → exclusive reference → move.

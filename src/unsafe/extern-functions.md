@@ -18,6 +18,10 @@ fn main() {
 
 <details>
 
+Calling foreign functions is unsafe — Rust can't verify what external code does.
+
+---
+
 **Key points for speakers:**
 - `extern "C"` declares a function using C calling conventions.
 - All calls to extern functions are unsafe — Rust can't verify the foreign code.

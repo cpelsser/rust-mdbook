@@ -10,6 +10,10 @@ and deallocate it in another.
 
 <details>
 
+`Send` means a type can safely move to another thread. Most types are `Send` automatically.
+
+---
+
 **Key points for speakers:**
 - `Send` is a marker trait with no methods — it's purely a compile-time guarantee.
 - A type is `Send` if ownership can safely transfer to another thread.

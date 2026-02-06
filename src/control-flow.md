@@ -7,6 +7,10 @@ in Rust.
 
 <details>
 
+In Rust, `if`, `match`, and loops are expressions — they return values.
+
+---
+
 **Key points for speakers:**
 - In Rust, most control flow constructs are *expressions*, not just statements.
 - This means `if`, `match`, `loop` can all return values.

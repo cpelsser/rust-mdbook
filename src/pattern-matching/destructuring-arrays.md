@@ -8,6 +8,10 @@ You can destructure arrays, tuples, and slices by matching on their elements:
 
 <details>
 
+Destructure arrays with patterns. Use `..` for rest, `_` for ignored elements.
+
+---
+
 **Key points for speakers:**
 - Array destructuring works with fixed-size arrays and slices.
 - Use `..` to ignore remaining elements (like rest patterns in other languages).

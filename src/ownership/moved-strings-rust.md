@@ -52,6 +52,10 @@ After move to `s2`:
 
 <details>
 
+After a move, only the new owner is valid. The heap data stays in place — just the pointer is copied.
+
+---
+
 **Key points for speakers:**
 - This diagram is crucial — spend time on it! It shows move semantics visually.
 - After the move, `s1` is marked as inaccessible — the compiler enforces this.

@@ -16,6 +16,10 @@ fn main() {
 
 <details>
 
+`|args| body` is the closure syntax. Types are usually inferred.
+
+---
+
 **Key points for speakers:**
 - `|args| body` is the basic closure syntax — pipes instead of parentheses.
 - Type inference is powerful — often no annotations needed.
