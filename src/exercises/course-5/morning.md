@@ -1,6 +1,6 @@
 # Course 5 Exercises
 
-We will design a classical GUI library traits and trait objects.
+We will design a classical GUI library using traits and trait objects.
 
 <!-- <details>
 

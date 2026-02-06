@@ -12,7 +12,7 @@ fn main() {
     page_counts.insert("Pride and Prejudice".to_string(), 303);
 
     if !page_counts.contains_key("Les Misérables") {
-        println!("We've know about {} books, but not Les Misérables.",
+        println!("We know about {} books, but not Les Misérables.",
                  page_counts.len());
     }
 
@@ -24,3 +24,21 @@ fn main() {
     }
 }
 ```
+
+<details>
+
+- `HashMap` is not defined in the prelude and needs to be brought into scope.
+- Try using `entry()` to insert a value if nothing is found:
+  ```rust,ignore
+  let pc = page_counts.entry("The Hunger Games".to_string()).or_insert(374);
+  ```
+- Unlike `vec!`, there is no standard `hashmap!` macro, but since Rust 1.56,
+  HashMap implements `From<[(K, V); N]>`:
+  ```rust,ignore
+  let page_counts = HashMap::from([
+      ("Harry Potter".to_string(), 336),
+      ("The Hunger Games".to_string(), 374),
+  ]);
+  ```
+
+</details>

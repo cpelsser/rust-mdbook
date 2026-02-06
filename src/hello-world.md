@@ -12,7 +12,7 @@ fn main() {
 What you see:
 
 * Functions are introduced with `fn`.
-* Blocks are delimited by curly braces like in C and C++.
+* Blocks are delimited by curly braces like in C.
 * The `main` function is the entry point of the program.
 * Rust has hygienic macros, `println!` is an example of this.
 * Rust strings are UTF-8 encoded and can contain any Unicode character.
@@ -20,11 +20,11 @@ What you see:
 <details>
 
 This slide tries to make the students comfortable with Rust code. They will see
-a ton of it over the next four days so we start small with something familiar.
+a lot of it throughout the course, so we start small with something familiar.
 
 Key points:
 
-* Rust is very much like other languages in the C/C++/Java tradition. It is
+* Rust is very much like other languages in the C tradition. It is
   imperative (not functional) and it doesn't try to reinvent things unless
   absolutely necessary.
 

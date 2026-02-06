@@ -34,8 +34,7 @@ fn main() {
 
 Copying and cloning are not the same thing:
 
-* Copying refers to bitwise copies of memory regions and does not work on arbitrary objects.
-* Copying does not allow for custom logic (unlike copy constructors in C++).
+* Copying refers to a simple bitwise copy of memory regions — no custom logic runs.
 * Cloning is a more general operation and also allows for custom behavior by implementing the `Clone` trait.
 * Copying does not work on types that implement the `Drop` trait.
 
@@ -55,7 +54,7 @@ fn main() {
 }
 ```
 
-* Remove `Copy` from the `derive` attribute. The compiler error is now in the `println!` for  `p1`.
+* Remove `Copy` from the `derive` attribute. The compiler error is now in the `println!` for `p1`.
 
 ```rust,editable
 #[derive(Clone, Debug)]

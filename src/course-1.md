@@ -2,8 +2,11 @@
 
 In this first session we will cover:
 
-* Basic Rust syntax: variables, scalar and compound types, enums, structs,
-  references, functions, and methods.
+* What is Rust and why use it: compile-time and runtime guarantees, modern
+  features.
+
+* Basic Rust syntax: if expressions, scalar and compound types, references,
+  slices, strings, functions, and methods.
 
 <!-- * Memory management: stack vs heap, manual memory management, scope-based memory
   management, and garbage collection.
@@ -20,7 +23,7 @@ Please remind the students that:
     keep the related to how Rust does things vs some other language. It can be
     hard to find the right balance, but err on the side of allowing discussions
     since they engage people much more than one-way communication.
-* The questions will likely mean that we about things ahead of the slides.
+* The questions will likely mean that we talk about things ahead of the slides.
   * This is perfectly okay! Repetition is an important part of learning. Remember
     that the slides are just a support and you are free to skip them as you
     like.

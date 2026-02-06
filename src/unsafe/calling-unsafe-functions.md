@@ -16,3 +16,13 @@ fn main() {
     }
 }
 ```
+
+<details>
+
+- Unsafe functions have preconditions that the compiler cannot verify.
+- You must wrap calls to unsafe functions in an `unsafe {}` block.
+- This signals to readers that extra care is needed to verify correctness.
+- The `_unchecked` suffix is a convention for functions that skip safety checks.
+- Violating the preconditions causes undefined behavior (UB).
+
+</details>

@@ -8,12 +8,28 @@
 
 * Heap: Storage of values outside of function calls.
   * Values have dynamic sizes determined at runtime.
-  * Slightly slower than the stack: some book-keeping needed.
+  * Slightly slower than the stack: some bookkeeping needed.
   * No guarantee of memory locality.
 
 <details>
 
-* The stack is used to store the program and the variables of fixed size.
-* The heap is used for dynamically allocating memory.
+The stack stores local variables of fixed size. The heap stores dynamically-sized data.
+
+---
+
+**Key points for speakers:**
+- Stack allocation is "free" — just moving a pointer. Heap requires finding free space.
+- Stack size is typically limited (8MB default on Linux). Heap is limited by system memory.
+- Stack is LIFO (Last In, First Out) — matches function call/return naturally.
+- Understanding this distinction is crucial for understanding Rust's ownership model.
+
+**Common student questions:**
+- *"How do I know if something is on the stack or heap?"* - Local variables of known size go on stack. `Box`, `Vec`, `String` allocate on heap. The type tells you!
+- *"Why is stack faster?"* - No searching for free space, no fragmentation, better cache locality (data is contiguous).
+- *"What happens if I overflow the stack?"* - Stack overflow error! Deep recursion or large arrays on stack can cause this.
+- *"Can I control where data goes?"* - Yes! Use `Box::new(value)` to explicitly heap-allocate.
+
+**Visual suggestion:**
+Draw a diagram showing stack growing down from high addresses and heap growing up from low addresses.
 
 </details>

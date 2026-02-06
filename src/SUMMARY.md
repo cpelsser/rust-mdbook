@@ -1,40 +1,12 @@
 # Summary
 
 [Welcome to Comprehensive Rust 🦀](welcome.md)
-<!-- - [Running the Course](running-the-course.md)-->
 - [Course Structure](running-the-course/course-structure.md)
 - [Keyboard Shortcuts](running-the-course/keyboard-shortcuts.md)
 - [Using Cargo](cargo.md)
   - [Rust Ecosystem](cargo/rust-ecosystem.md)
   - [Code Samples](cargo/code-samples.md)
   - [Running Cargo Locally](cargo/running-locally.md)
-
-
-<!-- # Day 1: Morning
-
-----
-
-- [Welcome](welcome-day-1.md)
-  - [What is Rust?](welcome-day-1/what-is-rust.md)
-- [Hello World!](hello-world.md)
-  - [Small Example](hello-world/small-example.md)
-- [Why Rust?](why-rust.md)
-  - [Compile Time Guarantees](why-rust/compile-time.md)
-  - [Runtime Guarantees](why-rust/runtime.md)
-  - [Modern Features](why-rust/modern.md)
-- [Basic Syntax](basic-syntax.md)
-  - [Scalar Types](basic-syntax/scalar-types.md)
-  - [Compound Types](basic-syntax/compound-types.md)
-  - [References](basic-syntax/references.md)
-    - [Dangling References](basic-syntax/references-dangling.md)
-  - [Slices](basic-syntax/slices.md)
-    - [String vs str](basic-syntax/string-slices.md)
-  - [Functions](basic-syntax/functions.md)
-    - [Methods](basic-syntax/methods.md)
-    - [Overloading](basic-syntax/functions-interlude.md)
-- [Exercises](exercises/day-1/morning.md)
-  - [Implicit Conversions](exercises/day-1/implicit-conversions.md)
-  - [Arrays and for Loops](exercises/day-1/for-loops.md) -->
 
 # Course 1
 
@@ -64,6 +36,8 @@
   - [Matrix multiplication](exercises/course-1/matrix-mult.md)
   - [Arrays and for Loops](exercises/course-1/for-loops.md)
   - [Palindrome](exercises/course-1/palindrome.md)
+  - [Fibonacci](exercises/course-1/fibonacci.md)
+  - [Collatz Sequence](exercises/course-1/collatz.md)
 
 # Course 2
 
@@ -73,7 +47,7 @@
 - [Variables](basic-syntax/variables.md)
   - [Type Inference](basic-syntax/type-inference.md)
   - [Option](basic-syntax/option.md)
-  - [static & const](basic-syntax/static-and-const.md))
+  - [static & const](basic-syntax/static-and-const.md)
   - [Scopes and Shadowing](basic-syntax/scopes-shadowing.md)
 - [Memory Management](memory-management.md)
   - [Stack vs Heap](memory-management/stack-vs-heap.md)
@@ -86,7 +60,7 @@
 - [Ownership](ownership.md)
   - [Move Semantics](ownership/move-semantics.md)
   - [Moved Strings in Rust](ownership/moved-strings-rust.md)
-    - [Double Frees in Modern C++](ownership/double-free-modern-cpp.md)
+    - [The Double-Free Problem](ownership/double-free-problem.md)
   - [Moves in Function Calls](ownership/moves-function-calls.md)
   - [Copying and Cloning](ownership/copy-clone.md)
   - [Borrowing](ownership/borrowing.md)
@@ -97,6 +71,7 @@
 - [Exercises](exercises/course-2/afternoon.md)
   - [Designing a Library](exercises/course-2/book-library.md)
   - [Iterators and Ownership](exercises/course-2/iterators-and-ownership.md)
+  - [Builder Type](exercises/course-2/builder-type.md)
 
 
 # Course 3
@@ -121,6 +96,7 @@
 - [Exercises](exercises/course-3/morning.md)
   - [Health Statistics](exercises/course-3/health-statistics.md)
   - [Points and Polygons](exercises/course-3/points-polygons.md)
+  - [Expression Evaluation](exercises/course-3/expression-eval.md)
 
 # Course 4
 
@@ -146,6 +122,12 @@
     - [Recursive Data Types](std/box-recursive.md)
     - [Niche Optimization](std/box-niche.md)
   - [Rc](std/rc.md)
+- [Iterators](iterators.md)
+  - [Motivation](iterators/motivation.md)
+  - [Iterator Trait](iterators/iterator.md)
+  - [Helper Methods](iterators/helpers.md)
+  - [collect](iterators/collect.md)
+  - [IntoIterator](iterators/intoiterator.md)
 - [Modules](modules.md)
   - [Visibility](modules/visibility.md)
   - [Paths](modules/paths.md)
@@ -153,6 +135,7 @@
 - [Exercises](exercises/course-4/afternoon.md)
   - [Luhn Algorithm](exercises/course-4/luhn.md)
   - [Strings and Iterators](exercises/course-4/strings-iterators.md)
+  - [Iterator Method Chaining](exercises/course-4/iterator-chain.md)
 
 
 # Course 5
@@ -175,11 +158,15 @@
   - [Generic Methods](generics/methods.md)
   - [Trait Bounds](generics/trait-bounds.md)
   - [impl Trait](generics/impl-trait.md)
-  - [Closures](generics/closures.md)
   - [Monomorphization](generics/monomorphization.md)
+- [Closures](closures.md)
+  - [Syntax](closures/syntax.md)
+  - [Capturing](closures/capturing.md)
+  - [Closure Traits](closures/traits.md)
   - [Trait Objects](generics/trait-objects.md)
 - [Exercises](exercises/course-5/morning.md)
   - [A Simple GUI Library](exercises/course-5/simple-gui.md)
+  - [Log Filter](exercises/course-5/log-filter.md)
 
 # Course 6
 
@@ -236,49 +223,20 @@
   - [Dining Philosophers](exercises/course-7/dining-philosophers.md)
   - [Multi-threaded Link Checker](exercises/course-7/link-checker.md)
 
-<!-- # Day 4: Afternoon
+# Course 8
 
 ----
 
-- [Android](android.md)
-  - [Setup](android/setup.md)
-  - [Build Rules](android/build-rules.md)
-    - [Binary](android/build-rules/binary.md)
-    - [Library](android/build-rules/library.md)
-  - [AIDL](android/aidl.md)
-    - [Interface](android/aidl/interface.md)
-    - [Implementation](android/aidl/implementation.md)
-    - [Server](android/aidl/server.md)
-    - [Deploy](android/aidl/deploy.md)
-    - [Client](android/aidl/client.md)
-    - [Changing API](android/aidl/changing.md)
-  - [Logging](android/logging.md)
-  - [Interoperability](android/interoperability.md)
-    - [With C](android/interoperability/with-c.md)
-      - [Calling C with Bindgen](android/interoperability/with-c/bindgen.md)
-      - [Calling Rust from C](android/interoperability/with-c/rust.md)
-    - [With C++](android/interoperability/cpp.md))
-    - [With Java](android/interoperability/java.md)
-- [Exercises](exercises/day-4/afternoon.md)
-
-# Final Words
-
-- [Thanks!](thanks.md)
-- [Other Resources](other-resources.md)
-- [Credits](credits.md)
-
-----
-
-# Solutions
-
-----
-
-- [Solutions](exercises/solutions.md)
-  - [Day 1 Morning](exercises/day-1/solutions-morning.md)
-  - [Day 1 Afternoon](exercises/day-1/solutions-afternoon.md)
-  - [Day 2 Morning](exercises/day-2/solutions-morning.md)
-  - [Day 2 Afternoon](exercises/day-2/solutions-afternoon.md)
-  - [Day 3 Morning](exercises/day-3/solutions-morning.md)
-  - [Day 3 Afternoon](exercises/day-3/solutions-afternoon.md)
-  - [Day 4 Morning](exercises/day-4/solutions-morning.md)
- -->
+- [Welcome](course-8.md)
+- [Bare Metal Basics](bare-metal.md)
+  - [What is no_std?](bare-metal/no-std.md)
+  - [The Embedded Ecosystem](bare-metal/ecosystem.md)
+- [Meet the micro:bit](bare-metal/microbit.md)
+  - [Hardware Overview](bare-metal/microbit-hardware.md)
+  - [Development Setup](bare-metal/setup.md)
+- [Your First Bare Metal Program](bare-metal/first-program.md)
+  - [Blink an LED](bare-metal/blink.md)
+  - [Reading Button Input](bare-metal/buttons.md)
+- [Exercises](exercises/course-8/exercises.md)
+  - [LED Pattern Controller](exercises/course-8/led-pattern.md)
+- [Where to Go Next](bare-metal/next-steps.md)

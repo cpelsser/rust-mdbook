@@ -27,3 +27,15 @@ fn test_multiple_words() {
 ```
 
 Use `cargo test` to find and run the unit tests.
+
+<details>
+
+- Unit tests are typically placed in the same file as the code being tested.
+- Use `#[cfg(test)]` on a `mod tests` block to only compile tests when running
+  `cargo test`.
+- This lets you unit test private helpers.
+- Common assertions: `assert!`, `assert_eq!`, `assert_ne!`.
+- Use `#[should_panic]` for tests that should panic.
+- Use `#[ignore]` to skip slow tests by default (run with `cargo test -- --ignored`).
+
+</details>

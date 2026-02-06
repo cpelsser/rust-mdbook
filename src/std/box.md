@@ -31,7 +31,8 @@ from `T` directly on a `Box<T>`][2].
 
 <details>
 
-* `Box` is like `std::unique_ptr` in C++.
+* `Box` is like `malloc` in C, but memory is automatically freed when the `Box` goes out of scope.
+* Unlike C where you must call `free()`, Rust handles cleanup automatically.
 * In the above example, you can even leave out the `*` in the `println!` statement thanks to `Deref`.
 
 </details>

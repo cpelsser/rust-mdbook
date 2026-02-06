@@ -28,6 +28,6 @@ fn main() {
 ```
 <details>
 
-Centimeters reuses the behavior of `not_equal` from the Equals trait. It overwrites `equal`, however.
+Centimeter reuses the behavior of `not_equal` from the Equals trait. It overwrites `equal`, however.
 
 </details>

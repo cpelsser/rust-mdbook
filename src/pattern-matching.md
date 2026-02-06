@@ -3,7 +3,7 @@
 The `match` keyword let you match a value against one or more _patterns_. The
 comparisons are done from top to bottom and the first match wins.
 
-The patterns can be simple values, similarly to `switch` in C and C++:
+The patterns can be simple values, similarly to `switch` in C (or `match` in Python 3.10+):
 
 ```rust,editable
 fn main() {
@@ -23,7 +23,7 @@ The `_` pattern is a wildcard pattern which matches any value.
 <details>
     
 Key Points:
-* You might point out how some specific characters are being used when in a patten
+* You might point out how some specific characters are being used when in a pattern
   * `|` as an `or`
   * `..` can expand as much as it needs to be
   * `1..=5` represents an inclusive range

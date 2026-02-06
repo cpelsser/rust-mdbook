@@ -1,0 +1,18 @@
+[workspace]
+
+[package]
+name = "microbit-exercises"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+cortex-m = "0.7.7"
+cortex-m-rt = "0.7.5"
+embedded-hal = "1.0.0"
+microbit-v2 = "0.16.0"
+panic-halt = "1.0.0"
+
+[[bin]]
+name = "led-pattern"
+path = "src/bin/led-pattern.rs"

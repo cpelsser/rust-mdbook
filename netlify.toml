@@ -1,0 +1,66 @@
+[build]
+  command = """
+    curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.52/mdbook-v0.4.52-x86_64-unknown-linux-gnu.tar.gz -o mdbook.tar.gz && \
+    tar -xzf mdbook.tar.gz && \
+    export PATH="$CARGO_HOME/bin:$PATH" && \
+    if [ ! -f "$CARGO_HOME/bin/mdbook-svgbob" ]; then \
+      cargo install mdbook-svgbob --version 0.2.2 --locked; \
+    fi && \
+    ./mdbook build
+  """
+  publish = "book/html"
+
+[build.environment]
+  RUST_LOG = "info"
+  CARGO_HOME = "/opt/build/cache/cargo"
+  CARGO_INCREMENTAL = "0"
+  RUSTFLAGS = "-C debuginfo=0"
+
+
+# Headers for better caching and security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Preview deployments for pull requests
+[context.deploy-preview]
+  command = """
+    curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.52/mdbook-v0.4.52-x86_64-unknown-linux-gnu.tar.gz -o mdbook.tar.gz && \
+    tar -xzf mdbook.tar.gz && \
+    export PATH="$CARGO_HOME/bin:$PATH" && \
+    if [ ! -f "$CARGO_HOME/bin/mdbook-svgbob" ]; then \
+      cargo install mdbook-svgbob --version 0.2.2 --locked; \
+    fi && \
+    ./mdbook build
+  """
+
+# Branch deploys
+[context.branch-deploy]
+  command = """
+    curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.52/mdbook-v0.4.52-x86_64-unknown-linux-gnu.tar.gz -o mdbook.tar.gz && \
+    tar -xzf mdbook.tar.gz && \
+    export PATH="$CARGO_HOME/bin:$PATH" && \
+    if [ ! -f "$CARGO_HOME/bin/mdbook-svgbob" ]; then \
+      cargo install mdbook-svgbob --version 0.2.2 --locked; \
+    fi && \
+    ./mdbook build
+  """

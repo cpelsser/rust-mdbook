@@ -3,7 +3,7 @@
 When you start reading about Rust, you will soon meet [Cargo](https://doc.rust-lang.org/cargo/), the standard tool
 used in the Rust ecosystem to build and run Rust applications. Here we want to
 give a brief overview of what Cargo is and how it fits into the wider ecosystem
-and how it fits into this training.
+and this training.
 
 ## Installation
 
@@ -34,3 +34,25 @@ Some folks also like to use the [JetBrains][4] family of IDEs, which do their ow
 [4]: https://www.jetbrains.com/clion/
 [5]: https://www.jetbrains.com/rust/
 [6]: https://github.com/rust-lang/rustfmt
+
+<details>
+
+Cargo is Rust's build system and package manager. Use `rustup` to install Rust.
+
+---
+
+**Key points for speakers:**
+- Cargo is Rust's build system AND package manager (like npm + webpack for JS, or Maven for Java).
+- `rustup` manages Rust versions; `cargo` manages project dependencies and builds.
+- Most students should use `rustup` for installation as it's the official method.
+
+**Common student questions:**
+- *"Why not just use apt/brew?"* - System packages are often outdated. Rustup gives you the latest stable, beta, or nightly.
+- *"What's rust-analyzer?"* - It's the language server that provides IDE features (autocomplete, go-to-definition, etc.).
+- *"Do I need an IDE?"* - No, but rust-analyzer + VS Code or similar makes learning much easier.
+
+**Demo suggestions:**
+- Show `rustup --version` and `cargo --version`
+- Create a new project with `cargo new hello` and explore the generated files
+
+</details>

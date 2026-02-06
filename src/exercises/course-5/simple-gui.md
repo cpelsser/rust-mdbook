@@ -89,3 +89,30 @@ Using such alignment tricks, you can for example produce output like this:
 | +-----------+                  |
 +--------------------------------+
 ```
+
+<details>
+
+**Exercise guidance for speakers:**
+- This exercise demonstrates trait objects (`dyn Widget`) and polymorphism.
+- `Box<dyn Widget>` allows storing different widget types in the same Vec.
+- The `draw_into` method writes to any `Write` impl (testable with String buffer).
+- Focus on composition: Window contains other Widgets.
+
+**Key concepts practiced:**
+1. Trait definitions with multiple methods.
+2. Implementing traits for multiple types.
+3. Using trait objects for heterogeneous collections.
+4. `Box<dyn Trait>` for owned trait objects.
+
+**Hints to give if stuck:**
+- `width()` calculates the widget's width for layout.
+- `draw_into` writes the widget's representation to the buffer.
+- Use `write!` and `writeln!` macros for formatting.
+- Window's width is the max of its children's widths plus borders.
+
+**Discussion points:**
+- Why `Box<dyn Widget>` instead of generics?
+- Trade-offs of dynamic dispatch vs static dispatch.
+- How would you add a callback to Button?
+
+</details>

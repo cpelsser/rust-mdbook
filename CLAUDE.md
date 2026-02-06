@@ -1,0 +1,203 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+This is an **mdBook-based Rust programming course** for **LINFO2315 - Design of Embedded and Real-time Systems** at UCLouvain (Université catholique de Louvain), Belgium. The course is taught by **Professor Cristel Pelsser** and adapted from Google's Comprehensive Rust course.
+
+The book consists of 8 progressive courses teaching Rust fundamentals through bare metal embedded programming, hosted at https://cpelsser.github.io/rust-mdbook/.
+
+## Academic Context (LINFO2315)
+
+### Course Information
+- **Code**: LINFO2315
+- **Title**: Design of Embedded and Real-time Systems
+- **Credits**: 5.00 (30h lectures + 30h practical)
+- **Term**: Q2 (Second semester)
+- **Language**: English (with French support available)
+- **Institution**: UCLouvain, Louvain-la-Neuve, Belgium
+- **Instructor**: Professor Cristel Pelsser
+- **Moodle**: https://moodle.uclouvain.be/course/view.php?id=558
+
+### About Professor Cristel Pelsser
+- **Position**: Professor, holds the Chair in Critical Embedded Systems at UCLouvain
+- **Affiliation**: UCLouvain - EPL / ICTEAM / INGI
+- **Website**: https://cristel.pelsser.eu/
+- **Research Focus**: Network operations, routing, Internet measurements, protocols and security
+
+**Biography**: Cristel Pelsser received her PhD from UCLouvain, Belgium. From 2015 to 2022, she was a full professor at the University of Strasbourg (France) where she led a team of researchers focusing on core Internet technologies. She spent nine years as a researcher working for ISPs in Japan (NTT, Internet Initiative Japan). Her aim is to facilitate network operations, avoid network disruptions, and when they occur, pinpoint failures precisely to quickly fix issues and prevent recurrence.
+
+**Research Areas**:
+- BGP security and routing protocols
+- Internet measurement infrastructure
+- Machine learning for network anomaly detection
+- Critical embedded systems for IoT applications
+- Next-generation tools for Internet monitoring
+
+**Recent Achievements**:
+- Best of CCR Award 2025 for "An Analysis of QUIC Connection Migration in the Wild"
+- Best Paper Award ACM SIGCOMM 2024 for "The Next Generation of BGP Data Collection Platforms" (GILL)
+- Applied Networking Research Prize (ANRP) twice: 2019 (BGP community attacks) and 2013 (seamless BGP reconfigurations)
+- Steering committee member of TMA, PAM, and IMC; General co-chair of IMC 2022
+
+**Teaching Philosophy**: Emphasizes practical applications of theory, helping students progress from programming basics to advanced systems design. Focus on building skills for creating reliable and secure computing systems through hands-on learning with real-world applications.
+
+### Target Programs
+- Master [120] in Computer Science Engineering (INFO2M)
+- Master [120] in Computer Science (SINF2M)
+- Master [120] in Electrical Engineering (ELEC2M)
+- Master [120] in Electromechanical Engineering (ELME2M)
+
+### Topics Covered
+- Embedded processors
+- Standard peripherals and custom peripheral development
+- Multi-core system architecture and inter-core communication
+- Real-time operating systems (RTOS): characterization and comparison
+- In-depth study of an open-source RTOS
+- Programming methodology for RTOS applications
+- Embedded Linux
+- Embedded systems security
+- **Secure programming with Rust for embedded systems**
+
+### Learning Outcomes
+Students who successfully complete this course will be able to:
+1. Design and implement a baremetal application
+2. Understand RTOS concepts
+3. Design and implement applications on an RTOS
+4. **Program in Rust for embedded systems**
+5. Design and implement systems on multi-core architecture with inter-core communication
+6. Efficiently program real-time constrained applications using rigorous methodology
+
+### Hardware
+Each student receives an **ESP32-LoRa-v3** board (dual-core Xtensa processor) for hands-on development.
+
+**Note**: Course 8 (Bare Metal Rust) uses the **BBC micro:bit v2** as an accessible introduction to embedded Rust before students work with the ESP32.
+
+### Evaluation
+- Project with demonstration during semester: 7 points
+- Written exam in June session: 13 points
+- Project cannot be redone for August session
+- **Generative AI is not authorized for this course**
+
+### Prerequisites
+Prior knowledge in computer architecture and programming is required.
+
+### Reference Book
+- "Real-time Operating Systems Book 1 - The Theory" by Jim Cooling, Lindentree Associates 2017, ISBN: 9781 5496 0894 0
+
+## Common Commands
+
+### Building the Book
+```bash
+mdbook build              # Build the book to ./book/
+mdbook serve              # Serve locally with live reload (http://localhost:3000)
+```
+
+### Working with Exercises
+```bash
+# Run a specific exercise binary
+cargo run --bin for-loops
+cargo run --bin book-library
+cargo run --bin points-polygons
+cargo run --bin luhn
+cargo run --bin strings-iterators
+cargo run --bin safe-ffi-wrapper
+cargo run --bin simple-gui
+cargo run --bin dining-philosophers
+cargo run --bin link-checker
+
+# Build all exercises
+cargo build -p comprehensive-rust
+
+# Run tests for exercises
+cargo test -p comprehensive-rust
+```
+
+### Code Formatting
+```bash
+cargo fmt                 # Format code (max_width = 90)
+```
+
+## Architecture
+
+### Workspace Structure
+The Cargo workspace has two members:
+- `i18n-helpers/` - Internationalization tools for mdBook (paragraph extraction, gettext support)
+- `src/exercises/` - Runnable Rust exercise binaries organized by day
+
+### Content Organization
+Course content lives in `src/` as Markdown files:
+- `src/SUMMARY.md` - mdBook table of contents (defines navigation structure)
+- `src/course-1/` through `src/course-8/` - Course-specific content
+- `src/bare-metal/` - Course 8 bare metal Rust content (micro:bit v2)
+- `src/exercises/course-1/` through `src/exercises/course-8/` - Exercise files (.md and .rs)
+- Topic directories: `basic-syntax/`, `ownership/`, `memory-management/`, `error-handling/`, `traits/`, `generics/`, `closures/`, `iterators/`, `concurrency/`, `testing/`, `unsafe/`, `std/`, `modules/`
+
+### mdBook Configuration
+- `book.toml` - Main configuration (preprocessors: links, index, svgbob; default theme: navy)
+- `theme/index.hbs` - Custom HTML template
+- `speaker-notes.js/css` - Presentation mode support
+- `svgbob.css` - ASCII-to-SVG diagram styling
+- `netlify.toml` - Netlify deployment configuration
+
+## Key Dependencies
+
+- **mdbook** (0.4.52) - Documentation generator
+- **mdbook-svgbob** (0.2.2) - Converts ASCII art diagrams to SVG
+- **mdbook-pandoc** - PDF generation support (optional, disabled by default)
+- **reqwest** - HTTP client (used in link-checker exercise)
+- **scraper** - HTML parsing (used in link-checker exercise)
+- **thiserror** - Error handling derive macros
+
+## CI/CD
+
+- **GitHub Actions** (`.github/workflows/deploy.yml`) - Builds and deploys to GitHub Pages on push to main
+- **Netlify** (`netlify.toml`) - Alternative deployment with preview builds for PRs and branch deploys
+
+## Speaker Notes
+
+All content files include comprehensive speaker notes in `<details>` blocks. When adding or editing content:
+
+### Speaker Notes Format
+```markdown
+<details>
+
+**Key points for speakers:**
+- Main concept 1
+- Main concept 2
+
+**Common student questions:**
+- *"Question?"* - Answer explaining the concept.
+
+**Demo suggestions:** (optional)
+- Interactive example to show
+
+</details>
+```
+
+### Guidelines for Speaker Notes
+- Include 3-5 key points that speakers should emphasize
+- Anticipate 2-4 common student questions with clear answers
+- Add demo suggestions for complex topics
+- Keep answers concise but informative
+- Focus on "why" not just "what"
+
+## Content Guidelines
+
+- **Exercises**: Located in `src/exercises/course-N/` with both `.md` (instructions) and `.rs` (solution) files
+- **Code examples**: Use `rust,editable` fence for interactive examples, `rust,compile_fail` for intentional errors
+- **Diagrams**: Use svgbob code fences for ASCII-art diagrams (automatically converted to SVG)
+- **Cross-references**: Link to related sections using relative markdown paths
+
+## Exercise Binaries
+
+Available exercise binaries (run with `cargo run --bin <name>`):
+- Course 1: `for-loops`, `fibonacci`, `collatz`
+- Course 2: `book-library`, `builder-type`
+- Course 3: `points-polygons`, `expression-eval`
+- Course 4: `luhn`, `strings-iterators`, `iterator-chain`
+- Course 5: `simple-gui`, `log-filter`
+- Course 6: `safe-ffi-wrapper`
+- Course 7: `dining-philosophers`, `link-checker`
+- Course 8: Standalone embedded projects (see `src/exercises/course-8/` with separate Cargo.toml for micro:bit)

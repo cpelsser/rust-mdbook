@@ -30,5 +30,5 @@ fn main() {
 * [std::process::id()](https://doc.rust-lang.org/std/process/fn.id.html) returns the 
   pid of the current process 
 
-</defails>
+</details>
 

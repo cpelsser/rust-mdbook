@@ -18,9 +18,30 @@ Rust.
 
 <details>
 
-* `if let` can be more concise than `match`, e.g., when only one case is interesting. In contrast, `match` requires all branches to be covered.
-    <!-- * For the similar use case consider demonstrating a newly stabilized [`let else`](https://github.com/rust-lang/rust/pull/93628) feature. -->
-<!-- * A common usage is handling `Some` values when working with `Option`. -->
-* Unlike `match`, `if let` does not support guard clauses for pattern matching.
+`if let` matches a single pattern. Use it instead of `match` when you only care about one case.
+
+---
+
+**Key points for speakers:**
+- `if let` is syntactic sugar for a `match` with one interesting arm and a wildcard.
+- Use it when you only care about one pattern and want to ignore the rest.
+- Can be chained with `else if let` for multiple patterns.
+- Unlike `match`, `if let` is not exhaustive — you don't need to handle all cases.
+
+**Common student questions:**
+- *"When should I use if let vs match?"* - `if let` for one or two patterns, `match` for many patterns or when you need exhaustiveness checking.
+- *"What about let-else?"* - `let Some(x) = opt else { return; }` is useful for early returns. Available since Rust 1.65.
+- *"Can I use if let with Result?"* - Yes! `if let Ok(value) = result { ... }` is common.
+- *"Why no guard clauses?"* - Design choice for simplicity. Use `match` if you need guards like `Some(x) if x > 5`.
+
+**Demo extension:**
+```rust
+// let-else for early returns
+let Some(value) = arg else {
+    println!("Missing name?");
+    return;
+};
+println!("Program name: {value}");
+```
 
 </details>

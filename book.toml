@@ -1,9 +1,8 @@
 [book]
 authors = ["Martin Geisler", "adapted by Cristel Pelsser"]
 language = "en"
-multilingual = false
 src = "src"
-title = "Rust-LINFO2315 (adapted from Comprehensive Rust 🦀)"
+title = "Rust-LINFO2315"
 
 [rust]
 edition = "2021"
@@ -29,10 +28,12 @@ class = "bob"
 # command = "./aspect-ratio-helper.py"
 
 [output.html]
-curly-quotes = true
-additional-js = ["ga4.js", "speaker-notes.js"]
-additional-css = ["svgbob.css", "speaker-notes.css"]
-site-url = "/rust-linfo2315/"
+smart-punctuation = true
+default-theme = "navy"
+preferred-dark-theme = "navy"
+additional-js = ["speaker-notes.js"]
+additional-css = ["svgbob.css", "speaker-notes.css", "code-style.css"]
+site-url = "/"
 git-repository-url = "https://github.com/cpelsser/rust-mdbook"
 edit-url-template = "https://github.com/cpelsser/rust-mdbook/edit/main/{path}"
 
@@ -42,3 +43,38 @@ level = 0
 
 [output.html.playground]
 editable = true
+line-numbers = false
+
+[output.pandoc]
+optional = true
+disabled = true
+hosted-html = "https://cpelsser.github.io/rust-mdbook/"
+
+[output.pandoc.profile.pdf]
+output-file = "linfo2315-rust-course.pdf"
+pdf-engine = "lualatex"
+highlight-style = "tango"
+filters = ["remove-details.lua"]
+
+[output.pandoc.profile.pdf.variables]
+papersize = "a4"
+colorlinks = true
+verbatim-in-note = true
+code-block-font-size = "\\small"
+mainfont = "Noto Serif"
+sansfont = "Noto Sans"
+monofont = "Noto Sans Mono"
+mainfontfallback = [
+  "NotoColorEmoji:mode=harf",
+  "NotoSansMath:",
+]
+sansfontfallback = [
+  "NotoColorEmoji:mode=harf",
+]
+monofontfallback = [
+  "NotoColorEmoji:mode=harf",
+  "NotoSansMath:",
+]
+geometry = ["margin=0.75in"]
+linkcolor = "blue"
+urlcolor = "red"

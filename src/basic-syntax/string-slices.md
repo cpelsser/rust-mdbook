@@ -38,9 +38,12 @@ Rust terminology:
     
 * You can borrow `&str` slices from `String` via `&` and optionally range selection.
     
-* For C++ programmers: think of `&str` as `const char*` from C++, but the one that always points 
-  to a valid string in memory. Rust `String` is a rough equivalent of `std::string` from C++ 
-  (main difference: it can only contain UTF-8 encoded bytes and will never use a small-string optimization).
+* For C programmers: think of `&str` as `const char*` from C, but one that always points
+  to a valid string in memory and knows its length (no null terminator needed).
+
+* For Python programmers: `&str` is like an immutable Python string, while `String` is like
+  a mutable string buffer. The key difference from Python is that Rust distinguishes between
+  owned strings (`String`) and borrowed views into strings (`&str`).
 
 * How do I modify s1? Here is an example built by iteratively following the guidelines of the compiler. 
   ```rust,editable

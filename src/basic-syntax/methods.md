@@ -27,4 +27,14 @@ fn main() {
 }
 ```
 
-* We will look much more at methods in this class' exercise and in the next class.
+* We will look at methods in more detail in the exercises for this class and in the next class.
+
+<details>
+
+- `&self` is short for `self: &Self` - an immutable borrow of the instance.
+- `&mut self` allows the method to mutate the instance.
+- `self` (without `&`) takes ownership of the instance.
+- Methods are called with dot notation: `rect.area()`.
+- Associated functions (no `self`) are called with `::`: `Rectangle::new()`.
+
+</details>

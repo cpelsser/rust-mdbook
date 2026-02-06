@@ -56,7 +56,7 @@ Tuples:
   the only valid value of that type - that is to say both the type and its value
   are expressed as `()`. It is used to indicate, for example, that a function or
   expression has no return value, as we'll see in a future slide. 
-    * You can think of it as `void` that can be familiar to you from other 
+    * You can think of it as `void`, which may be familiar from other
       programming languages.
 
 T is a generic type

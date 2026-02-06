@@ -1,6 +1,6 @@
 # References
 
-Like C++, Rust has references:
+Like C pointers, Rust has references:
 
 ```rust,editable
 fn main() {
@@ -13,7 +13,7 @@ fn main() {
 
 Some notes:
 
-* We must dereference `ref_x` when assigning to it, similar to C and C++ pointers.
+* We must dereference `ref_x` when assigning to it, similar to C pointers.
 * Rust will auto-dereference in some cases, in particular when invoking
   methods (try `ref_x.count_ones()`).
 * References that are declared as `mut` can be bound to different values over their lifetime.

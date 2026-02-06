@@ -32,11 +32,26 @@ fn main() {
 
 <details>
 
-* `anyhow::Result<V>` is a type alias for `Result<V, anyhow::Error>`.
-* `anyhow::Error` is essentially a wrapper around `Box<dyn Error>`. As such it's again generally not
-  a good choice for the public API of a library, but is widely used in applications.
-* Actual error type inside of it can be extracted for examination if necessary.
-* Functionality provided by `anyhow::Result<T>` may be familiar to Go developers, as it provides
-  similar usage patterns and ergonomics to `(T, error)` from Go.
+`anyhow` adds context to errors. Use `.context()` to enrich errors, `bail!` to return early.
+
+---
+
+**Key points for speakers:**
+- `anyhow` is the go-to crate for application error handling.
+- `.context()` wraps errors with additional information.
+- `bail!` is a macro for early returns with an error message.
+- `anyhow::Result<T>` = `Result<T, anyhow::Error>`.
+
+**Common student questions:**
+- *"anyhow vs thiserror?"* - `anyhow` for applications (easy, flexible), `thiserror` for libraries (structured, typed).
+- *"What's the ? operator doing here?"* - Same as before, but `context()` returns a Result with enriched error info.
+- *"Can I still pattern match on errors?"* - Yes, use `.downcast_ref::<MyError>()` to get the original error type.
+- *"What about performance?"* - `anyhow::Error` allocates. For hot paths, consider typed errors.
+
+**Additional notes:**
+- `anyhow::Error` wraps `Box<dyn Error>` — type-erased, but flexible.
+- Great for prototyping and applications where error types don't need to be part of API.
+- Similar ergonomics to Go's `(T, error)` pattern.
+- Use `{err:?}` (Debug) to see full error chain, `{err}` (Display) for user-facing message.
 
 </details>
