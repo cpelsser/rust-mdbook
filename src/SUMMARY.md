@@ -75,6 +75,7 @@
   - [Option](basic-syntax/option.md)
   - [static & const](basic-syntax/static-and-const.md))
   - [Scopes and Shadowing](basic-syntax/scopes-shadowing.md)
+- [Unwrap](basic-syntax/unwrap.md) 
 - [Memory Management](memory-management.md)
   - [Stack vs Heap](memory-management/stack-vs-heap.md)
   - [Stack Memory](memory-management/stack.md)
@@ -86,7 +87,7 @@
 - [Ownership](ownership.md)
   - [Move Semantics](ownership/move-semantics.md)
   - [Moved Strings in Rust](ownership/moved-strings-rust.md)
-    - [Double Frees in Modern C++](ownership/double-free-modern-cpp.md)
+    <!-- - [Double Frees in Modern C++](ownership/double-free-modern-cpp.md) -->
   - [Moves in Function Calls](ownership/moves-function-calls.md)
   - [Copying and Cloning](ownership/copy-clone.md)
   - [Borrowing](ownership/borrowing.md)

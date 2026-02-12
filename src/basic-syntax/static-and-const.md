@@ -56,8 +56,8 @@ We will look at mutating static data in the [chapter on Unsafe Rust](../unsafe.m
 <details>
 
 * `pub fn unwrap_or(self, default: T) -> T`. Returns the contained `Some` value or a provided default. Here, ZERO.unwrap_or(0) is equal to 42. It would return 0 if ZERO was equal to None.
-* `const` is used to define a constant value that is inlined wherever it is used. inlingin means that the compiler replaces all instances of the constant with its value.
-* `static`, on the other hand have a fixed memory location and can be mutated.
+* `const` is used to define a constant value that is inlined wherever it is used. Inlining means that the compiler replaces all instances of the constant with its value.
+* `static` on the other hand have a fixed memory location and can be mutated.
 
 </details>
 
