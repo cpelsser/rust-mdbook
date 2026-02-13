@@ -34,7 +34,7 @@ Key Points:
   * Unlike in C++, there is no inheritance between structs.
 * Methods are defined in an `impl` block, which we will see in following slides.
 * There are different types of structs. 
-  * Zero-sized structs `e.g., struct Foo;` `is a structure that does not require any memore. It might be used when implementing a trait on some type but don’t have any data that you want to store in the value itself. 
+  * Zero-sized structs `e.g., struct Foo;` `is a structure that does not require any memory. It might be used when implementing a trait on some type but don’t have any data that you want to store in the value itself. 
   * The next slide will introduce Tuple structs.
 * .. is an operator that is used for pattern binding here. It performs a "and the rest" pattern binding.
 

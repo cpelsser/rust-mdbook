@@ -38,4 +38,11 @@ methods on a `Vec`.
 * Show iterating over a vector and mutating the value:
   `for e in &mut v { *e += 50; }`
 
+  Example code: 
+  ```
+  let mut v = vec![1, 2];
+  for e in &mut v { *e += 50; }
+  println!("{:?}", v);
+  ```
+
 </details>
