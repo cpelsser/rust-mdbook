@@ -3256,6 +3256,16 @@ even the presence of an operating system.</li>
 </code></pre></pre>
 <p><code>Vec</code> implements <a href="https://doc.rust-lang.org/std/vec/struct.Vec.html#deref-methods-%5BT%5D"><code>Deref&lt;Target = [T]&gt;</code></a>, which means that you can call slice
 methods on a <code>Vec</code>.</p>
+<pre><pre class="playground"><code class="language-rust editable edition2021">fn main() {
+ 
+    let numbers = vec![10, 20, 30, 40, 50];
+
+    // Slice from index 1 to 3 (exclusive)
+    let slice = &amp;numbers[1..3];
+    println!(&quot;{:?}&quot;, slice); 
+}
+
+</code></pre></pre>
 <details>
 <ul>
 <li>
@@ -3323,8 +3333,18 @@ fn main() {
 from <code>T</code> directly on a <code>Box&lt;T&gt;</code></a>.</p>
 <details>
 <ul>
-<li><code>Box</code> is like <code>std::unique_ptr</code> in C++.</li>
-<li>In the above example, you can even leave out the <code>*</code> in the <code>println!</code> statement thanks to <code>Deref</code>.</li>
+<li>
+<p><code>Box</code> is like <code>std::unique_ptr</code> in C++.</p>
+<ul>
+<li>Ownership: owns the value/object it points to.</li>
+<li>Only one <code>Box</code>, one <code>unique_ptr</code> can own the data at a time.</li>
+<li>Automatically deallocates memory when dropped/destroyed.</li>
+</ul>
+<!--* Cannot be copied (only moved).-->
+</li>
+<li>
+<p>In the above example, you can even leave out the <code>*</code> in the <code>println!</code> statement thanks to <code>Deref</code>.</p>
+</li>
 </ul>
 </details>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="box-with-recursive-data-structures"><a class="header" href="#box-with-recursive-data-structures">Box with Recursive Data Structures</a></h1>
@@ -3387,7 +3407,7 @@ context. Arc stands for “Atomically Reference counted”. If you need to mutat
 </details>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="modules"><a class="header" href="#modules">Modules</a></h1>
 <p>We have seen how <code>impl</code> blocks let us namespace functions to a type.</p>
-<p>Similarly, <code>mod</code> lets us namespace types and functions:</p>
+<p><code>mod</code> is about organization: how your code is structured and accessed.</p>
 <pre><pre class="playground"><code class="language-rust editable edition2021">mod foo {
     pub fn do_something() {
         println!(&quot;In the foo module&quot;);
@@ -3418,6 +3438,31 @@ fn main() {
 
     pub fn public() {
         println!(&quot;outer::public&quot;);
+    }
+
+    mod inner {
+        fn private() {
+            println!(&quot;outer::inner::private&quot;);
+        }
+
+        pub fn public() {
+            println!(&quot;outer::inner::public&quot;);
+            super::private();
+        }
+    }
+}
+
+fn main() {
+    outer::public();
+}
+</code></pre></pre>
+<pre><pre class="playground"><code class="language-rust editable edition2021">mod outer {
+    fn private() {
+        println!(&quot;outer::private&quot;);
+    }
+
+    pub fn public() {
+        inner::public();
     }
 
     mod inner {
@@ -3689,7 +3734,13 @@ fn main() {
 }
 </code></pre></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="default-methods"><a class="header" href="#default-methods">Default Methods</a></h1>
-<p>Traits can implement behavior in terms of other trait methods:</p>
+<p>Traits can implement behavior in terms of other trait methods.</p>
+<p>This means that when defining a trait, you can:</p>
+<p>Declare a set of methods.
+Provide default implementations for some methods, which can call other methods in the same trait.
+This allows you to:</p>
+<p>Define a “core” set of methods that must be implemented by types.
+Provide additional methods that build on top of the core methods, reducing boilerplate for implementors.</p>
 <pre><pre class="playground"><code class="language-rust editable edition2021">trait Equals {
     fn equal(&amp;self, other: &amp;Self) -&gt; bool;
     fn not_equal(&amp;self, other: &amp;Self) -&gt; bool {
@@ -3752,6 +3803,13 @@ fn main() {
 </code></pre></pre>
 <details>
 <ul>
+<li>
+<p><code>enumerate().take()</code> is a powerful combination of two iterator methods:</p>
+<ul>
+<li><code>enumerate()</code>: Converts an iterator into an iterator of tuples (index, value), where index is the position of the value in the original iterator.</li>
+<li><code>take(n)</code>: Limits the iterator to the first n elements.</li>
+</ul>
+</li>
 <li>
 <p><code>IntoIterator</code> is the trait that makes for loops work. It is implemented by collection types such as
 <code>Vec&lt;T&gt;</code> and references to them such as <code>&amp;Vec&lt;T&gt;</code> and <code>&amp;[T]</code>. Ranges also implement it. <code>&amp;[T]</code> is the shared slice type.</p>
@@ -4349,7 +4407,7 @@ assert!(result.is_err());
 }
 </code></pre></pre>
 <ul>
-<li>This can be useful in servers which should keep running even if a single
+<li>Catching the stack unwinding can be useful in servers which should keep running even if a single
 request crashes.</li>
 <li>This does not work if <code>panic = 'abort'</code> is set in your <code>Cargo.toml</code>.</li>
 </ul>
@@ -4408,6 +4466,7 @@ fn read_username(path: &amp;str) -&gt; Result&lt;String, io::Error&gt; {
         Ok(file) =&gt; file,
         Err(e) =&gt; return Err(e),
     };
+    //let mut username_file = username_file_result?;
 
     let mut username = String::new();
 

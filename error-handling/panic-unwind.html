@@ -170,7 +170,7 @@ assert!(result.is_err());
 }
 </code></pre></pre>
 <ul>
-<li>This can be useful in servers which should keep running even if a single
+<li>Catching the stack unwinding can be useful in servers which should keep running even if a single
 request crashes.</li>
 <li>This does not work if <code>panic = 'abort'</code> is set in your <code>Cargo.toml</code>.</li>
 </ul>

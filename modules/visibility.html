@@ -183,6 +183,31 @@ fn main() {
     outer::public();
 }
 </code></pre></pre>
+<pre><pre class="playground"><code class="language-rust editable edition2021">mod outer {
+    fn private() {
+        println!(&quot;outer::private&quot;);
+    }
+
+    pub fn public() {
+        inner::public();
+    }
+
+    mod inner {
+        fn private() {
+            println!(&quot;outer::inner::private&quot;);
+        }
+
+        pub fn public() {
+            println!(&quot;outer::inner::public&quot;);
+            super::private();
+        }
+    }
+}
+
+fn main() {
+    outer::public();
+}
+</code></pre></pre>
 
                     </main>
 

@@ -153,7 +153,13 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="default-methods"><a class="header" href="#default-methods">Default Methods</a></h1>
-<p>Traits can implement behavior in terms of other trait methods:</p>
+<p>Traits can implement behavior in terms of other trait methods.</p>
+<p>This means that when defining a trait, you can:</p>
+<p>Declare a set of methods.
+Provide default implementations for some methods, which can call other methods in the same trait.
+This allows you to:</p>
+<p>Define a “core” set of methods that must be implemented by types.
+Provide additional methods that build on top of the core methods, reducing boilerplate for implementors.</p>
 <pre><pre class="playground"><code class="language-rust editable edition2021">trait Equals {
     fn equal(&amp;self, other: &amp;Self) -&gt; bool;
     fn not_equal(&amp;self, other: &amp;Self) -&gt; bool {

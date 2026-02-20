@@ -164,8 +164,18 @@
 from <code>T</code> directly on a <code>Box&lt;T&gt;</code></a>.</p>
 <details>
 <ul>
-<li><code>Box</code> is like <code>std::unique_ptr</code> in C++.</li>
-<li>In the above example, you can even leave out the <code>*</code> in the <code>println!</code> statement thanks to <code>Deref</code>.</li>
+<li>
+<p><code>Box</code> is like <code>std::unique_ptr</code> in C++.</p>
+<ul>
+<li>Ownership: owns the value/object it points to.</li>
+<li>Only one <code>Box</code>, one <code>unique_ptr</code> can own the data at a time.</li>
+<li>Automatically deallocates memory when dropped/destroyed.</li>
+</ul>
+<!--* Cannot be copied (only moved).-->
+</li>
+<li>
+<p>In the above example, you can even leave out the <code>*</code> in the <code>println!</code> statement thanks to <code>Deref</code>.</p>
+</li>
 </ul>
 </details>
 
