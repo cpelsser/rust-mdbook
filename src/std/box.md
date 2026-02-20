@@ -32,6 +32,10 @@ from `T` directly on a `Box<T>`][2].
 <details>
 
 * `Box` is like `std::unique_ptr` in C++.
+  * Ownership: owns the value/object it points to.
+  * Only one `Box`, one `unique_ptr` can own the data at a time.
+  * Automatically deallocates memory when dropped/destroyed.
+  <!--* Cannot be copied (only moved).-->
 * In the above example, you can even leave out the `*` in the `println!` statement thanks to `Deref`.
 
 </details>

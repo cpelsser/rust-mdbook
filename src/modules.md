@@ -2,7 +2,7 @@
 
 We have seen how `impl` blocks let us namespace functions to a type.
 
-Similarly, `mod` lets us namespace types and functions:
+`mod` is about organization: how your code is structured and accessed.
 
 ```rust,editable
 mod foo {

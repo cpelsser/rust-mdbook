@@ -18,6 +18,18 @@ fn main() {
 `Vec` implements [`Deref<Target = [T]>`][2], which means that you can call slice
 methods on a `Vec`.
 
+```rust,editable
+fn main() {
+ 
+    let numbers = vec![10, 20, 30, 40, 50];
+
+    // Slice from index 1 to 3 (exclusive)
+    let slice = &numbers[1..3];
+    println!("{:?}", slice); 
+}
+
+```
+
 [1]: https://doc.rust-lang.org/std/vec/struct.Vec.html
 [2]: https://doc.rust-lang.org/std/vec/struct.Vec.html#deref-methods-[T]
 

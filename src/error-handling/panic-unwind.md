@@ -19,7 +19,7 @@ assert!(result.is_err());
 }
 ```
 
-* This can be useful in servers which should keep running even if a single
+* Catching the stack unwinding can be useful in servers which should keep running even if a single
   request crashes.
 * This does not work if `panic = 'abort'` is set in your `Cargo.toml`.
 

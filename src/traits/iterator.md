@@ -29,6 +29,10 @@ fn main() {
 
 <details>
 
+* `enumerate().take()` is a powerful combination of two iterator methods:
+  * `enumerate()`: Converts an iterator into an iterator of tuples (index, value), where index is the position of the value in the original iterator.
+  * `take(n)`: Limits the iterator to the first n elements.
+
 * `IntoIterator` is the trait that makes for loops work. It is implemented by collection types such as
   `Vec<T>` and references to them such as `&Vec<T>` and `&[T]`. Ranges also implement it. `&[T]` is the shared slice type.
 

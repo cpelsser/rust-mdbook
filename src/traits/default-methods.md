@@ -1,6 +1,15 @@
 # Default Methods
 
-Traits can implement behavior in terms of other trait methods:
+Traits can implement behavior in terms of other trait methods. 
+
+This means that when defining a trait, you can:
+
+Declare a set of methods.
+Provide default implementations for some methods, which can call other methods in the same trait.
+This allows you to:
+
+Define a "core" set of methods that must be implemented by types.
+Provide additional methods that build on top of the core methods, reducing boilerplate for implementors.
 
 ```rust,editable
 trait Equals {

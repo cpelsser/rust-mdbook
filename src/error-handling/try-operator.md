@@ -29,6 +29,7 @@ fn read_username(path: &str) -> Result<String, io::Error> {
         Ok(file) => file,
         Err(e) => return Err(e),
     };
+    //let mut username_file = username_file_result?;
 
     let mut username = String::new();
 
